@@ -22,32 +22,32 @@ supported by the JST/NSF SICORP 'eMetabolomics for the low carbon society' proje
 
 ## Table of contents
 
-[Software environments](http:// "Software environments")
-Required programs
-Acceptable ASCII formats
-	MSP format for MS/MS
-	MSP format for EI-MS
-	MAT format
-	Adduct ion format: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.
-	User defined structure database format
-	Specific field to fix the formula element count
-Import queries
-	A. From a folder which includes MSP or MAT format files
-	B. From the graphical user interface of the MS-FINDER program
-	C. From the MS-DIAL program
-Parameter setting
-	Method tab
-	Mass spectrum tab
-	Formula finder tab
-	Structure finder tab
-	Data source tab
-Compound annotation by in silico fragmenter
-Compound annotation by searching spectral databases
-FSEA: fragment set enrichment analysis
-Compound annotation (batch analysis)
-Peak assignment (single)
-Peak assignment (batch job)
-Molecular spectrum networking
-Mouse function
-Export
-Help
+* [Software environments](http:// "Software environments")
+* Required programs
+* Acceptable ASCII formats
+	* MSP format for MS/MS
+	* MSP format for EI-MS
+	* MAT format
+	* Adduct ion format: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.
+	* User defined structure database format
+	* Specific field to fix the formula element count
+* Import queries
+	* A. From a folder which includes MSP or MAT format files
+	* B. From the graphical user interface of the MS-FINDER program
+	* C. From the MS-DIAL program
+* Parameter setting
+	* Method tab
+	* Mass spectrum tab
+	* Formula finder tab
+	* Structure finder tab
+	* Data source tab
+* Compound annotation by in silico fragmenter
+* Compound annotation by searching spectral databases
+* FSEA: fragment set enrichment analysis
+* Compound annotation (batch analysis)
+* Peak assignment (single)
+* Peak assignment (batch job)
+* Molecular spectrum networking
+* Mouse function
+* Export
+* Help
