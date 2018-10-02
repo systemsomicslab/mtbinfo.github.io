@@ -1,0 +1,9 @@
+html, body {
+	margin: 0 auto;
+	height: 100%;
+	color: #2b2b2b;
+	background-color: #fffffe;
+	font-family: sans-serif;
+	font-size: 100%;
+	line-break: strict;
+}
