@@ -23,7 +23,7 @@ supported by the JST/NSF SICORP 'eMetabolomics for the low carbon society' proje
 ## Table of contents
 
 * [Software environments](/environments "Software environments")
-* [test]({% / environments %})
+* [test](environments "env")
 
 * Required programs
 * Acceptable ASCII formats
