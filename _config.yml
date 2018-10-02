@@ -1,2 +1,4 @@
 theme: jekyll-theme-minimal
 encoding: UTF-8
+auto: true
+server: true
