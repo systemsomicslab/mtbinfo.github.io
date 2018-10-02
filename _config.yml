@@ -1,6 +1,7 @@
-destination: mtbinfo manuals
+description: msinfo manuals
 theme: jekyll-theme-minimal
 encoding: UTF-8
 timezone: Asia/Tokyo
 auto: true
 server: true
+stylesheet: ["/css/style.css"]
