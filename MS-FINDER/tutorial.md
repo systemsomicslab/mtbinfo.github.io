@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/MS-FINDER/css/style.css" charset="utf-8">
-
 # MS-FINDER tutorial
 
 ### Abstract
