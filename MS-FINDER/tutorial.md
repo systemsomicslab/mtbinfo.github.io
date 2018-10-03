@@ -17,7 +17,7 @@ MassBank, LipidBlast, and GNPS. MS-FINDER has been developed as the collaborativ
 between Prof. Masanori Arita team (RIKEN, Reifycs Inc.) and Prof. Oliver Fiehn team (UC Davis)
 supported by the JST/NSF SICORP ?eMetabolomics for the low carbon society?f project.
 
-![MS-FINDER screenshot](/images/scrMsDial1.png)
+![MS-FINDER screenshot](/MS-FINDER/images/scrMsDial1.png)
 
 ## Table of contents
 
