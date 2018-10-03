@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{site.github.url}}/css/style.css" charset="utf-8">
+<link rel="stylesheet" href="/MS-FINDER/css/style.css" charset="utf-8">
 
 # MS-FINDER tutorial
 
