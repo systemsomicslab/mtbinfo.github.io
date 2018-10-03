@@ -4,26 +4,26 @@
 
 ### Abstract
 
-The purpose of metabolomics is to perform the ?ecomprehensive?f analysis for small biomolecules of
+The purpose of metabolomics is to perform the 'comprehensive' analysis for small biomolecules of
 living organisms. Gas chromatography coupled with electron ionization mass spectrometer (GC/MS)
 and liquid chromatography coupled with electrospray ionization- (ESI-) tandem mass spectrometer
 (LC/MS/MS) are the preferred tools for untargeted metabolomics. Currently, the main bottleneck of
 GC/MS- and LC/MS/MS based untargeted analysis is compound identification due to the limitation of
 EI-MS and MS/MS records of authentic standard.
 
-MS-FINDER was launched as a universal program for compound ?eannotation?f that supports
+MS-FINDER was launched as a universal program for compound 'annotation' that supports
 EI-MS (GC/MS) and MS/MS spectral mining. First, MS-FINDER aims to provide solutions for 1)
 formula predictions, 2) fragment annotations, and 3) structure elucidations by means of unknown
 spectra. In addition, the program can annotate your unknowns by the public spectral databases such as
 MassBank, LipidBlast, and GNPS. MS-FINDER has been developed as the collaborative work
 between Prof. Masanori Arita team (RIKEN, Reifycs Inc.) and Prof. Oliver Fiehn team (UC Davis)
-supported by the JST/NSF SICORP ?eMetabolomics for the low carbon society?f project.
+supported by the JST/NSF SICORP 'Metabolomics for the low carbon society' project.
 
 ![MS-FINDER screenshot](/MS-FINDER/images/scrMsDial1.png)
 
 ## Table of contents
 
-- [Software environments](http:// "Software environments")
+- [Software environments]("#Software environments" "Software environments")
 - Required programs
 - Acceptable ASCII formats
 	* MSP format for MS/MS
@@ -52,3 +52,8 @@ supported by the JST/NSF SICORP ?eMetabolomics for the low carbon society?f proj
 - Mouse function
 - Export
 - Help
+
+### Software environments
++ Windows OS (.NET Framework 4.5 or later): Windows 7 or later
++ RAM: 8.0 GB or more
+
