@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{site.github.url}}/css/style.css" charset="utf-8">
+
 # MS-FINDER tutorial
 
 ### Abstract
