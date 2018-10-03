@@ -3,6 +3,11 @@
 Sentences common
 ######################################################################
 */
+html, body {
+	margin: 0 auto;
+	color: #2b2b2b;
+	background-color: #fffffe;
+}
 
 img {
 	backface-visibility: hidden;
