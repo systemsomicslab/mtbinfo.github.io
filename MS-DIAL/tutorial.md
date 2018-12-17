@@ -7,10 +7,10 @@ Last edited in Sep. 14, 2018
 MS-DIAL was launched as a universal program for untargeted metabolomics that supports multiple instruments (GC/MS, GC/MS/MS, LC/MS, and LC/MS/MS) and MS vendors (Agilent, Bruker, LECO, Sciex, Shimadzu, Thermo, and Waters). Common data formats such as netCDF (AIA) and mzML, can also be managed in our project. In addition, we released several MSP files including both EI- and MS/MS spectra as a ‘start-up kit’. Moreover, MS-DIAL internally has a version of Fiehn lab’s GC/MS database (oriented by FAME RI index), and in silico retention time- and MS/MS database for LC/MS/MS based lipidomics. The isotope labeled tracking can also be executed in LC/MS project.  
 &emsp;&emsp;&emsp;It features (1) spectral deconvolution for both GC/MS and data-independent MS/MS, (2) streamlined criteria for peak identification, (3) support of all data processing steps from raw data import to statistical analysis, and (4) user-friendly graphic user interface.  
 &emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  
-<div style="text-align: right;">  
+<div style="text-align: right;">
 Hiroshi Tsugawa  
 RIKEN Center for Sustainable Resource Science  
-<hiroshi.tsugawa@riken.jp>  </div>
+<hiroshi.tsugawa@riken.jp></div>
 Lead developer: Hiroshi Tsugawa (RIKEN)   
 Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiology CAS), Ipputa Tada (NIG), Haruki Uchino (Keio)  
 
@@ -21,16 +21,16 @@ MS-DIAL screenshot
 
 ## Table of contents ##
 
-Chapter 1: General introduction of MS-DIAL [5](#chapter-1-general-introduction-of-ms-dial)  
-&emsp;Section 1: Downloading file converter to convert a vendor’s format into ABF	[6](#section-1-downloading-file-converter-to-convert-a-vendors-format-into-abf)  
-&emsp;Section 2: Check the conditions for file conversion	7  
-&emsp;Section 3: File conversion	9  
-&emsp;Section 4: Start up a project of MS-DIAL	10  
-&emsp;Section 5: Centroid or Profile? The content of ABF data	12  
-&emsp;Section 6: Database (MSP or Text) for compound identification	13  
-&emsp;&emsp;Section 6-1: MSP format for precursor- and MS/MS library	14  
-&emsp;&emsp;Section 6-2: Adduct ion format	15  
-&emsp;&emsp;Section 6-3: Text format library for retention time and accurate mass search (post identification)	16  
+[Chapter 1: General introduction of MS-DIAL](#chapter-1-general-introduction-of-ms-dial)  
+&emsp;[Section 1: Downloading file converter to convert a vendor’s format into ABF](#section-1-downloading-file-converter-to-convert-a-vendors-format-into-abf)  
+&emsp;[Section 2: Check the conditions for file conversion](#section-2-check-the-conditions-for-file-conversion)  
+&emsp;[Section 3: File conversion](#section-3-file-conversion)  
+&emsp;[Section 4: Start up a project of MS-DIAL](#section-4-start-up-a-project-of-ms-dial)  
+&emsp;[Section 5: Centroid or Profile? The content of ABF data](#section-5-centroid-or-profile-the-content-of-abf-data)  
+&emsp;[Section 6: Database (MSP or Text) for compound identification](#section-6-database-msp-or-text-for-compound-identification)  
+&emsp;&emsp;[Section 6-1: MSP format for precursor- and MS/MS library](#section-6-1-msp-format-for-precursor-and-MSMS-library)  
+&emsp;&emsp;[Section 6-2: Adduct ion format](#section-6-2-adduct-ion-format)  
+&emsp;&emsp;[Section 6-3: Text format library for retention time and accurate mass search (post identification)](#section-6-3-text-format-library-for-retention-time-and-accurate-mass-search-post-identification)  
 &emsp;&emsp;Section 6-4: MSP format as GC/MS library	17  
 &emsp;&emsp;Section 6-5: Alkane- or FAME retention time dictionary for the calculation of retention index	18  
 Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)	20  
