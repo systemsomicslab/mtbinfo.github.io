@@ -28,7 +28,7 @@ MS-DIAL screenshot
 &emsp;[Section 4: Start up a project of MS-DIAL](#section-4-start-up-a-project-of-ms-dial)  
 &emsp;[Section 5: Centroid or Profile? The content of ABF data](#section-5-centroid-or-profile-the-content-of-abf-data)  
 &emsp;[Section 6: Database (MSP or Text) for compound identification](#section-6-database-msp-or-text-for-compound-identification)  
-&emsp;&emsp;[Section 6-1: MSP format for precursor- and MS/MS library](#section-6-1-msp-format-for-precursor-and-MSMS-library)  
+&emsp;&emsp;[Section 6-1: MSP format for precursor- and MS/MS library](#section-6-1-msp-format-for-precursor--and-msms-library)  
 &emsp;&emsp;[Section 6-2: Adduct ion format](#section-6-2-adduct-ion-format)  
 &emsp;&emsp;[Section 6-3: Text format library for retention time and accurate mass search (post identification)](#section-6-3-text-format-library-for-retention-time-and-accurate-mass-search-post-identification)  
 &emsp;&emsp;Section 6-4: MSP format as GC/MS library	17  
