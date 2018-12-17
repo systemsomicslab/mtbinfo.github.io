@@ -5,9 +5,3 @@ timezone: Asia/Tokyo
 auto: true
 server: true
 stylesheet: ["/css/style.css"]
-author_profile: true
-sidebar:
-  - title: "Title"
-    text: "Some text here."
-  - title: "Another Title"
-    text: "More text here."
