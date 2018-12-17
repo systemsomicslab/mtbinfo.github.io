@@ -22,7 +22,7 @@ MS-DIAL screenshot
 ## Table of contents ##
 
 Chapter 1: General introduction of MS-DIAL [5](#chapter-1-general-introduction-of-ms-dial)  
-&emsp;Section 1: Downloading file converter to convert a vendor’s format into ABF	[6](#an)  
+&emsp;Section 1: Downloading file converter to convert a vendor’s format into ABF	[6](#section-1-downloading-file-converter-to-convert-a-vendors-format-into-abf)  
 &emsp;Section 2: Check the conditions for file conversion	7  
 &emsp;Section 3: File conversion	9  
 &emsp;Section 4: Start up a project of MS-DIAL	10  
@@ -120,7 +120,7 @@ The current MS-DIAL program provides a stream pipeline for untargeted metabolomi
 
 ![alt](images/image_2.png)  
 
-### Section 1: Downloading file converter to convert a vendor’s format into ABF ###
+### Section 1: Downloading file converter to convert a vendor’s format into ABF
 1. Go to <http://www.reifycs.com/AbfConverter/index.html>  
 2. Check the requirements and license terms, and download the converter. (Figure 2)  
 
@@ -128,7 +128,7 @@ The current MS-DIAL program provides a stream pipeline for untargeted metabolomi
 
 ![alt](images/image_3.png)  
    
-### Section 2: Check the conditions for file conversion ###
+### Section 2: Check the conditions for file conversion
 
 To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC (Table 1).   
 
@@ -156,7 +156,7 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 *	Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
 *	NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <https://www.microsoft.com/en-us/download/details.aspx?id=15468>.   
 
-### Section 3: File conversion ###
+### Section 3: File conversion
 1.	Start “AnalysisBaseFileConverter.exe”.   
 2.	Drag & drop MS vendor files into this program.  
 3.	Click “Convert”.  
@@ -164,7 +164,7 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 
 ![alt](images/image_4.png)  
 
-### Section 4: Start up a project of MS-DIAL ###
+### Section 4: Start up a project of MS-DIAL
 This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA: data dependent acquisition), and (3) LC/MS/MS (data independent acquisition) for the explanation of parameters and required files. In this section, three projects are summarized and you will find a minimum requirement for these processes. The details for LC/MS/MS (DIA), LC/MS/MS (DDA), and GC/MS processing are described in Chapter 2, Chapter 3, and Chapter 4, respectively.   
 
 ![alt](images/image_5.png)
@@ -176,7 +176,7 @@ This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA
 &#042; In the case of SWATH data-independent analysis, the experiment file can be made at PeakView (Show->sample information). Do not change the column orders. The word “SCAN” should be kept.   
 
    
-### Section 5: Centroid or Profile? The content of ABF data ###
+### Section 5: Centroid or Profile? The content of ABF data
 One of the problems of ABF file is that we have to determine the data type, i.e. centroid or profile, by ourselves. If your data type is ‘centroid’, the MS-DIAL program does not have to execute the process of spectral centroiding. On the other hand, MS-DIAL should perform the centroiding process for ‘profile’ mode data. We have validated the types for several instruments as follows.  
 (what is the difference between centroid and profile? <http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html>)  
 
