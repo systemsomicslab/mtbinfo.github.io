@@ -21,6 +21,9 @@ Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiolog
 MS-DIAL screenshot  
 </div>
 
+{% include toc.html html=content %}
+
+
 ## Table of contents ##
 
 [Chapter 1: General introduction of MS-DIAL](#chapter-1-general-introduction-of-ms-dial)  
