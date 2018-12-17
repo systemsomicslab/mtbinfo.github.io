@@ -1,5 +1,9 @@
 body {
-  margin-right: auto;
+	margin: 0 auto;
+}
+
+.wrapper {
+	margin-right: auto;
 	margin-left: auto;
 	width: 96%;
 	min-width: 1266px;
