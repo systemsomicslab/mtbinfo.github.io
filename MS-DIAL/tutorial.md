@@ -1,5 +1,3 @@
-<div class="sidebar" id="sidebar">
-
 # MS-DIAL tutorial #
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
@@ -23,6 +21,7 @@ Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiolog
 MS-DIAL screenshot  
 </div>
 
+<div class="sidebar" id="sidebar">
 ## Table of contents ##
 
 [Chapter 1: General introduction of MS-DIAL](#chapter-1-general-introduction-of-ms-dial)  
@@ -118,7 +117,7 @@ Chapter 9: Graphical user interface of MS-DIAL in AIF mode	107
 &emsp;Section 3: Compound search for the curation of peak identification	109  
 &emsp;Section 4: Aligned sample table viewer for checking each sample	110  
 
-
+</div>
 ## Chapter 1: General introduction of MS-DIAL
 The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. Figure 1 shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
 
