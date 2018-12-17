@@ -21,7 +21,7 @@ MS-DIAL screenshot
 
 ## Table of contents ##
 
-Chapter 1: General introduction of MS-DIAL	5  
+Chapter 1: General introduction of MS-DIAL	[5](#Chapter 1) 
 &emsp;Section 1: Downloading file converter to convert a vendor’s format into ABF	6  
 &emsp;Section 2: Check the conditions for file conversion	7  
 &emsp;Section 3: File conversion	9  
