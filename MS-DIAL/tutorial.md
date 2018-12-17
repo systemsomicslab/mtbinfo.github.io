@@ -1,3 +1,5 @@
+<div class="sidebar" id="sidebar">
+
 # MS-DIAL tutorial #
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
