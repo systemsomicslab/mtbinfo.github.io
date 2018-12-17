@@ -6,11 +6,11 @@ Last edited in Sep. 14, 2018
 ## ABSTRACT ##
 MS-DIAL was launched as a universal program for untargeted metabolomics that supports multiple instruments (GC/MS, GC/MS/MS, LC/MS, and LC/MS/MS) and MS vendors (Agilent, Bruker, LECO, Sciex, Shimadzu, Thermo, and Waters). Common data formats such as netCDF (AIA) and mzML, can also be managed in our project. In addition, we released several MSP files including both EI- and MS/MS spectra as a ‘start-up kit’. Moreover, MS-DIAL internally has a version of Fiehn lab’s GC/MS database (oriented by FAME RI index), and in silico retention time- and MS/MS database for LC/MS/MS based lipidomics. The isotope labeled tracking can also be executed in LC/MS project.  
 &emsp;&emsp;&emsp;It features (1) spectral deconvolution for both GC/MS and data-independent MS/MS, (2) streamlined criteria for peak identification, (3) support of all data processing steps from raw data import to statistical analysis, and (4) user-friendly graphic user interface.  
-&emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.
+&emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  
 <div style="text-align: right;">  
 Hiroshi Tsugawa  
 RIKEN Center for Sustainable Resource Science  
-hiroshi.tsugawa@riken.jp  </div>
+<hiroshi.tsugawa@riken.jp>  </div>
 Lead developer: Hiroshi Tsugawa (RIKEN)   
 Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiology CAS), Ipputa Tada (NIG), Haruki Uchino (Keio)  
 
@@ -121,7 +121,7 @@ The current MS-DIAL program provides a stream pipeline for untargeted metabolomi
 ![alt](images/image_2.png)  
 
 ### Section 1: Downloading file converter to convert a vendor’s format into ABF ###
-1. Go to http://www.reifycs.com/AbfConverter/index.html  
+1. Go to <http://www.reifycs.com/AbfConverter/index.html>  
 2. Check the requirements and license terms, and download the converter. (Figure 2)  
 
 &#042; File converter is freely available.  
@@ -146,15 +146,15 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 |Waters|.RAW|MassLynx Raw Data Reader Interface Library|
 |netCDF|.CDF|Microsoft Visual J# 2.0|
 
-**FAQ (see the latest at http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index3.html)**  
+**FAQ (see the latest at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index3.html>)**  
 *	Agilent: Almost all of Agilent’s raw data (.D) can readily be converted without any additional steps. However, the only exception is GCMS data sets obtained from ChemStation, which cannot be directly converted to ABF. Therefore, you have to convert your files into netCDF (AIA) in ChemStation. Then, convert your AIA files into ABF using our file converter.  
-*	Bruker: Go to https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).  
+*	Bruker: Go to <https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html>. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).  
 * LECO: All of your data has to be converted to netCDF (AIA) first. Then, convert them into ABF using our file converter.  
-*	Shimadzu: In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (http://proteowizard.sourceforge.net/index.shtml). Then, convert them into ABF.  
-*	Thermo: The following link explains how to install MSFileReader. http://fields.scripps.edu/rawconv/. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.  
+*	Shimadzu: In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (<http://proteowizard.sourceforge.net/index.shtml>). Then, convert them into ABF.  
+*	Thermo: The following link explains how to install MSFileReader. <http://fields.scripps.edu/rawconv/>. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.  
 
-*	Waters: 1. Download MassLyncs Raw Data Reader Interface Library (http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
-*	NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at https://www.microsoft.com/en-us/download/details.aspx?id=15468.   
+*	Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
+*	NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <https://www.microsoft.com/en-us/download/details.aspx?id=15468>.   
 
 ### Section 3: File conversion ###
 1.	Start “AnalysisBaseFileConverter.exe”.   
@@ -178,7 +178,7 @@ This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA
    
 ### Section 5: Centroid or Profile? The content of ABF data ###
 One of the problems of ABF file is that we have to determine the data type, i.e. centroid or profile, by ourselves. If your data type is ‘centroid’, the MS-DIAL program does not have to execute the process of spectral centroiding. On the other hand, MS-DIAL should perform the centroiding process for ‘profile’ mode data. We have validated the types for several instruments as follows.  
-(what is the difference between centroid and profile? http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html)  
+(what is the difference between centroid and profile? <http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html>)  
 
 &#10003; SCIEX QTOF: Profile  
 &#10003;	Thermo Q-Exactive: Profile  
@@ -200,10 +200,10 @@ The data types of Bruker LC-QTOF and FT-ICR, and Waters LC-Xevo QTOF and Synapt 
 3.	If the shape appears to require centroiding, restart the project in 'Profile' mode.  
 
 ### Section 6: Database (MSP or Text) for compound identification  
-The database formats for GC/MS or LC/MS datasets are described in this section. The main difference between GC/MS (EI-MS) and LC/MS (ESI-MS/MS) is the availability of precursor ion and its MS/MS. While a precursor *m/z* and its MS/MS are mostly available in ESI (or the other soft ionization)-MS/MS, the molecular ion in EI-MS is difficult to detect owning to the hard ionization. Several MSP files are downloadable as a starter kit for MS-DIAL at http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html.  
+The database formats for GC/MS or LC/MS datasets are described in this section. The main difference between GC/MS (EI-MS) and LC/MS (ESI-MS/MS) is the availability of precursor ion and its MS/MS. While a precursor *m/z* and its MS/MS are mostly available in ESI (or the other soft ionization)-MS/MS, the molecular ion in EI-MS is difficult to detect owning to the hard ionization. Several MSP files are downloadable as a starter kit for MS-DIAL at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.  
 
 #### Section 6-1: MSP format for precursor- and MS/MS library  
-MS-DIAL supports the MSP (http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf) format in ASCII text (below Figure). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  
+MS-DIAL supports the MSP (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) format in ASCII text (below Figure). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  
 
 ![alt](images/image_8.png)
 Figure: an example of MSP format library  
@@ -234,7 +234,7 @@ MS-DIAL also supports tab-delimited text format library for peak identification 
 Figure: an example of text library  
    
 #### Section 6-4: MSP format as GC/MS library  
-MS-DIAL supports the MSP format (http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf) in ASCII text, same as in section 6-1. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   
+MS-DIAL supports the MSP format (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) in ASCII text, same as in section 6-1. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   
 
 ![alt](images/image_10.png)  
 Figure: an example of MSP format library for GC/MS  
@@ -244,9 +244,9 @@ Figure: an example of MSP format library for GC/MS
 Retention time and retention index are used for routine identification of metabolites in GC/MS based metabolomics. The current MS-DIAL program has three options for the use of retention information: 1) retention time, 2) alkane mix based retention index, and 3) FAME (fatty acid methyl ester) mix based retention index.  
 
 See the experimental details of alkane and FAME mixtures.  
-Alkanes: http://www.sciencedirect.com/science/article/pii/S1389172311001848  
-Alkanes: https://en.wikipedia.org/wiki/Kovats_retention_index  
-FAMEs: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805091/  
+Alkanes: <http://www.sciencedirect.com/science/article/pii/S1389172311001848>  
+Alkanes: <https://en.wikipedia.org/wiki/Kovats_retention_index>  
+FAMEs: <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805091/>  
 
 In order to calculate the retention indexes of detected peaks, users have to prepare a dictionary including the pairs of the carbon number and its retention time as tab-delimited text (see next page).   
 
@@ -260,10 +260,10 @@ Figure: examples of Alkanes or Fames dictionaries
    
 ## Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
 
-A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids (MS-DIAL’s LipidBlast) is demonstrated. The experimental protocol is described in previous research: http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html.   
+A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids (MS-DIAL’s LipidBlast) is demonstrated. The experimental protocol is described in previous research: <http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html>.   
 
 This tutorial uses 23 demonstration files which are downloadable from the below link.   
-http://prime.psc.riken.jp/?action=drop_index  
+<http://prime.psc.riken.jp/?action=drop_index>  
 
 ![alt](images/image_12.png)
 
@@ -320,12 +320,12 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/image_16.png)  
 
 
-*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf). For FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.  
+*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.  
 
 *Peak spotting parameters*: The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. If you already know unwanted *m/z* peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  
 
    
-A part of http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf  
+A part of <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>  
 
 ![alt](images/image_17.png)  
 ![alt](images/image_18.png)
@@ -452,7 +452,7 @@ Note: Please finalize your file name here, because you cannot change it later.
 #### Section 3-2: Peak detection tab  
 ![alt](images/image_31.png)  
 
-*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf). For FT-ICR or Orbirap data, the minimum peak height should be more than 20,000.  
+*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbirap data, the minimum peak height should be more than 20,000.  
 
 *Peak spotting parameters*: The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. If you already know unwanted *m/z* peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  
    
@@ -504,7 +504,7 @@ Practically, what you have to do is to curate the identification result of an al
    
 ### Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL  
 Gas chromatography coupled with mass spectrometry is a robust and stable technique for metabolic profiling. Practically, it should be the first choice for untargeted metabolome analyses in terms of easier operation and maintenance over LC/MS. Moreover, the compound identification of GC/MS is currently straightforward owing to huge amount of retention time (and retention index) and EI spectrum databases.  
-Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part of this study) is demonstrated. The detail is shown in http://prime.psc.riken.jp/meko/. The alkane mixture based retention index (Kovats) is used. The other methods using FAME mixture based retention index (Fiehn) or retention times are also explained. The files used for this demonstration can be downloaded from http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html.   
+Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part of this study) is demonstrated. The detail is shown in <http://prime.psc.riken.jp/meko/>. The alkane mixture based retention index (Kovats) is used. The other methods using FAME mixture based retention index (Fiehn) or retention times are also explained. The files used for this demonstration can be downloaded from <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
 
 ![alt](images/image_38.png)  
@@ -551,7 +551,7 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/image_43.png)  
 
 *Peak detection parameters*: The workflow of GC/MS deconvolution is 1) peak picking in each *m/z* chromatogram, and 2) deconvolution on the basis of detected peak spots. The algorithm of this peak picking is the same as LC/MS parts except for exclusion mass list which was removed from the parameter list in GC/MS processing.   
-Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf ). For GC-Q-Exactive data, the minimum peak height should be 50,000 or more (at a first trial).  
+Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For GC-Q-Exactive data, the minimum peak height should be 50,000 or more (at a first trial).  
 
 *Peak spotting parameters*: If your data is obtained by high resolution GCMS such as Agilent GC-QTOFMS and GC-QExactive, check ‘accurate MS’. Then, set the width of mass slice. From our experience, 0.1 or 0.05 is suitable for accurate GCMS. In addition, put the mass accuracy which is used for the construction of EI-chromatograms followed by the deconvolution (MS1Dec) program.  
 
@@ -565,14 +565,14 @@ In addition, you may set a cutoff value to reduce the MS noises (see Section 3-3
    
 #### Section 3-4: Identification tab  
 The peak identification of GC/MS based untargeted analysis is straightforward, but you have to carefully check your conditions especially about retention index for the comprehensive identification of metabolites. In fact, MS-DIAL can use ‘retention time’ as the index of retention information, but it is highly recommended to use retention indexes for the routine identifications. * Since there is retention time information as well in our curated MSP DBs, you may be able to choose ‘retention time’ as the index. However, you should use larger retention time tolerance, at the cost of increasing false positives.   
-There are two methods to calculate retention indexes: 1) Kovats on the basis of alkane mixture, and 2) Fiehn on the basis on FAME (fatty acid methyl ester) mixture. These mixtures can be bought for example from Sigma-Aldrich (49452-U for C7-C40 saturated alkane mixture) and from Agilent (http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf ). Here, you have to prepare a tab-delimited file which includes the pair-list of carbon number and its retention time.  
+There are two methods to calculate retention indexes: 1) Kovats on the basis of alkane mixture, and 2) Fiehn on the basis on FAME (fatty acid methyl ester) mixture. These mixtures can be bought for example from Sigma-Aldrich (49452-U for C7-C40 saturated alkane mixture) and from Agilent (<http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf>). Here, you have to prepare a tab-delimited file which includes the pair-list of carbon number and its retention time.  
 ![alt](images/image_45.png)  
 
 The figure above describes the way to check the retention times of Alkane mixture (using AMDIS), and the same way can be used for FAME mixture. Note that **for FAME based Fiehn RI calculation**, you MUST prepare all of retention information of C8, C9, C10, C12, C14, C16, C18, C20, C22, C24, C26, C28, and C30 to calculate Fiehn RIs. On the other hand, all of alkanes is not required for the Kovats calculation.   
 
 From version 2.42, MS-DIAL supports ‘retention index’ based peak alignment. Some metabolomics studies can be acquired over months / years.  Cutting 10-15 cm of the GC column during instrument maintenance makes retention times shorter but this does not influence retention index. In some cases, there are many isomers (e.g., analysis of volatiles), thus, use of wide retention time tolerance (e.g., 0.5-1 min) could lead to wrong peak alignment. In order to deal with this requirement, users have to define the ‘pair’ of analysis file path and carbon-RT dictionary file in the parameter setting. Use ‘auto fill’ of context menu to apply a dictionary file into all of the other analysis files.  
 
-&#042; AMDIS (http://chemdata.nist.gov/mass-spc/amdis/downloads/) is a nice and very robust program for GC/MS analysis. It can also be used to check the retention times of both alkanes and FAMEs since you can directly see your raw data without any processing. In contrast, MS-DIAL has to be executed first to check raw data sets.  
+&#042; AMDIS (<http://chemdata.nist.gov/mass-spc/amdis/downloads/>) is a nice and very robust program for GC/MS analysis. It can also be used to check the retention times of both alkanes and FAMEs since you can directly see your raw data without any processing. In contrast, MS-DIAL has to be executed first to check raw data sets.  
 
 *MSP file*: Set your MSP file here. (Tutorial data: **GCMS DB_MassBank-Restek-RIKEN.msp**.) Importantly, as long as you use FAME mixture, you do not have to prepare your own MSP since MS-DIAL internally has the Fiehn BinBase spectra records. Of course, you can choose your own MSP file for FAME based GC/MS metabolome analysis.  
 
@@ -651,7 +651,7 @@ B)	Principal component analysis
 
 A)	If you want to use internal standards to normalize your peak list, you have to set the IS information in **Option** menu. MS-DIAL also supports LOESS and cubic spline algorithm to normalize batch or amplitude drifts. In order to use the LOESS algorithm, you have to set “quality control” and “analytical order” information correctly in the **Option** menu.  
 B)	If you want to use the other statistics, please go to PRIMe web site:  
-http://prime.psc.riken.jp/Metabolomics_Software/StatisticalAnalysisOnMicrosoftExcel/index.html  
+<http://prime.psc.riken.jp/Metabolomics_Software/StatisticalAnalysisOnMicrosoftExcel/index.html>  
 
 &#042; Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_&#042;&#042;&#042;’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘176’ which was annotated LysoPC 17:0 from the setting below.  
 
@@ -801,18 +801,18 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
    
 ## Chapter 6: Other utilities of MS-DIAL  
 ### Section 1: Link to MS-FINDER for searching unknowns  
-MS-FINDER aims to provide 4lutions for 1) formula predictions, 2) fragment annotations, and 3) structure elucidations by means of survey scan MS and MS/MS spectra of unknowns. The detail of MS-FINDER is described in http://prime.psc.riken.jp/Metabolomics_Software/MS-FINDER/index.html. **Note that you have to download the MS-FIDNER program from the website above on your PC.**   
+MS-FINDER aims to provide 4lutions for 1) formula predictions, 2) fragment annotations, and 3) structure elucidations by means of survey scan MS and MS/MS spectra of unknowns. The detail of MS-FINDER is described in <http://prime.psc.riken.jp/Metabolomics_Software/MS-FINDER/index.html>. **Note that you have to download the MS-FIDNER program from the website above on your PC.**   
 The current MS-DIAL program can send the unknown query. On the first time that you try to send a query into MS-FINDER, a pop up window will be generated, and then select ‘MSFINDER.exe’ from its dialog box. Moreover, MS-DIAL can export all of peak- or alignment spots as ‘MAT’ format file which can be imported by MS-FINDER (**Add components to search list**).   
 
 ![alt](images/image_88.png)
 
 ### Section 2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets  
-The purpose of this section is to announce the utility of ‘MRMPROBS’ instead of MS-DIAL for SWATH-MS or other DIA-MS data. MRMPROBS was originally developed for targeted metabolomics using triple quadrupole MS data (multiple reaction monitoring, MRM; selected reaction monitoring, SRM). It also supports the entire workflow from data import until statistical analysis as MS-DIAL does. Compared to the MS-DIAL program, MRMPROBS is optimized for targeted metabolomics: 1) users can manually curate the peak left- and right edges of chromatographic peaks, 2) users can simultaneously check all samples’ peaks of a targeted compound, and 3) users can easily curate the identification results. http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html  
+The purpose of this section is to announce the utility of ‘MRMPROBS’ instead of MS-DIAL for SWATH-MS or other DIA-MS data. MRMPROBS was originally developed for targeted metabolomics using triple quadrupole MS data (multiple reaction monitoring, MRM; selected reaction monitoring, SRM). It also supports the entire workflow from data import until statistical analysis as MS-DIAL does. Compared to the MS-DIAL program, MRMPROBS is optimized for targeted metabolomics: 1) users can manually curate the peak left- and right edges of chromatographic peaks, 2) users can simultaneously check all samples’ peaks of a targeted compound, and 3) users can easily curate the identification results. <http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>  
 
 ![alt](images/image_89.png)
 
 &emsp;&emsp;&emsp;&emsp;MRMPROBS is now launched as a universal program to deal with DIA-MS data and GC/MS data as well as QqQ-MS data. While the current MS-DIAL program always calculates the peak intensity (height) and peak area of compounds by the survey scan MS1 data, MRMPROBS can utilize the MS/MS chromatograms for metabolite quantifications. In addition, the tools for untargeted analysis like MS-DIAL will often provide the false positive things in the process of peak picking, deconvolution, and peak alignment. In contrast, users can easily parse the targeted compounds with the user-friendly graphical user interface. The ‘bridge’ from MS-DIAL to MRMPROBS was described in next figure. The workflow can also be utilized for GC/MS data. The detail of MRMPROBS is fully described in the tutorial of MRMPROBS program.  
-http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html  
+<http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>  
 
 ![alt](images/image_90.png)
 Workflow of the ‘bridge’ from MS-DIAL to MRMPROBS   
@@ -834,13 +834,13 @@ B.	Second way to perform the network analysis is to click the network button at 
 ![alt](images/image_94.png)
 
 
-C.	 Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not show all of nodes and edges to be used in the network analysis. If you want to use all of information with the flexible graphical user interface, please export the node- and edge files from the export option. The exported results can be imported by the cytoscape program (http://www.cytoscape.org/cy3.html).   
+C.	 Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not show all of nodes and edges to be used in the network analysis. If you want to use all of information with the flexible graphical user interface, please export the node- and edge files from the export option. The exported results can be imported by the cytoscape program (<http://www.cytoscape.org/cy3.html>).   
 
 ![alt](images/image_95.png)
 
 ### Chapter 7: MS-DIAL isotope tracking function  
 
-Stable isotope assisted metabolomics is a great approach to reveal the metabolic turnover of a nutrient source, to calculate flux balances, and to determine the molecular element (CNOS) of unknown molecules. Here, a project using LC-MS/MS data sets of non-labeled- and fully 13C labeled Arabidopsis thaliana samples for the comprehensive annotation of plant specialized metabolites is demonstrated. The purpose of this study was to determine the carbon element count of molecular formula by using 13C labeled plant tissues. The files used for this demonstration can be downloaded from http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html.   
+Stable isotope assisted metabolomics is a great approach to reveal the metabolic turnover of a nutrient source, to calculate flux balances, and to determine the molecular element (CNOS) of unknown molecules. Here, a project using LC-MS/MS data sets of non-labeled- and fully 13C labeled Arabidopsis thaliana samples for the comprehensive annotation of plant specialized metabolites is demonstrated. The purpose of this study was to determine the carbon element count of molecular formula by using 13C labeled plant tissues. The files used for this demonstration can be downloaded from <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
 ![alt](images/image_96.png)  
 
@@ -937,7 +937,7 @@ The result can be checked as described below. Practically, I recommend the follo
 
 ## Chapter 8: Project for all ion fragmentation with multiple collision energies   
 We recently started the development for data independent MS/MS acquisition data from all-ion approach (such as MSE, all-ions, or all ion fragementations) with ‘multiple collision energies (like a sequential loop of 0V, 10V, and 40V)’. Here, a project is demonstrated using LC/MS/MS data sets from yeast strains, which have already published (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). The abf files used for this demonstration can be downloaded from the below link.  
-http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html  
+<http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>  
 
 ![alt](images/image_107.png)
 
@@ -1019,7 +1019,7 @@ Note: The chromatographic peaks are highly coeluted in the beginning of this LC-
 #### Section 3-2: Peak detection tab  
 ![alt](images/image_113.png)
 
-*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf ). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.  
+*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.  
 **Note:** check the smoothing level at the raw data  
 **Note:** it is recommended to set the minimum peak height at least 2-5 fold higher than the noise level, otherwise the data analysis will take very long time. To check the noise level you can for example check several scans in the non-busy region of the mass spectrum. The small peaks not found consistently across the scans can be regarded as noise.   
 
