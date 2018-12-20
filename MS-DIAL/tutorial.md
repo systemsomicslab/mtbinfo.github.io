@@ -9,9 +9,9 @@ MS-DIAL was launched as a universal program for untargeted metabolomics that sup
 &emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  
 
 <div style="text-align: right;">
-Hiroshi Tsugawa<br />  
-RIKEN Center for Sustainable Resource Science<br />  
-<hiroshi.tsugawa@riken.jp>
+Hiroshi Tsugawa<br />
+RIKEN Center for Sustainable Resource Science<br />
+<a href="mailto:hiroshi.tsugawa@riken.jp>
 </div>
 
 Lead developer: Hiroshi Tsugawa (RIKEN)   
