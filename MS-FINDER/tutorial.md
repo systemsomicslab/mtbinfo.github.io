@@ -19,7 +19,7 @@ hiroshi.tsugawa@riken.jp
 ![alt](images/image_1.png)
 MS-FINDER screenshot  
 <br />
-<div id="boxMenu">
+<div id ="boxMenu">
 ## Table of contents  
 [Section 1: Software environments](#section-1)  
 [Section 2: Required programs](#section-2)  
