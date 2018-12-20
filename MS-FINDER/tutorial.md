@@ -20,6 +20,40 @@ hiroshi.tsugawa@riken.jp
 MS-FINDER screenshot  
 <br />
 
+<div id="boxMenu">
+<h2 id="table-of-contents">Table of contents</h2>
+<p><a href="#section-1">Section 1: Software environments</a><br />
+<a href="#section-2">Section 2: Required programs</a><br />
+<a href="#section-3">Section 3: Acceptable ASCII formats</a><br />
+&emsp;<a href="#section-3-1">Section 3-1: MSP format for MS/MS</a><br />
+&emsp;<a href="#section-3-2">Section 3-2: MSP format for EI-MS</a><br />
+&emsp;<a href="#section-3-3">Section 3-3: MAT format</a><br />
+&emsp;<a href="#section-3-4">Section 3-4: Adduct ion format: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.</a><br />
+&emsp;<a href="#section-3-5">Section 3-5: User defined structure database format</a><br />
+&emsp;<a href="#section-3-6">Section 3-6: Specific field to fix the formula element count</a><br />
+<a href="#section-4">Section 4: Import queries</a><br />
+&emsp;<a href="#section-4-1">Section 4-1: From a folder which includes MSP or MAT format files</a><br />
+&emsp;<a href="#section-4-2">Section 4-2: From the graphical user interface of the MS-FINDER program</a><br />
+&emsp;<a href="#section-4-3">Section 4-3: From the MS-DIAL program</a><br />
+<a href="#section-5">Section 5: Parameter setting</a><br />
+&emsp;<a href="#section-5-1">Section 5-1: Method tab</a><br />
+&emsp;<a href="#section-5-2">Section 5-2: Mass spectrum tab</a><br />
+&emsp;<a href="#section-5-3">Section 5-3: Formula finder tab</a><br />
+&emsp;<a href="#section-5-4">Section 5-4: Structure finder tab</a><br />
+&emsp;<a href="#section-5-5">Section 5-5: Data source tab</a><br />
+<a href="#section-6">Section 6: Compound annotation by <em>in silico</em> fragmenter</a><br />
+<a href="#section-7">Section 7: Compound annotation by searching spectral databases</a><br />
+<a href="#section-8">Section 8: FSEA: fragment set enrichment analysis</a><br />
+<a href="#section-9">Section 9: Compound annotation (batch analysis)</a><br />
+<a href="#section-10">Section 10: Peak assignment (single)</a><br />
+<a href="#section-11">Section 11: Peak assignment (batch job)</a><br />
+<a href="#section-12">Section 12: Molecular spectrum networking</a><br />
+<a href="#section-13">Section 13: Mouse function</a><br />
+<a href="#section-14">Section 14: Export</a><br />
+<a href="#section-15">Section 15: Help</a></p>
+</div>
+
+
 ## Table of contents  
 [Section 1: Software environments](#section-1)  
 [Section 2: Required programs](#section-2)  
