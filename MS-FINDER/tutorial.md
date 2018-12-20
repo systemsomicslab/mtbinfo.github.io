@@ -19,7 +19,7 @@ hiroshi.tsugawa@riken.jp
 ![alt](images/image_1.png)
 MS-FINDER screenshot  
 <br />
-<div id ="boxMenu">
+
 ## Table of contents  
 [Section 1: Software environments](#section-1)  
 [Section 2: Required programs](#section-2)  
@@ -50,7 +50,6 @@ MS-FINDER screenshot
 [Section 13: Mouse function](#section-13)  
 [Section 14: Export](#section-14)  
 [Section 15: Help](#section-15)  
-</div>
    
 ## Section 1
 ## Software environments  
