@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="/css/style.css>
+<link rel="stylesheet" href="/css/style.css">
 # MS-FINDER tutorial
 
 ### Abstract
