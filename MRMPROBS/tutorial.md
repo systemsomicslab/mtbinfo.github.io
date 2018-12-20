@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/style.css">
 # MRMPROBS tutorial  
 <div style="text-align: right;">
 Edited in 2016/11/16  
