@@ -168,7 +168,7 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 1.	Start “AnalysisBaseFileConverter.exe”.   
 2.	Drag & drop MS vendor files into this program.  
 3.	Click “Convert”.  
-4.	The ABF files are generated in the same directory as the raw data files. (Figure 3)  
+4.	The ABF files are generated in the same directory as the raw data files. (**Figure 3**)  
 
 ![alt](images/image_4.png)  
 
@@ -181,7 +181,7 @@ This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA
 ![alt](images/image_7.png)
 
 
-&#042; Prepare the above dictionary file as tab-delimited text.  
+&#042; <span style="color:red;">Prepare the above dictionary file as tab-delimited text.</span>  
 &#042; In the case of SWATH data-independent analysis, the experiment file can be made at PeakView (Show->sample information). Do not change the column orders. The word “SCAN” should be kept.   
 
    
@@ -215,7 +215,7 @@ The database formats for GC/MS or LC/MS datasets are described in this section. 
 
 #### Section 1-6-1
 #### MSP format for precursor- and MS/MS library  
-MS-DIAL supports the MSP (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) format in ASCII text (below Figure). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  
+MS-DIAL supports the MSP (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) format in ASCII text (below **Figure**). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  
 
 ![alt](images/image_8.png)
 Figure: an example of MSP format library  
@@ -295,6 +295,7 @@ Mass spectrometer: SWATH method with negative ion mode.
 &emsp;&emsp;&emsp;Q1 window, 21 Da  
 &emsp;&emsp;&emsp;Mass range, *m/z* 100-1250  
 
+
 ### Section 2-1
 ### Starting up your project  
 ![alt](images/image_13.png)
@@ -302,7 +303,7 @@ Mass spectrometer: SWATH method with negative ion mode.
 1. File -> new project  
 2. Set your project file path to the directory of your ABF files  
 3. Select your method type as ‘Data independent MS/MS’  
-4. Select the experimental file: ABSciex_Experiment_Information_CSH21Da.txt.  
+4. Select the experimental file: **ABSciex_Experiment_Information_CSH21Da.txt**.  
 5. Choose data type profile data for both MS1 and MS/MS  
 6. Choose negative ion mode  
 7. Choose target omics as lipidomics  
