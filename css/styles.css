@@ -1,0 +1,36 @@
+body {
+	margin: 0 auto;
+}
+
+header{
+	top:30px;
+	left:3%;
+}
+
+footer{
+	top:145px;
+	left:3%;
+}
+
+section {
+	width: 66%;
+}
+
+.wrapper {
+	margin-right: auto;
+	margin-left: auto;
+	width: 96%;
+	min-width: 1266px;
+	max-width: 2360px;
+	background-color: #fffffe;
+}
+
+#boxMenu{
+	position: fixed;
+	top:200px;
+	left:3%;
+	height:86%;
+	width:30%;
+	overflow-x:scroll;
+	z-index:999;
+}
