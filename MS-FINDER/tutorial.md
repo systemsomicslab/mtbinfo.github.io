@@ -20,7 +20,6 @@ hiroshi.tsugawa@riken.jp
 MS-FINDER screenshot  
 <br />
 
-<span id="boxMenu">
 ## Table of contents  
 [Section 1: Software environments](#section-1)  
 [Section 2: Required programs](#section-2)  
@@ -51,7 +50,7 @@ MS-FINDER screenshot
 [Section 13: Mouse function](#section-13)  
 [Section 14: Export](#section-14)  
 [Section 15: Help](#section-15)  
-</span> 
+
 ## Section 1
 ## Software environments  
 * Windows OS (.NET Framework 4.5 or later): Windows 7 or later  
