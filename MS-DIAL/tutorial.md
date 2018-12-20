@@ -11,7 +11,7 @@ MS-DIAL was launched as a universal program for untargeted metabolomics that sup
 <div style="text-align: right;">
 Hiroshi Tsugawa<br />
 RIKEN Center for Sustainable Resource Science<br />
-<a href="mailto:hiroshi.tsugawa@riken.jp>
+hiroshi.tsugawa@riken.jp
 </div>
 
 Lead developer: Hiroshi Tsugawa (RIKEN)   
