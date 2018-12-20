@@ -166,7 +166,7 @@ MS-FINDER recently accepts the filtering field for molecular formula prediction.
 
 ![alt](images/image_5.png)  
    
-## Sectopm 4
+## Section 4
 ## Import queries  
 There are two ways to import unknown queries.   
 
