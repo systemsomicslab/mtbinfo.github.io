@@ -4,4 +4,3 @@ encoding: UTF-8
 timezone: Asia/Tokyo
 auto: true
 server: true
-stylesheet: ["/css/style.css"]
