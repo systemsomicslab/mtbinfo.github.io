@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/css/style.css">
-
 # MS-FINDER tutorial  
 <div style ="text-align: right;">
 Last edited in Sep. 10, 2018  
@@ -52,38 +50,6 @@ MS-FINDER screenshot
 <a href="#section-14">Section 14: Export</a><br />
 <a href="#section-15">Section 15: Help</a></p>
 </div>
-
-
-## Table of contents  
-[Section 1: Software environments](#section-1)  
-[Section 2: Required programs](#section-2)  
-[Section 3: Acceptable ASCII formats](#section-3)  
-&emsp;[Section 3-1: MSP format for MS/MS](#section-3-1)  
-&emsp;[Section 3-2: MSP format for EI-MS](#section-3-2)  
-&emsp;[Section 3-3: MAT format](#section-3-3)  
-&emsp;[Section 3-4: Adduct ion format: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.](#section-3-4)  
-&emsp;[Section 3-5: User defined structure database format](#section-3-5)  
-&emsp;[Section 3-6: Specific field to fix the formula element count](#section-3-6)  
-[Section 4: Import queries](#section-4)  
-&emsp;[Section 4-1: From a folder which includes MSP or MAT format files](#section-4-1)  
-&emsp;[Section 4-2: From the graphical user interface of the MS-FINDER program](#section-4-2)  
-&emsp;[Section 4-3: From the MS-DIAL program](#section-4-3)  
-[Section 5: Parameter setting](#section-5)  
-&emsp;[Section 5-1: Method tab](#section-5-1)  
-&emsp;[Section 5-2: Mass spectrum tab](#section-5-2)  
-&emsp;[Section 5-3: Formula finder tab](#section-5-3)  
-&emsp;[Section 5-4: Structure finder tab](#section-5-4)  
-&emsp;[Section 5-5: Data source tab](#section-5-5)  
-[Section 6: Compound annotation by *in silico* fragmenter](#section-6)  
-[Section 7: Compound annotation by searching spectral databases](#section-7)  
-[Section 8: FSEA: fragment set enrichment analysis](#section-8)  
-[Section 9: Compound annotation (batch analysis)](#section-9)  
-[Section 10: Peak assignment (single)](#section-10)  
-[Section 11: Peak assignment (batch job)](#section-11)  
-[Section 12: Molecular spectrum networking](#section-12)  
-[Section 13: Mouse function](#section-13)  
-[Section 14: Export](#section-14)  
-[Section 15: Help](#section-15)  
 
 ## Section 1
 ## Software environments  
