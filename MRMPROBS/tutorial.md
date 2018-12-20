@@ -10,14 +10,16 @@ Hiroshi Tsugawa<br />
 RIKEN Center for Sustainable Resource Science<br />
 hiroshi.tsugawa@riken.jp
 </div>  
+<br />
 
 ![alt](images/image_1.png)  
-
 MRMPROBS screenshot  
+<br />
+
 ## Table of contents  
 [Section 1: Software environments](#section-1)  
 [Section 2: Required software programs and files](#section-2)  
-[Section 3:Project type and condition](#section-3)  
+[Section 3: Project type and condition](#section-3)  
 [Section 4: ABF file conversion](#section-4)  
 &emsp;[Section 4-1: Downloading the ABF converter](#section-4-1)  
 &emsp;[Section 4-2: Check the conditions for file conversion](#section-4-2)  
