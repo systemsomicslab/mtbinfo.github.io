@@ -84,7 +84,7 @@ MS-DIAL screenshot
 &emsp;&emsp;[Section 5-12-1: Display filters](#section-5-12-1)  
 &emsp;&emsp;[Section 5-12-2: Tabs of MS-DIAL](#section-5-12-2)  
 &emsp;[Section 5-13: Search](#section-5-13)  
-&emsp;&emsp;[Section 5-13-1: MS/MS fragment searcher](#section-15-13-1)  
+&emsp;&emsp;[Section 5-13-1: MS/MS fragment searcher](#section-5-13-1)  
 &emsp;&emsp;[Section 5-13-2: Amalgamation of different polarity peak list](#section-5-13-2)  
 [Chapter 6: Other utilities of MS-DIAL](#chapter-6)  
 &emsp;[Section 6-1: Link to MS-FINDER for searching unknowns](#section-6-1)  
