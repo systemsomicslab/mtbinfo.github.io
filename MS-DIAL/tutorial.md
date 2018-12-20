@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/style.css">
 # MS-DIAL tutorial
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
@@ -19,11 +18,10 @@ Lead developer: Hiroshi Tsugawa (RIKEN)
 Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiology CAS), Ipputa Tada (NIG), Haruki Uchino (Keio)  
 
 ![alt](images/image_1.png)
-<div style="text-align: center;">
 MS-DIAL screenshot  
-</div>
 
-## Table of contents ##
+
+## Table of contents
 
 [Chapter 1: General introduction of MS-DIAL](#chapter-1)  
 &emsp;[Section 1-1: Downloading file converter to convert a vendor’s format into ABF](#section-1-1)  
@@ -122,15 +120,15 @@ MS-DIAL screenshot
 
 ## Chapter 1
 ## General introduction of MS-DIAL
-The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. Figure 1 shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
+The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. **Figure 1** shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
 
 ![alt](images/image_2.png)  
+<br />
 
 ### Section 1-1
 ### Downloading file converter to convert a vendor’s format into ABF
 1. Go to <http://www.reifycs.com/AbfConverter/index.html>  
-2. Check the requirements and license terms, and download the converter. (Figure 2)  
-
+2. Check the requirements and license terms, and download the converter. (**Figure 2**)  
 &#042; File converter is freely available.  
 
 ![alt](images/image_3.png)  
@@ -138,7 +136,7 @@ The current MS-DIAL program provides a stream pipeline for untargeted metabolomi
 ### Section 1-2
 ### Check the conditions for file conversion
 
-To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC (Table 1).   
+To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC (**Table 1**).   
 
 **Table 1: Summary of PC condition required for file conversion**
 
@@ -160,7 +158,6 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 * LECO: All of your data has to be converted to netCDF (AIA) first. Then, convert them into ABF using our file converter.  
 *	Shimadzu: In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (<http://proteowizard.sourceforge.net/index.shtml>). Then, convert them into ABF.  
 *	Thermo: The following link explains how to install MSFileReader. <http://fields.scripps.edu/rawconv/>. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.  
-
 *	Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
 *	NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <https://www.microsoft.com/en-us/download/details.aspx?id=15468>.   
 
