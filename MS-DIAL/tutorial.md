@@ -1,6 +1,3 @@
-
-<link rel="stylesheet" href="/css/style.css">
-
 # MS-DIAL tutorial #
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
@@ -12,9 +9,10 @@ MS-DIAL was launched as a universal program for untargeted metabolomics that sup
 &emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  
 
 <div style="text-align: right;">
-Hiroshi Tsugawa  
-RIKEN Center for Sustainable Resource Science  
-<hiroshi.tsugawa@riken.jp></div>
+Hiroshi Tsugawa<br />  
+RIKEN Center for Sustainable Resource Science<br />  
+<hiroshi.tsugawa@riken.jp>
+</div>
 
 Lead developer: Hiroshi Tsugawa (RIKEN)   
 Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiology CAS), Ipputa Tada (NIG), Haruki Uchino (Keio)  
@@ -36,9 +34,9 @@ MS-DIAL screenshot
 &emsp;&emsp;[Section 6-1: MSP format for precursor- and MS/MS library](#section-6-1-msp-format-for-precursor--and-msms-library)  
 &emsp;&emsp;[Section 6-2: Adduct ion format](#section-6-2-adduct-ion-format)  
 &emsp;&emsp;[Section 6-3: Text format library for retention time and accurate mass search (post identification)](#section-6-3-text-format-library-for-retention-time-and-accurate-mass-search-post-identification)  
-&emsp;&emsp;Section 6-4: MSP format as GC/MS library	17  
-&emsp;&emsp;Section 6-5: Alkane- or FAME retention time dictionary for the calculation of retention index	18  
-Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)	20  
+&emsp;&emsp;[Section 6-4: MSP format as GC/MS library](#section-6-4-msp-format-as-gcms-library)  
+&emsp;&emsp;[Section 6-5: Alkane- or FAME retention time dictionary for the calculation of retention index](#section-6-5-alkane--or-fame-retention-time-dictionary-for-the-calculation-of-retention-index)  
+[Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)](#chapter-2-lcmsms-data-independent-msms-project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
 &emsp;Section 1: Starting up your project	21  
 &emsp;Section 2: Importing ABF files	22  
 &emsp;Section 3: Setting parameters	23  
@@ -118,6 +116,7 @@ Chapter 9: Graphical user interface of MS-DIAL in AIF mode	107
 &emsp;Section 2: MS/MS chromatogram viewer in peak viewer	108  
 &emsp;Section 3: Compound search for the curation of peak identification	109  
 &emsp;Section 4: Aligned sample table viewer for checking each sample	110  
+
 
 ## Chapter 1: General introduction of MS-DIAL
 The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. Figure 1 shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
@@ -610,8 +609,9 @@ C)	Mouse left double click: reset range and select files in the file navigator
 D)	Mouse wheel: zoom in and out  
 E)	Right click: popup context menu  
 ![alt](images/image_48.png)
-<div style="color:red;">&#042; Red rectangle: acceptable click point</div>
-
+<span style="color:red;">&#042; Red rectangle: acceptable click point</span>
+<br />  
+<br />  
 
 ### Section 2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
 In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the center window (**Peak spot viewer**), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (**Survey scan spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**Extracted ion chromatogram of focused spot**) displays the extracted ion chromatogram of the focused peak. The right window (**Exp. vs. Ref.**) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘**MS2 chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘MS2 Chrom.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
