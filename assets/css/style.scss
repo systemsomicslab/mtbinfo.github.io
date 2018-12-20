@@ -1,2 +1,6 @@
 @import "{{ site.theme }}";
-@import "/css/style.css";
+.tableHead {
+    background-color: #222;
+    color: #eee;
+    font-size: 12px;
+}
