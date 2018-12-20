@@ -1,9 +1,9 @@
-# MS-DIAL tutorial #
+# MS-DIAL tutorial
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
 </div>
 
-## ABSTRACT ##
+## ABSTRACT
 MS-DIAL was launched as a universal program for untargeted metabolomics that supports multiple instruments (GC/MS, GC/MS/MS, LC/MS, and LC/MS/MS) and MS vendors (Agilent, Bruker, LECO, Sciex, Shimadzu, Thermo, and Waters). Common data formats such as netCDF (AIA) and mzML, can also be managed in our project. In addition, we released several MSP files including both EI- and MS/MS spectra as a ‘start-up kit’. Moreover, MS-DIAL internally has a version of Fiehn lab’s GC/MS database (oriented by FAME RI index), and in silico retention time- and MS/MS database for LC/MS/MS based lipidomics. The isotope labeled tracking can also be executed in LC/MS project.  
 &emsp;&emsp;&emsp;It features (1) spectral deconvolution for both GC/MS and data-independent MS/MS, (2) streamlined criteria for peak identification, (3) support of all data processing steps from raw data import to statistical analysis, and (4) user-friendly graphic user interface.  
 &emsp;&emsp;&emsp;MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  
@@ -24,106 +24,109 @@ MS-DIAL screenshot
 
 ## Table of contents ##
 
-[Chapter 1: General introduction of MS-DIAL](#chapter-1-general-introduction-of-ms-dial)  
-&emsp;[Section 1: Downloading file converter to convert a vendor’s format into ABF](#section-1-downloading-file-converter-to-convert-a-vendors-format-into-abf)  
-&emsp;[Section 2: Check the conditions for file conversion](#section-2-check-the-conditions-for-file-conversion)  
-&emsp;[Section 3: File conversion](#section-3-file-conversion)  
-&emsp;[Section 4: Start up a project of MS-DIAL](#section-4-start-up-a-project-of-ms-dial)  
-&emsp;[Section 5: Centroid or Profile? The content of ABF data](#section-5-centroid-or-profile-the-content-of-abf-data)  
-&emsp;[Section 6: Database (MSP or Text) for compound identification](#section-6-database-msp-or-text-for-compound-identification)  
-&emsp;&emsp;[Section 6-1: MSP format for precursor- and MS/MS library](#section-6-1-msp-format-for-precursor--and-msms-library)  
-&emsp;&emsp;[Section 6-2: Adduct ion format](#section-6-2-adduct-ion-format)  
-&emsp;&emsp;[Section 6-3: Text format library for retention time and accurate mass search (post identification)](#section-6-3-text-format-library-for-retention-time-and-accurate-mass-search-post-identification)  
-&emsp;&emsp;[Section 6-4: MSP format as GC/MS library](#section-6-4-msp-format-as-gcms-library)  
-&emsp;&emsp;[Section 6-5: Alkane- or FAME retention time dictionary for the calculation of retention index](#section-6-5-alkane--or-fame-retention-time-dictionary-for-the-calculation-of-retention-index)  
-[Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)](#chapter-2-lcmsms-data-independent-msms-project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
-&emsp;Section 1: Starting up your project	21  
-&emsp;Section 2: Importing ABF files	22  
-&emsp;Section 3: Setting parameters	23  
-&emsp;&emsp;Section 3-1: Data collection tab	23  
-&emsp;&emsp;Section 3-2: Peak detection tab	24  
-&emsp;&emsp;Section 3-3: MS2Dec tab	29  
-&emsp;&emsp;Section 3-4: Identification tab	30  
-&emsp;&emsp;Section 3-5: Adduct tab	32  
-&emsp;&emsp;Section 3-6: Alignment tab	33  
-&emsp;Section 4: Data curation for the reduction of false positive identifications	34  
-Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL	35  
-&emsp;Section 1: Starting up your project	36  
-&emsp;Section 2: Importing ABF files	37  
-&emsp;Section 3: Setting parameters	38  
-&emsp;&emsp;Section 3-1: Data collection tab	38  
-&emsp;&emsp;Section 3-2: Peak detection tab	39  
-&emsp;&emsp;Section 3-3: MS2Dec tab	40  
-&emsp;&emsp;Section 3-4: Identification tab	41  
-&emsp;&emsp;Section 3-5: Adduct tab	43  
-&emsp;&emsp;Section 3-6: Alignment tab	44  
-&emsp;Section 4: Data curation to reduce false positive identifications	45  
-Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL	46  
-&emsp;Section 1: Starting up your project	47  
-&emsp;Section 2: Importing ABF files	48  
-&emsp;Section 3: Setting parameters	49  
-&emsp;&emsp;Section 3-1: Data collection tab	49  
-&emsp;&emsp;Section 3-2: Peak detection tab	50  
-&emsp;&emsp;Section 3-3: MS1Dec tab	51  
-&emsp;&emsp;Section 3-4: Identification tab	52  
-&emsp;&emsp;Section 3-5: Alignment tab	54  
-&emsp;Section 4: Data curation for the reduction of false positive identifications	55  
-Chapter 5: Graphical user interface of MS-DIAL	56  
-&emsp;Section 1: Mouse function	56  
-&emsp;Section 2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project	57  
-&emsp;Section 3: Overview of the MS-DIAL main window in GC/MS project	59  
-&emsp;Section 4: Compound search for the result curation of peak identification	61  
-&emsp;Section 5: Normalization and statistical analysis in MS-DIAL	62  
-&emsp;Section 6: Export	64  
-&emsp;Section 7: Save	65  
-&emsp;Section 8: Open	66  
-&emsp;Section 9: Option	67  
-&emsp;Section 10: Manual annotation on Identification menu	68  
-&emsp;Section 11: Chromatogram viewers	69  
-&emsp;Section 12: Explanation of buttons and tabs of MS-DIAL	70  
-&emsp;&emsp;Section 12-1: Display filters	70  
-&emsp;&emsp;Section 12-2: Tabs of MS-DIAL	72  
-&emsp;Section 13. Search	75  
-&emsp;&emsp;MS/MS fragment searcher	75  
-&emsp;&emsp;Amalgamation of different polarity peak list	76  
-Chapter 6: Other utilities of MS-DIAL	78  
-&emsp;Section 1: Link to MS-FINDER for searching unknowns	78  
-&emsp;Section 2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets	79  
-&emsp;Section 3: Molecular spectrum networking for metabolite annotations	81  
-Chapter 7: MS-DIAL isotope tracking function	84  
-&emsp;Section 1: Starting up your project	85  
-&emsp;Section 2: Importing ABF files	86  
-&emsp;Section 3: Setting parameters	87  
-&emsp;&emsp;Section 3-1: Data collection tab	87  
-&emsp;&emsp;Section 3-2: Peak detection tab and MS2Dec tab	88  
-&emsp;&emsp;Section 3-3: Identification tab	89  
-&emsp;&emsp;Section 3-5: Adduct tab	90  
-&emsp;&emsp;Section 3-6: Alignment tab	91  
-&emsp;&emsp;Section 3-7: Isotope tracking tab	92  
-&emsp;Section 4: Data curation for isotope tracking result	93  
-Chapter 8: Project for all ion fragmentation with multiple collision energies	95  
-&emsp;Section 1: Starting up your project	97  
-&emsp;Section 2: Importing ABF files	99  
-&emsp;Section 3: Setting parameters	100  
-&emsp;&emsp;Section 3-1: Data collection tab	100  
-&emsp;&emsp;Section 3-2: Peak detection tab	101  
-&emsp;&emsp;Section 3-4: Identification tab	103  
-&emsp;&emsp;Section 3-5: Adduct tab	104  
-&emsp;&emsp;Section 3-6: Alignment tab	105  
-&emsp;Section 4: Result checking	106  
-Chapter 9: Graphical user interface of MS-DIAL in AIF mode	107  
-&emsp;Section 1: Mass spectrum viewers in peak spot and alignment viewer	108  
-&emsp;Section 2: MS/MS chromatogram viewer in peak viewer	108  
-&emsp;Section 3: Compound search for the curation of peak identification	109  
-&emsp;Section 4: Aligned sample table viewer for checking each sample	110  
+[Chapter 1: General introduction of MS-DIAL](#chapter-1)  
+&emsp;[Section 1-1: Downloading file converter to convert a vendor’s format into ABF](#section-1-1)  
+&emsp;[Section 1-2: Check the conditions for file conversion](#section-1-2)  
+&emsp;[Section 1-3: File conversion](#section-1-3)  
+&emsp;[Section 1-4: Start up a project of MS-DIAL](#section-1-4)  
+&emsp;[Section 1-5: Centroid or Profile? The content of ABF data](#section-1-5)  
+&emsp;[Section 1-6: Database (MSP or Text) for compound identification](#section-1-6)  
+&emsp;&emsp;[Section 1-6-1: MSP format for precursor- and MS/MS library](#section-1-6-1)  
+&emsp;&emsp;[Section 1-6-2: Adduct ion format](#section-1-6-2)  
+&emsp;&emsp;[Section 1-6-3: Text format library for retention time and accurate mass search (post identification)](#section-1-6-3)  
+&emsp;&emsp;[Section 1-6-4: MSP format as GC/MS library](#section-1-6-4)  
+&emsp;&emsp;[Section 1-6-5: Alkane- or FAME retention time dictionary for the calculation of retention index](#section-1-6-5)  
+[Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)](#chapter-2)  
+&emsp;[Section 2-1: Starting up your project](#section-2-1)  
+&emsp;[Section 2-2: Importing ABF files](#section-2-2)  
+&emsp;[Section 2-3: Setting parameters](#section-2-3)  
+&emsp;&emsp;[Section 2-3-1: Data collection tab](#section-2-3-1)  
+&emsp;&emsp;[Section 2-3-2: Peak detection tab](#section-2-3-2)  
+&emsp;&emsp;[Section 2-3-3: MS2Dec tab](#section-2-3-3)  
+&emsp;&emsp;[Section 2-3-4: Identification tab](#section-2-3-4)  
+&emsp;&emsp;[Section 2-3-5: Adduct tab](#section-2-3-5)  
+&emsp;&emsp;[Section 2-3-6: Alignment tab](#section-2-3-6)  
+&emsp;[Section 2-4: Data curation for the reduction of false positive identifications](#section-2-4)  
+[Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL](#chapter-3)  
+&emsp;[Section 3-1: Starting up your project](#section-3-1)  
+&emsp;[Section 3-2: Importing ABF files](#section-3-2)  
+&emsp;[Section 3-3: Setting parameters](#section-3-3)  
+&emsp;&emsp;[Section 3-3-1: Data collection tab](#section-3-3-1)  
+&emsp;&emsp;[Section 3-3-2: Peak detection tab](#section-3-3-2)  
+&emsp;&emsp;[Section 3-3-3: MS2Dec tab](#section-3-3-3)  
+&emsp;&emsp;[Section 3-3-4: Identification tab](#section-3-3-4)  
+&emsp;&emsp;[Section 3-3-5: Adduct tab](#section-3-3-5)  
+&emsp;&emsp;[Section 3-3-6: Alignment tab](#section-3-3-6)  
+&emsp;[Section 3-4: Data curation to reduce false positive identifications](#section-3-4)  
+[Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL](#chapter-4)  
+&emsp;[Section 4-1: Starting up your project](#section-4-1)  
+&emsp;[Section 4-2: Importing ABF files](#section-4-2)  
+&emsp;[Section 4-3: Setting parameters](#section-4-3)  
+&emsp;&emsp;[Section 4-3-1: Data collection tab](#section-4-3-1)  
+&emsp;&emsp;[Section 4-3-2: Peak detection tab](#section-4-3-2)  
+&emsp;&emsp;[Section 4-3-3: MS1Dec tab](#section-4-3-3)  
+&emsp;&emsp;[Section 4-3-4: Identification tab](#section-4-3-4)  
+&emsp;&emsp;[Section 4-3-5: Alignment tab](#section-4-3-5)  
+&emsp;[Section 4-4: Data curation for the reduction of false positive identifications](#section-4-4)  
+[Chapter 5: Graphical user interface of MS-DIAL](#chapter-5)  
+&emsp;[Section 5-1: Mouse function](#section-5-1)  
+&emsp;[Section 5-2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project](#section-5-2)  
+&emsp;[Section 5-3: Overview of the MS-DIAL main window in GC/MS project](#section-5-3)  
+&emsp;[Section 5-4: Compound search for the result curation of peak identification](#section-5-4)  
+&emsp;[Section 5-5: Normalization and statistical analysis in MS-DIAL](#section-5-5)  
+&emsp;[Section 5-6: Export](#section-5-6)  
+&emsp;[Section 5-7: Save](#section-5-7)  
+&emsp;[Section 5-8: Open](#section-5-8)  
+&emsp;[Section 5-9: Option](#section-5-9)  
+&emsp;[Section 5-10: Manual annotation on Identification menu](#section-5-10)  
+&emsp;[Section 5-11: Chromatogram viewers](#section-5-11)  
+&emsp;[Section 5-12: Explanation of buttons and tabs of MS-DIAL](#section-5-12)  
+&emsp;&emsp;[Section 5-12-1: Display filters](#section-5-12-1)  
+&emsp;&emsp;[Section 5-12-2: Tabs of MS-DIAL](#section-5-12-2)  
+&emsp;[Section 5-13: Search](#section-5-13)  
+&emsp;&emsp;[Section 5-13-1: MS/MS fragment searcher](#section-15-13-1)  
+&emsp;&emsp;[Section 5-13-2: Amalgamation of different polarity peak list](#section-5-13-2)  
+[Chapter 6: Other utilities of MS-DIAL](#chapter-6)  
+&emsp;[Section 6-1: Link to MS-FINDER for searching unknowns](#section-6-1)  
+&emsp;[Section 6-2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets](#section-6-2)  
+&emsp;[Section 6-3: Molecular spectrum networking for metabolite annotations](#section-6-3)  
+[Chapter 7: MS-DIAL isotope tracking function](#chapter-7)  
+&emsp;[Section 7-1: Starting up your project](#section-7-1)  
+&emsp;[Section 7-2: Importing ABF files](#section-7-2)  
+&emsp;[Section 7-3: Setting parameters](#section-7-3)  
+&emsp;&emsp;[Section 7-3-1: Data collection tab](#section-7-3-1)  
+&emsp;&emsp;[Section 7-3-2: Peak detection tab and MS2Dec tab](#section-7-3-2)  
+&emsp;&emsp;[Section 7-3-3: Identification tab](#section-7-3-3)  
+&emsp;&emsp;[Section 7-3-4: Adduct tab](#section-7-3-4)  
+&emsp;&emsp;[Section 7-3-5: Alignment tab](#section-7-3-5)
+&emsp;&emsp;[Section 7-3-6: Isotope tracking tab](#section-7-3-6)  
+&emsp;[Section 7-4: Data curation for isotope tracking result](#section-7-4)  
+[Chapter 8: Project for all ion fragmentation with multiple collision energies](#chapter-8)  
+&emsp;[Section 8-1: Starting up your project](#section-8-1)  
+&emsp;[Section 8-2: Importing ABF files](#section-8-2)  
+&emsp;[Section 8-3: Setting parameters](#section-8-3)  
+&emsp;&emsp;[Section 8-3-1: Data collection tab](#section-8-3-1)  
+&emsp;&emsp;[Section 8-3-2: Peak detection tab](#section-8-3-2)  
+&emsp;&emsp;[Section 8-3-3: MS2Dec tab](#section-8-3-3)  
+&emsp;&emsp;[Section 8-3-4: Identification tab](#section-8-3-4)  
+&emsp;&emsp;[Section 8-3-5: Adduct tab](#section-8-3-5)  
+&emsp;&emsp;[Section 8-3-6: Alignment tab](#section-8-3-6)  
+&emsp;[Section 8-4: Result checking](#section-8-4)  
+[Chapter 9: Graphical user interface of MS-DIAL in AIF mode](#cjapter-9)  
+&emsp;[Section 9-1: Mass spectrum viewers in peak spot and alignment viewer](#section-9-1)  
+&emsp;[Section 9-2: MS/MS chromatogram viewer in peak viewer](#section-9-2)  
+&emsp;[Section 9-3: Compound search for the curation of peak identification](#section-9-3)  
+&emsp;[Section 9-4: Aligned sample table viewer for checking each sample](#section-9-4)  
 
 
-## Chapter 1: General introduction of MS-DIAL
+## Chapter 1
+## General introduction of MS-DIAL
 The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. Figure 1 shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
 
 ![alt](images/image_2.png)  
 
-### Section 1: Downloading file converter to convert a vendor’s format into ABF
+### Section 1-1
+### Downloading file converter to convert a vendor’s format into ABF
 1. Go to <http://www.reifycs.com/AbfConverter/index.html>  
 2. Check the requirements and license terms, and download the converter. (Figure 2)  
 
@@ -131,7 +134,8 @@ The current MS-DIAL program provides a stream pipeline for untargeted metabolomi
 
 ![alt](images/image_3.png)  
    
-### Section 2: Check the conditions for file conversion
+### Section 1-2
+### Check the conditions for file conversion
 
 To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC (Table 1).   
 
@@ -159,7 +163,8 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 *	Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
 *	NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <https://www.microsoft.com/en-us/download/details.aspx?id=15468>.   
 
-### Section 3: File conversion
+### Section 1-3
+### File conversion
 1.	Start “AnalysisBaseFileConverter.exe”.   
 2.	Drag & drop MS vendor files into this program.  
 3.	Click “Convert”.  
@@ -167,7 +172,8 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 
 ![alt](images/image_4.png)  
 
-### Section 4: Start up a project of MS-DIAL
+### Section 1-4
+### Start up a project of MS-DIAL
 This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA: data dependent acquisition), and (3) LC/MS/MS (data independent acquisition) for the explanation of parameters and required files. In this section, three projects are summarized and you will find a minimum requirement for these processes. The details for LC/MS/MS (DIA), LC/MS/MS (DDA), and GC/MS processing are described in Chapter 2, Chapter 3, and Chapter 4, respectively.   
 
 ![alt](images/image_5.png)
@@ -179,7 +185,8 @@ This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA
 &#042; In the case of SWATH data-independent analysis, the experiment file can be made at PeakView (Show->sample information). Do not change the column orders. The word “SCAN” should be kept.   
 
    
-### Section 5: Centroid or Profile? The content of ABF data
+### Section 1-5
+### Centroid or Profile? The content of ABF data
 One of the problems of ABF file is that we have to determine the data type, i.e. centroid or profile, by ourselves. If your data type is ‘centroid’, the MS-DIAL program does not have to execute the process of spectral centroiding. On the other hand, MS-DIAL should perform the centroiding process for ‘profile’ mode data. We have validated the types for several instruments as follows.  
 (what is the difference between centroid and profile? <http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html>)  
 
@@ -202,16 +209,19 @@ The data types of Bruker LC-QTOF and FT-ICR, and Waters LC-Xevo QTOF and Synapt 
 2.	See the MS1 and MS2 spectrum in ‘Peak spot viewer’ and check the 'shape' of the spectra.  
 3.	If the shape appears to require centroiding, restart the project in 'Profile' mode.  
 
-### Section 6: Database (MSP or Text) for compound identification  
+### Section 1-6
+### Database (MSP or Text) for compound identification  
 The database formats for GC/MS or LC/MS datasets are described in this section. The main difference between GC/MS (EI-MS) and LC/MS (ESI-MS/MS) is the availability of precursor ion and its MS/MS. While a precursor *m/z* and its MS/MS are mostly available in ESI (or the other soft ionization)-MS/MS, the molecular ion in EI-MS is difficult to detect owning to the hard ionization. Several MSP files are downloadable as a starter kit for MS-DIAL at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.  
 
-#### Section 6-1: MSP format for precursor- and MS/MS library  
+#### Section 1-6-1
+#### MSP format for precursor- and MS/MS library  
 MS-DIAL supports the MSP (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) format in ASCII text (below Figure). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  
 
 ![alt](images/image_8.png)
 Figure: an example of MSP format library  
    
-#### Section 6-2: Adduct ion format  
+#### Section 1-6-2
+#### Adduct ion format  
 Adduct ion information should be formatted as described in this section: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.  
 1.	The parentheses ‘[’ and ‘]’ must be used to bracket the ion information.  
 2.	The char + and - are required after ']' and the number must be written before + or -.  
@@ -228,7 +238,8 @@ Adduct ion information should be formatted as described in this section: [M+Na]+
 &emsp;&emsp;For Trifluoroacetic acid: TFA, CFCOOH  
 
    
-#### Section 6-3: Text format library for retention time and accurate mass search (post identification)  
+#### Section 1-6-3
+#### Text format library for retention time and accurate mass search (post identification)  
 MS-DIAL also supports tab-delimited text format library for peak identification by means of retention time and MS1 accurate mass information. The identification process is performed after completing peak identification based on MSP format library. This is why we call this identification processing “post identification”. The first row should include header information. The first, second, third, and fourth columns should contain the metabolite name, accurate mass [Da], retention time [min], and adduct ion, respectively. This library can be easily created in Microsoft Excel. Save the spreadsheet in “Tab delimited text format”. This option is useful for internal standard identifications etc. (Even if you don’t have MS/MS libraries, the peak identification based on retention time and accurate mass is available from this option.)   
 
 &#042; The minimum requirement for this text library is just ‘metabolite name’ and ‘*m/z*’ information; i.e. the first two columns are required. Retention time and adduct ion fields provide additional information for MS-DIAL in peak identification and adduct ion picking, respectively.  
@@ -236,14 +247,16 @@ MS-DIAL also supports tab-delimited text format library for peak identification 
 ![alt](images/image_9.png)  
 Figure: an example of text library  
    
-#### Section 6-4: MSP format as GC/MS library  
+#### Section 1-6-4
+#### MSP format as GC/MS library  
 MS-DIAL supports the MSP format (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) in ASCII text, same as in section 6-1. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   
 
 ![alt](images/image_10.png)  
 Figure: an example of MSP format library for GC/MS  
 
    
-#### Section 6-5: Alkane- or FAME retention time dictionary for the calculation of retention index  
+#### Section 1-6-5
+#### Alkane- or FAME retention time dictionary for the calculation of retention index  
 Retention time and retention index are used for routine identification of metabolites in GC/MS based metabolomics. The current MS-DIAL program has three options for the use of retention information: 1) retention time, 2) alkane mix based retention index, and 3) FAME (fatty acid methyl ester) mix based retention index.  
 
 See the experimental details of alkane and FAME mixtures.  
@@ -261,7 +274,8 @@ In order to calculate the retention indexes of detected peaks, users have to pre
 Figure: examples of Alkanes or Fames dictionaries  
 
    
-## Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
+## Chapter 2
+## LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
 
 A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids (MS-DIAL’s LipidBlast) is demonstrated. The experimental protocol is described in previous research: <http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html>.   
 
@@ -281,7 +295,8 @@ Mass spectrometer: SWATH method with negative ion mode.
 &emsp;&emsp;&emsp;Q1 window, 21 Da  
 &emsp;&emsp;&emsp;Mass range, *m/z* 100-1250  
 
-### Section 1: Starting up your project  
+### Section 2-1
+### Starting up your project  
 ![alt](images/image_13.png)
 
 1. File -> new project  
@@ -295,7 +310,8 @@ If you select ‘lipidomics’ project, you do not have to prepare NIST MSP form
 **&#042; see section 4 of chapter 1 as well for more detail**  
 
 
-### Section 2: Importing ABF files  
+### Section 2-2
+### Importing ABF files  
 ![alt](images/image_14.png)
 
 
@@ -305,8 +321,10 @@ If you select ‘lipidomics’ project, you do not have to prepare NIST MSP form
 Note: Please finalize your file name here, because you cannot change it later.  
 
    
-### Section 3: Setting parameters  
-#### Section 3-1: Data collection tab  
+### Section 2-3
+### Setting parameters  
+#### Section 2-3-1
+#### Data collection tab  
 
 ![alt](images/image_15.png)  
 
@@ -318,7 +336,8 @@ Note: Please finalize your file name here, because you cannot change it later.
 
 *Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)   
 
-#### Section 3-2: Peak detection tab  
+#### Section 2-3-2
+#### Peak detection tab  
 
 ![alt](images/image_16.png)  
 
@@ -336,7 +355,8 @@ A part of <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ
 ![alt](images/image_20.png)
 
 
-#### Section 3-3: MS2Dec tab  
+#### Section 2-3-3
+#### MS2Dec tab  
 
 ![alt](images/image_21.png)  
 
@@ -348,7 +368,8 @@ In addition, you may be able to set a cut off value to reduce the MS noises (see
 
 *Keep the isotopic ions w/o MS2Dec*: sometimes, the MS2Dec algorithm may erase the precursor’s isotopic ions due to the mathematics issues. Therefore, you can keep the raw MS/MS spectra only for the precursor’s isotopic ions by this option.   
    
-#### Section 3-4: Identification tab  
+#### Section 2-3-4
+#### Identification tab  
 ![alt](images/image_22.png)
 
 
@@ -373,14 +394,16 @@ Post ident. Tab:
 2.	*Only report the top hit*: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
 
 
-#### Section 3-5: Adduct tab  
+#### Section 2-3-5
+#### Adduct tab  
 ![alt](images/image_24.png)  
 
 Adduct ion setting: You can tick the adduct ions and charge values to be considered.  
 &#042; see also the section 3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  
 
    
-#### Section 3-6: Alignment tab  
+#### Section 2-3-6
+#### Alignment tab  
 ![alt](images/image_25.png)  
 
 *Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.  
@@ -390,13 +413,15 @@ If you can prepare many QC sample data, tick the “Detected in all QCs” box. 
 
 
    
-### Section 4: Data curation for the reduction of false positive identifications  
+### Section 2-4
+### Data curation for the reduction of false positive identifications  
 MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor *m/z*, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications as well as true positives. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified. Of course, the ultimate goal is the perfect identification without any false positive- and negative identifications.   
 Practically, what to manually curate the identification result of your representative alignment file since the identification result of its alignment file will be reflected in the final output such as ‘peak height’ matrix etc. Using the GUI of MS-DIAL, you can check if an aligned spot is a false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
 ![alt](images/image_26.png)
    
-## Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL  
+## Chapter 3
+## LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL  
 
 Here, a project from data dependent MS/MS acquisition in combination with a user-defined MSP library (an integration library of MassBank, GNPS, and Respect) is demonstrated. The experimental protocol is described in the previous research: http://pubs.acs.org/doi/abs/10.1021/acs.jafc.5b04890. The ABF files for this demonstration can be downloaded from our website: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html.   
 
@@ -414,7 +439,8 @@ Mass spectrometer: data dependent method with positive ion mode.
 &emsp;&emsp;&emsp;Cycle time, 125 ms  
 &emsp;&emsp;&emsp;Mass range, *m/z* 60-1250  
    
-### Section 1: Starting up your project  
+### Section 3-1
+### Starting up your project  
 
 ![alt](images/image_28.png)
 
@@ -429,7 +455,8 @@ If you select ‘lipidomics’ project, you do not have to prepare NIST MSP form
 &#042; see section 4 of chapter 1 as well  
 
    
-### Section 2: Importing ABF files  
+### Section 3-2
+### Importing ABF files  
 1.	Select ABF files  
 2.	If the file is a “quality control” sample for peak alignment, then set the type as such. (in this example, you do not have to change this setting.)  
 
@@ -438,8 +465,10 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/image_29.png)
 
    
-### Section 3: Setting parameters  
-#### Section 3-1: Data collection tab  
+### Section 3-3
+### Setting parameters  
+#### Section 3-3-1
+#### Data collection tab  
 ![alt](images/image_30.png)  
 
 &#042; For the quick start and its explanations, load ‘Param.med’ as shown above.  
@@ -452,20 +481,23 @@ Note: Please finalize your file name here, because you cannot change it later.
 
 *Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
    
-#### Section 3-2: Peak detection tab  
+#### Section 3-3-2
+#### Peak detection tab  
 ![alt](images/image_31.png)  
 
 *Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbirap data, the minimum peak height should be more than 20,000.  
 
 *Peak spotting parameters*: The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. If you already know unwanted *m/z* peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  
    
-#### Section 3-3: MS2Dec tab  
+#### Section 3-3-3
+#### MS2Dec tab  
 Unless you have data independent MS/MS data sets, you can skip this part. However, as shown below, you may set a cutoff value to reduce the MS noises. Note that what is shown below is not the same as data sets described earlier, but we found that this parameter was very important to reduce the computational time and the underestimation of spectral similarities especially in Waters or Agilent instruments.  
 
 ![alt](images/image_32.png)  
 Figure: Explanation about purification parameters  
    
-#### Section 3-4: Identification tab  
+#### Section 3-3-4
+#### Identification tab  
 
 ![alt](images/image_33.png)  
 
@@ -486,12 +518,14 @@ Post ident. Tab:
 4.	*Only report the top hit*: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
 
 
-#### Section 3-5: Adduct tab  
+#### Section 3-3-5
+#### Adduct tab  
 ![alt](images/image_35.png)  
 You can tick the adduct ions and charge values to be considered.  
 In addition, own definition for adduct ions can be set. (see the adduct format in Section 6-2 of Chapter 1)  
 
-#### Section 3-6: Alignment tab  
+#### Section 3-3-6
+#### Alignment tab  
 ![alt](images/image_36.png)  
 
 *Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample, which are not monitored in the representative file, can be automatically interpolated by the algorithm of MS-DIAL (gap-filling). In this demonstration, 0717_kinetex_wine_50_4min_pos_IDA_A1 is selected as the representative file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (here set 0.05 min and 0.025 Da.). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.  
@@ -499,13 +533,15 @@ If you can prepare many QC sample data, tick the “Detected in all QCs” box. 
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
-### Section 4: Data curation to reduce false positive identifications  
+### Section 3-4
+### Data curation to reduce false positive identifications  
 MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor *m/z*, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified.   
 Practically, what you have to do is to curate the identification result of an alignment file since the identification result of its alignment file will be reflected in the final output like ‘peak height’ data matrix. Using the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
 ![alt](images/image_37.png)  
    
-### Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL  
+## Chapter 4
+## Nominal and accurate GC/MS based metabolic profiling in MS-DIAL  
 Gas chromatography coupled with mass spectrometry is a robust and stable technique for metabolic profiling. Practically, it should be the first choice for untargeted metabolome analyses in terms of easier operation and maintenance over LC/MS. Moreover, the compound identification of GC/MS is currently straightforward owing to huge amount of retention time (and retention index) and EI spectrum databases.  
 Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part of this study) is demonstrated. The detail is shown in <http://prime.psc.riken.jp/meko/>. The alkane mixture based retention index (Kovats) is used. The other methods using FAME mixture based retention index (Fiehn) or retention times are also explained. The files used for this demonstration can be downloaded from <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
@@ -514,7 +550,8 @@ Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part o
 
 ![alt](images/image_39.png)  
 
-### Section 1: Starting up your project  
+### Section 4-1
+### Starting up your project  
 
 ![alt](images/image_40.png)  
 
@@ -531,7 +568,8 @@ Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part o
 *	If you have accurate GC/MS data, a parameter to set its accuracy is given in the parameter setting section.  
 * If your data is a kind of precursor oriented GC/MS/MS technique such as GC-CI- (chemical ionization), GC-FI- (field ionization), GC-PI- (photonic ionization), and GC-APCI-MS, it should be dedicated to ‘ESI (LC/MS, LC/MS/MS, or precursor-oriented GC/MS/MS’ part as ionization type. See chapter 3.  
 
-### Section 2: Importing ABF files  
+### Section 4-2
+### Importing ABF files  
 ![alt](images/image_41.png)  
 
 1.	Select ABF files  
@@ -540,8 +578,10 @@ Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part o
 Note: Please finalize your file name here, because you cannot change it later.  
 
 
-### Section 3: Setting parameters  
-#### Section 3-1: Data collection tab  
+### Section 4-3
+### Setting parameters  
+#### Section 4-3-1
+#### Data collection tab  
 ![alt](images/image_42.png)  
 
 &#042; For the quick start and its explanations, load ‘Param.med’ as shown above.  
@@ -550,7 +590,8 @@ Note: Please finalize your file name here, because you cannot change it later.
 
 *Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
    
-#### Section 3-2: Peak detection tab  
+#### Section 4-3-2
+#### Peak detection tab  
 ![alt](images/image_43.png)  
 
 *Peak detection parameters*: The workflow of GC/MS deconvolution is 1) peak picking in each *m/z* chromatogram, and 2) deconvolution on the basis of detected peak spots. The algorithm of this peak picking is the same as LC/MS parts except for exclusion mass list which was removed from the parameter list in GC/MS processing.   
@@ -558,7 +599,8 @@ Linear-weighted moving average is used for the peak detection by default to accu
 
 *Peak spotting parameters*: If your data is obtained by high resolution GCMS such as Agilent GC-QTOFMS and GC-QExactive, check ‘accurate MS’. Then, set the width of mass slice. From our experience, 0.1 or 0.05 is suitable for accurate GCMS. In addition, put the mass accuracy which is used for the construction of EI-chromatograms followed by the deconvolution (MS1Dec) program.  
 
-#### Section 3-3: MS1Dec tab  
+#### Section 4-3-3
+#### MS1Dec tab  
 ![alt](images/image_44.png)  
 
 The sigma window value is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved chromatographic peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks.   
@@ -566,7 +608,8 @@ The sigma window value is highly affected by the resolution of deconvolutions. A
 In addition, you may set a cutoff value to reduce the MS noises (see Section 3-3 of Chapter 3). This is the same as LC/MS part.  
 
    
-#### Section 3-4: Identification tab  
+#### Section 4-3-4
+#### Identification tab  
 The peak identification of GC/MS based untargeted analysis is straightforward, but you have to carefully check your conditions especially about retention index for the comprehensive identification of metabolites. In fact, MS-DIAL can use ‘retention time’ as the index of retention information, but it is highly recommended to use retention indexes for the routine identifications. * Since there is retention time information as well in our curated MSP DBs, you may be able to choose ‘retention time’ as the index. However, you should use larger retention time tolerance, at the cost of increasing false positives.   
 There are two methods to calculate retention indexes: 1) Kovats on the basis of alkane mixture, and 2) Fiehn on the basis on FAME (fatty acid methyl ester) mixture. These mixtures can be bought for example from Sigma-Aldrich (49452-U for C7-C40 saturated alkane mixture) and from Agilent (<http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf>). Here, you have to prepare a tab-delimited file which includes the pair-list of carbon number and its retention time.  
 ![alt](images/image_45.png)  
@@ -585,7 +628,8 @@ Even if you use accurate GC/MS data, 0.5 for *m/z* tolerance is recommended unle
 
 
    
-#### Section 3-5: Alignment tab  
+#### Section 4-3-5
+#### Alignment tab  
 ![alt](images/image_46.png)  
 
 *Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample which are not monitored in the representative file can be automatically interpolated by the algorithm of MS-DIAL (gap-filling).   
@@ -594,15 +638,18 @@ Even if you use accurate GC/MS data, 0.5 for *m/z* tolerance is recommended unle
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the EI spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
-### Section 4: Data curation for the reduction of false positive identifications  
+### Section 4-4
+### Data curation for the reduction of false positive identifications  
 MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention index (or retention time) and EI spectrum with the reference databases. However, there are also false positive identifications in the result of peak identifications as well as true positives. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified.   
 Practically, what you have to do is to curate the identification result of an alignment result file registered in ‘**Alignment navigator**’ since the identification result of its alignment file will be reflected as the final output. By the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
 &#042; Note: in contrast to LC/MS (precursor oriented data), each alignment spot does not describe a ‘precursor’ ion of metabolite but instead describe the quant mass (or unique mass, unique *m/z*) of the deconvoluted peak. The representative quant mass is determined by the voting way from quant masses of all biological samples.   
 ![alt](images/image_47.png)
 
-## Chapter 5: Graphical user interface of MS-DIAL  
-### Section 1: Mouse function  
+## Chapter 5
+## Graphical user interface of MS-DIAL  
+### Section 5-1
+### Mouse function  
 A)	Mouse right click (or hold) and move: zoom in and out  
 B)	Mouse left click (or hold) and move: select and scroll  
 C)	Mouse left double click: reset range and select files in the file navigator  
@@ -613,7 +660,8 @@ E)	Right click: popup context menu
 <br />  
 <br />  
 
-### Section 2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
+### Section 5-2
+### Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
 In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the center window (**Peak spot viewer**), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (**Survey scan spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**Extracted ion chromatogram of focused spot**) displays the extracted ion chromatogram of the focused peak. The right window (**Exp. vs. Ref.**) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘**MS2 chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘MS2 Chrom.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
 
 ![alt](images/image_49.png)
@@ -626,7 +674,8 @@ On **Bar chart of aligned spots** of top panel, you can see the summary of the t
 
 
    
-### Section 3: Overview of the MS-DIAL main window in GC/MS project  
+### Section 5-3
+### Overview of the MS-DIAL main window in GC/MS project  
 The main viewer of MS-DIAL GC/MS is mostly the same as the viewer of LC/MS part. The specific difference between GC/MS part and LC/MS part are in ‘**Peak spot viewer**’. The peak picking and deconvolution results of a GC/MS file are shown in the center window by mouse left double click of the file name in the File navigator. In the center window (**Peak spot viewer**), each circle spot denotes the detected peak on each mass (*m/z*) trace: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. However, in contrast to LC/MS part, these circle spots are not meaningful very much. Instead, the **reverse triangle** is the important description to recognize detected metabolites.   
 Once you click one of the reverse triangles, you can see the detail of detected (deconvoluted) peak. The left window (**Survey scan spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**Extracted ion chromatogram of focused spot**) displays the extracted ion chromatogram of the quant mass of focused peak. The right window (**Exp. vs. Ref.**) displays the EI spectrum (blue or black) and the reference MS/MS spectrum (red). The detail of deconvolution is shown in ‘**EI chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The EI chromatograms (both raw- and deconvoluted) are depicted in ‘EI Chrom.’. In addition, the raw- and deconvoluted (purified) EI spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
 
@@ -640,7 +689,8 @@ On **Bar chart of aligned spots** of top panel, you can see the summary of the t
 ![alt](images/image_52.png)
 
    
-### Section 4: Compound search for the result curation of peak identification  
+### Section 5-4
+### Compound search for the result curation of peak identification  
 The automatic identification process cannot escape from mis-identification. MS-DIAL provides the user-interface so that users can manually correct the identification result. In this option, you can customize the identification criteria into three levels: “confident”, “unsettled”, and “unknown.” For example, in the phospholipid identification, we often determine only the cumulative composition such as PC 36:1 without positions of acyl chains, e.g. PC(18:0/18:1). You can add “unsettled” tag to such peaks as the signpost to comment that “we only checked the cumulative composition”.   
 Information of identification is available not only in the “peak viewer” but also in the “alignment viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  
 ![alt](images/image_53.png)
@@ -649,7 +699,8 @@ B)	Add a tolerance value for identification and click the “Search” button.
 C)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  
 
    
-### Section 5: Normalization and statistical analysis in MS-DIAL  
+### Section 5-5
+### Normalization and statistical analysis in MS-DIAL  
 A)	Data normalization by internal standards or LOESS algorithm  
 B)	Principal component analysis  
 
@@ -660,8 +711,11 @@ B)	If you want to use the other statistics, please go to PRIMe web site:
 &#042; Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_&#042;&#042;&#042;’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘176’ which was annotated LysoPC 17:0 from the setting below.  
 
 ![alt](images/image_54.png)
-![alt](images/image_55.png)
-### Section 6: Export  
+![alt](images/image_55.png)  
+
+
+### Section 5-6
+### Export  
 A)	Peak list export  
 B)	Alignment result export  
 C)	Context menu strip  
@@ -683,7 +737,8 @@ Step3.	Select export format if you want to export the representative spectra.
 Step4.	Click the export button.    
 
 
-### Section 7: Save  
+### Section 5-7
+### Save  
 ![alt](images/image_58.png)
 
 **Your project is managed in MTD file.** Although your project is saved automatically whenever you do the data processing method, this program is not saved after your manual modification such as the curation of identification result, internal standard setting, and file or class information setting. Therefore, you have to save your project from this option after your modification.  
@@ -695,7 +750,8 @@ Step4.	Click the export button.
 
 <br />
 
-### Section 8: Open  
+### Section 5-8
+### Open  
 
 ![alt](images/image_61.png)
 
@@ -703,7 +759,8 @@ The project file is saved as MTD file format automatically whenever you perform 
 
 
    
-### Section 9: Option  
+### Section 5-9
+### Option  
 ![alt](images/image_62.png)
 
 
@@ -713,7 +770,8 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ![alt](images/image_64.png)
 
 <br />
-### Section 10: Manual annotation on Identification menu  
+### Section 5-10
+### Manual annotation on Identification menu  
 
 ![alt](images/image_65.png)
 
@@ -721,7 +779,8 @@ You can set properties of aligned peaks and files. In the file properties, you c
 
 ![alt](images/image_66.png)
    
-### Section 11: Chromatogram viewers  
+### Section 5-11
+### Chromatogram viewers  
 
 ![alt](images/image_67.png)
 
@@ -733,8 +792,10 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ![alt](images/image_69.png)
 
 
-### Section 12: Explanation of buttons and tabs of MS-DIAL  
-#### Section 12-1: Display filters  
+### Section 5-12
+### Explanation of buttons and tabs of MS-DIAL  
+#### Section 5-12-1
+#### Display filters  
 
 *Label*: You can check the peak information such as retention time, accurate mass, metabolite name, adduct ion name and isotope ion in the center window of MS-DIAL. Shown below are examples.  
 
@@ -752,7 +813,8 @@ You can set properties of aligned peaks and files. In the file properties, you c
 4. “MS/MS” shows only peaks having the MS/MS spectrum.  
 5. “Unknown” shows only unknown peaks.  
 
-#### Section 12-2: Tabs of MS-DIAL  
+#### Section 5-12-2
+#### Tabs of MS-DIAL  
 
 <br />
 ![alt](images/image_73.png)
@@ -780,12 +842,15 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 
 ![alt](images/image_82.png)
 
-### Section 13. Search  
+### Section 5-13
+### Search  
+#### Section 5-13-1
 #### MS/MS fragment searcher  
 In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’96.9597’ Da as product ion search in order to find the precursor ions contacting sulfate (SO<sub>4</sub><sup>-</sup>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  
 
 ![alt](images/image_83.png)
 
+#### Section 5-13-2
 #### Amalgamation of different polarity peak list  
 The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see *m/z* 273.076 in positive and *m/z* 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  
 
@@ -803,14 +868,17 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 
 
    
-## Chapter 6: Other utilities of MS-DIAL  
-### Section 1: Link to MS-FINDER for searching unknowns  
+## Chapter 6
+## Other utilities of MS-DIAL  
+### Section 6-1
+### Link to MS-FINDER for searching unknowns  
 MS-FINDER aims to provide 4lutions for 1) formula predictions, 2) fragment annotations, and 3) structure elucidations by means of survey scan MS and MS/MS spectra of unknowns. The detail of MS-FINDER is described in <http://prime.psc.riken.jp/Metabolomics_Software/MS-FINDER/index.html>. **Note that you have to download the MS-FIDNER program from the website above on your PC.**   
 The current MS-DIAL program can send the unknown query. On the first time that you try to send a query into MS-FINDER, a pop up window will be generated, and then select ‘MSFINDER.exe’ from its dialog box. Moreover, MS-DIAL can export all of peak- or alignment spots as ‘MAT’ format file which can be imported by MS-FINDER (**Add components to search list**).   
 
 ![alt](images/image_88.png)
 
-### Section 2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets  
+### Section 6-2
+### Bridge to MRMPROBS for DIA-MS or GC/MS data sets  
 The purpose of this section is to announce the utility of ‘MRMPROBS’ instead of MS-DIAL for SWATH-MS or other DIA-MS data. MRMPROBS was originally developed for targeted metabolomics using triple quadrupole MS data (multiple reaction monitoring, MRM; selected reaction monitoring, SRM). It also supports the entire workflow from data import until statistical analysis as MS-DIAL does. Compared to the MS-DIAL program, MRMPROBS is optimized for targeted metabolomics: 1) users can manually curate the peak left- and right edges of chromatographic peaks, 2) users can simultaneously check all samples’ peaks of a targeted compound, and 3) users can easily curate the identification results. <http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>  
 
 ![alt](images/image_89.png)
@@ -822,7 +890,8 @@ The purpose of this section is to announce the utility of ‘MRMPROBS’ instead
 Workflow of the ‘bridge’ from MS-DIAL to MRMPROBS   
 
 <br />
-### Section 3: Molecular spectrum networking for metabolite annotations  
+### Section 6-3
+### Molecular spectrum networking for metabolite annotations  
 The molecular spectrum networking is a useful technique to get the insight for unknown metabolite structures as used in GNPS and MS2LDA projects. The basic hypothesis is that the mass spectra should be similar (and partially same) among a metabolite subfamily (class). In addition, the metabolic profile’s similarity among aligned ion spots is also a useful information to know the biosynthesis regulations among samples. There are several methods to perform the molecular spectrum networking analysis in MS-DIAL. Note that please set FireFox as the default html viewer for the rapid browsing of your result.  
 
 A.	Follow as ‘Data visualization’ -> ‘Molecular spectrum networking’. Then, follow the below setting. If you select ‘Alignment spots’, the analysis is performed for the alignment spots displayed in ‘alignment spot viewer’. The mass tolerance [Da] should be the mass accuracy of MS/MS spectrum. For nominal mass GC-MS project, the tolerance should be set to 0.25 Da. The similarity cut off is applied to the score of ‘Bonanza spectral clustering algorithm’ [Falkner, J. A., Falkner, J. W., Yocum, A. K. & Andrews, P. C. J. Proteome Res. 7, 4614–4622 (2008)]: the algorithm is a little bit modified form the original one, and the detail will be described after new paper is published. MS-DIAL also provides the retention time tolerance where the target retention time is defined as what you select in the spot viewer.  
@@ -842,13 +911,15 @@ C.	 Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not s
 
 ![alt](images/image_95.png)
 
-### Chapter 7: MS-DIAL isotope tracking function  
+## Chapter 7
+## MS-DIAL isotope tracking function  
 
 Stable isotope assisted metabolomics is a great approach to reveal the metabolic turnover of a nutrient source, to calculate flux balances, and to determine the molecular element (CNOS) of unknown molecules. Here, a project using LC-MS/MS data sets of non-labeled- and fully 13C labeled Arabidopsis thaliana samples for the comprehensive annotation of plant specialized metabolites is demonstrated. The purpose of this study was to determine the carbon element count of molecular formula by using 13C labeled plant tissues. The files used for this demonstration can be downloaded from <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
 ![alt](images/image_96.png)  
 
-### Section 1: Starting up your project  
+### Section 7-1
+### Starting up your project  
 
 ![alt](images/image_97.png)
 
@@ -859,7 +930,8 @@ Stable isotope assisted metabolomics is a great approach to reveal the metabolic
 5. Choose negative ion mode  
 
    
-### Section 2: Importing ABF files  
+### Section 7-2
+### Importing ABF files  
 1.	Select ABF files  
 2.	Class ID in this demonstration is set to ‘Non-labeled’ and ‘Uniform-labeled’.  
 
@@ -868,8 +940,10 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/image_98.png)
 
    
-### Section 3: Setting parameters  
-#### Section 3-1: Data collection tab  
+### Section 7-3
+### Setting parameters  
+#### Section 7-3-1
+#### Data collection tab  
 
 
 ![alt](images/image_99.png)
@@ -884,13 +958,15 @@ Centroid parameters: After the peak detection algorithm is applied along the MS 
 
 Multithreading: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
    
-#### Section 3-2: Peak detection tab and MS2Dec tab  
+#### Section 7-3-2
+#### Peak detection tab and MS2Dec tab  
 ![alt](images/image_100.png)
 
 The details are described in Chapter 2&3. In Waters and Bruker QTOF, the minimum peak height can be set to 300-500 as long as I confirmed. Here, 300 is set for minimum peak height because the demonstration file was obtained by Waters Xevo QTOF.  
 
 
-#### Section 3-3: Identification tab  
+#### Section 7-3-3
+#### Identification tab  
 ![alt](images/image_101.png)
 
 *MSP file*: Set your MSP file here. (Tutorial data: **MSMS-AllPublic-Curated-Neg.msp.**)   
@@ -899,20 +975,23 @@ The details are described in Chapter 2&3. In Waters and Bruker QTOF, the minimum
 
 Please make sure that in isotope tracking project, the identification result of non-labeled sample as set as ‘reference file’ is reflected in the alignment result.   
 
-#### Section 3-5: Adduct tab  
+#### Section 7-3-4
+#### Adduct tab  
 ![alt](images/image_102.png)
 
 You can tick the adduct ions and charge values to be considered. In doing the metabolome analysis for plant specialized metabolites, the losses for C6H10O4, C6H10O5, and C6H8O6 etc may be added because there are many in source fragment ions detected in hexosylmetabolites.  
 
    
-#### Section 3-6: Alignment tab  
+#### Section 7-3-5
+#### Alignment tab  
 ![alt](images/image_103.png)
 
 *Parameters*: The details of alignment parameter are shown in chapter 2 and 3.   
 
 **Note:** Please set one of ‘non-labeled’ biological samples as the reference file when the isotope tracking function is used.  
    
-#### Section 3-7: Isotope tracking tab  
+#### Section 7-3-6
+#### Isotope tracking tab  
 ![alt](images/image_104.png)
 
 
@@ -922,7 +1001,8 @@ When the isotope tracking function is used, check ‘tracking of isotope labels�
 
 
    
-### Section 4: Data curation for isotope tracking result  
+### Section 7-4
+### Data curation for isotope tracking result  
 The result can be checked as described below. Practically, I recommend the following procedures for the data analysis of isotope labeled metabolomics.  
 
 1. It’s much better ‘NOT’ to perform the peak alignment at the first run of data analysis. It means that please perform peak spotting only.  
@@ -939,7 +1019,8 @@ The result can be checked as described below. Practically, I recommend the follo
 
 
 
-## Chapter 8: Project for all ion fragmentation with multiple collision energies   
+## Chapter 8
+## Project for all ion fragmentation with multiple collision energies   
 We recently started the development for data independent MS/MS acquisition data from all-ion approach (such as MSE, all-ions, or all ion fragementations) with ‘multiple collision energies (like a sequential loop of 0V, 10V, and 40V)’. Here, a project is demonstrated using LC/MS/MS data sets from yeast strains, which have already published (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). The abf files used for this demonstration can be downloaded from the below link.  
 <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>  
 
@@ -964,7 +1045,8 @@ Data was collected on a 1290 Infinity II ultrahigh performance liquid chromatogr
 An internal lock mass mixture (Agilent Technologies) was prepared at a final concentration of 2 μM purine (C5H4N4) and 2.5 μM HP-0921 (C18H18O6N3P3F24) in acetonitrile:water (19:1, v/v). The internal lock mass mixture was constantly infused at a flow rate of 1 mL/min (split 1:100) using an isocratic pump together with the LC eluent for constant mass correction [positive ionization mode: purine (*m/z* 121.0509), HP-0921 (*m/z* 922.0098); Although observed mass accuracy will depends upon the resolution, potential metabolite coelution, and isobaric compounds, a mass accuracy of <5 ppm was expected.  
 
    
-### Section 1: Starting up your project  
+### Section 8-1
+### Starting up your project  
 
 ![alt](images/image_108.png)
 
@@ -996,7 +1078,8 @@ Examples of the modified dictionary file
 
 
 
-### Section 2: Importing ABF files  
+### Section 8-2
+### Importing ABF files  
 
 ![alt](images/image_111.png)
 
@@ -1008,8 +1091,10 @@ Examples of the modified dictionary file
 
 
    
-### Section 3: Setting parameters  
-#### Section 3-1: Data collection tab  
+### Section 8-3
+### Setting parameters  
+#### Section 8-3-1
+#### Data collection tab  
 
 ![alt](images/image_112.png)
 
@@ -1020,7 +1105,8 @@ Note: The chromatographic peaks are highly coeluted in the beginning of this LC-
 
 *Centroid parameters*: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding. By default, mass spectrum of ±0.01 and ±0.01 Da range from each peak top is integrated in MS1 and MS2, respectively. Importantly, this MS2 tolerance value is also used to build the MS/MS chromatogram for a certain *m/z* trace. The MS/MS chromatograms are dedicated to the MS2Dec deconvolution program.  
 
-#### Section 3-2: Peak detection tab  
+#### Section 8-3-2
+#### Peak detection tab  
 ![alt](images/image_113.png)
 
 *Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.  
@@ -1033,14 +1119,16 @@ In this demonstration, the m/z values for calibrant compounds, i.e. purine and H
 Purine 121.0509 [M+H]+  
 HP-921 922.0098 [M+H]+ and 923.0129 [M+H]+ isotope with 0.01 tolerance  
 
-#### Section 3-3: MS2Dec tab  
+#### Section 8-3-3
+#### MS2Dec tab  
 ![alt](images/image_114.png)
 
 The sigma window value is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks.  
 In addition, you may be able to set a cut off value to reduce the MS noises (see Section 3-3 of Chapter 3). Finally, if you want to remove the product ions with higher m/z than the focused precursor ion (recommended for metabolomics and lipidomics), check “Exclude after precursor”.  
 
 
-#### Section 3-4: Identification tab  
+#### Section 8-3-4
+#### Identification tab  
 ![alt](images/image_115.png)
 
 *MSP file*: Set your MSP file here (Tutorial data: **AIF_tutorial_library.msp**). In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  
@@ -1055,14 +1143,16 @@ The cutoff of the identification score should be greater than 0.6 or 0.7.
 *Parameters*: The meanings of parameters are the same as MSP based identification.  
 
 
-#### Section 3-5: Adduct tab  
+#### Section 8-3-5
+#### Adduct tab  
 ![alt](images/image_116.png)  
 
 *Adduct ion setting*: You can tick the adduct ions and charge values to be considered.  
 &#042; see also the section 3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  
 
 
-#### Section 3-6: Alignment tab  
+#### Section 8-3-6
+#### Alignment tab  
 ![alt](images/image_117.png)  
 
 *Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. If you can prepare many QC sample data, tick the “QC at least filter” box. Then a peak will be removed if it is missing in any of the QC samples.  
@@ -1070,7 +1160,8 @@ The cutoff of the identification score should be greater than 0.6 or 0.7.
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
 
-#### Section 4: Result checking  
+### Section 8-4
+### Result checking  
 ![alt](images/image_118.png)  
 
 MS-DIAL can automatically identify metabolite peaks by the similarity calculation of retention time, precursor *m/z*, isotopic ratios, and MS/MS spectrum with the reference databases. You can easily check the result from alignment ion spot table.  
@@ -1080,24 +1171,28 @@ MS-DIAL can automatically identify metabolite peaks by the similarity calculatio
 Ion intensities of tryptophan are stable across samples; however, the intensity of kynurenine, which is synthesized from tryptophan, is very low in the mutant sample (bna2). Please refer to the original paper for details (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). For further information about GUI of MS-DIAL, see Chapter 5 & Chapter 9.  
 
 
-## Chapter 9: Graphical user interface of MS-DIAL in AIF mode  
+## Chapter 9
+## Graphical user interface of MS-DIAL in AIF mode  
 ![alt](images/image_120.png)  
 
 If you choose “All-ions with multiple CEs” as method type in the project, the **AIF Viewer Controller** will be launched when you open the project. The controller currently has 6 buttons to lunch additional viewers.   
 
    
-### Section 1: Mass spectrum viewers in peak spot and alignment viewer  
+### Section 9-1
+### Mass spectrum viewers in peak spot and alignment viewer  
 ![alt](images/image_121.png)  
 
 These viewers show mass spectrum with different collision energies in parallel. **Mass Spectrum Viewer** in peak viewer has two tabs. The window (**A**) on **Exp. vs. Ref.** tab displays the deconvoluted MS/MS spectrum (blue, the upper part) and the reference MS/MS spectrum (red, the lower part). The window (**B**) on **Raw. vs Dec.** tab displays the raw- and deconvoluted MS/MS spectrum on the upper and lower panel respectively. The window (**C**, **Mass Spectrum Viewer in alignment**) displays the deconvoluted MS/MS spectrum (blue, upper) and the reference (red, lower).   
 
-### Section 2: MS/MS chromatogram viewer in peak viewer  
+### Section 9-2
+### MS/MS chromatogram viewer in peak viewer  
 ![alt](images/image_122.png)  
 
 The detail of deconvolution is shown in the **MS2 chromatogram** viewer. The window displays the raw- and deconvoluted MS/MS chromatogram on the upper and lower panel respectively. Please use this viewer for checking the quality of deconvolution.   
 
 
-### Section 3: Compound search for the curation of peak identification  
+### Section 9-3
+### Compound search for the curation of peak identification  
 ![alt](images/image_123.png)  
 
 This function is almost the same as the compound search in the main viewer. Please refer to Section 4 of Chapter 5. Additionally, you can change a compound library by clicking the “Import new Library” button. After changing a library file, you cannot click the confidence/unsettled button. In that case, please change the annotation using the ion table directly.   
@@ -1105,7 +1200,8 @@ When you select a different reference spectrum, the mass spectrum viewers will b
 
 
 
-### Section 4: Aligned sample table viewer for checking each sample  
+### Section 9-4
+### Aligned sample table viewer for checking each sample  
 ![alt](images/image_124.png)  
 
 This viewer shows each sample’s peak information including chromatogram peak shapes in an alignment spot. The value of ‘-2’ in “Peak ID” column means that the peak is not detected by peak picking process. (but calculated by gap-filling method). In the case of gap-filled peak, the colors of the “Peak Int.” and “Peak Area” columns become light blue. In normal, the colors (red) reflect the level of peak intensity or peak area. You cannot refine the peak and alignment yet, but that function will be developed.   
