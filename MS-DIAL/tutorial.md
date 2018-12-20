@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/style.css">
 # MS-DIAL tutorial
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
