@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/css/style.css">  
-
 # MS-DIAL tutorial
 <div style="text-align: right;">
 Last edited in Sep. 14, 2018
@@ -21,104 +19,104 @@ Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiolog
 
 ![alt](images/image_1.png)
 MS-DIAL screenshot  
+<br />
 
-
-## Table of contents
-
-[Chapter 1: General introduction of MS-DIAL](#chapter-1)  
-&emsp;[Section 1-1: Downloading file converter to convert a vendor’s format into ABF](#section-1-1)  
-&emsp;[Section 1-2: Check the conditions for file conversion](#section-1-2)  
-&emsp;[Section 1-3: File conversion](#section-1-3)  
-&emsp;[Section 1-4: Start up a project of MS-DIAL](#section-1-4)  
-&emsp;[Section 1-5: Centroid or Profile? The content of ABF data](#section-1-5)  
-&emsp;[Section 1-6: Database (MSP or Text) for compound identification](#section-1-6)  
-&emsp;&emsp;[Section 1-6-1: MSP format for precursor- and MS/MS library](#section-1-6-1)  
-&emsp;&emsp;[Section 1-6-2: Adduct ion format](#section-1-6-2)  
-&emsp;&emsp;[Section 1-6-3: Text format library for retention time and accurate mass search (post identification)](#section-1-6-3)  
-&emsp;&emsp;[Section 1-6-4: MSP format as GC/MS library](#section-1-6-4)  
-&emsp;&emsp;[Section 1-6-5: Alkane- or FAME retention time dictionary for the calculation of retention index](#section-1-6-5)  
-[Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)](#chapter-2)  
-&emsp;[Section 2-1: Starting up your project](#section-2-1)  
-&emsp;[Section 2-2: Importing ABF files](#section-2-2)  
-&emsp;[Section 2-3: Setting parameters](#section-2-3)  
-&emsp;&emsp;[Section 2-3-1: Data collection tab](#section-2-3-1)  
-&emsp;&emsp;[Section 2-3-2: Peak detection tab](#section-2-3-2)  
-&emsp;&emsp;[Section 2-3-3: MS2Dec tab](#section-2-3-3)  
-&emsp;&emsp;[Section 2-3-4: Identification tab](#section-2-3-4)  
-&emsp;&emsp;[Section 2-3-5: Adduct tab](#section-2-3-5)  
-&emsp;&emsp;[Section 2-3-6: Alignment tab](#section-2-3-6)  
-&emsp;[Section 2-4: Data curation for the reduction of false positive identifications](#section-2-4)  
-[Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL](#chapter-3)  
-&emsp;[Section 3-1: Starting up your project](#section-3-1)  
-&emsp;[Section 3-2: Importing ABF files](#section-3-2)  
-&emsp;[Section 3-3: Setting parameters](#section-3-3)  
-&emsp;&emsp;[Section 3-3-1: Data collection tab](#section-3-3-1)  
-&emsp;&emsp;[Section 3-3-2: Peak detection tab](#section-3-3-2)  
-&emsp;&emsp;[Section 3-3-3: MS2Dec tab](#section-3-3-3)  
-&emsp;&emsp;[Section 3-3-4: Identification tab](#section-3-3-4)  
-&emsp;&emsp;[Section 3-3-5: Adduct tab](#section-3-3-5)  
-&emsp;&emsp;[Section 3-3-6: Alignment tab](#section-3-3-6)  
-&emsp;[Section 3-4: Data curation to reduce false positive identifications](#section-3-4)  
-[Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL](#chapter-4)  
-&emsp;[Section 4-1: Starting up your project](#section-4-1)  
-&emsp;[Section 4-2: Importing ABF files](#section-4-2)  
-&emsp;[Section 4-3: Setting parameters](#section-4-3)  
-&emsp;&emsp;[Section 4-3-1: Data collection tab](#section-4-3-1)  
-&emsp;&emsp;[Section 4-3-2: Peak detection tab](#section-4-3-2)  
-&emsp;&emsp;[Section 4-3-3: MS1Dec tab](#section-4-3-3)  
-&emsp;&emsp;[Section 4-3-4: Identification tab](#section-4-3-4)  
-&emsp;&emsp;[Section 4-3-5: Alignment tab](#section-4-3-5)  
-&emsp;[Section 4-4: Data curation for the reduction of false positive identifications](#section-4-4)  
-[Chapter 5: Graphical user interface of MS-DIAL](#chapter-5)  
-&emsp;[Section 5-1: Mouse function](#section-5-1)  
-&emsp;[Section 5-2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project](#section-5-2)  
-&emsp;[Section 5-3: Overview of the MS-DIAL main window in GC/MS project](#section-5-3)  
-&emsp;[Section 5-4: Compound search for the result curation of peak identification](#section-5-4)  
-&emsp;[Section 5-5: Normalization and statistical analysis in MS-DIAL](#section-5-5)  
-&emsp;[Section 5-6: Export](#section-5-6)  
-&emsp;[Section 5-7: Save](#section-5-7)  
-&emsp;[Section 5-8: Open](#section-5-8)  
-&emsp;[Section 5-9: Option](#section-5-9)  
-&emsp;[Section 5-10: Manual annotation on Identification menu](#section-5-10)  
-&emsp;[Section 5-11: Chromatogram viewers](#section-5-11)  
-&emsp;[Section 5-12: Explanation of buttons and tabs of MS-DIAL](#section-5-12)  
-&emsp;&emsp;[Section 5-12-1: Display filters](#section-5-12-1)  
-&emsp;&emsp;[Section 5-12-2: Tabs of MS-DIAL](#section-5-12-2)  
-&emsp;[Section 5-13: Search](#section-5-13)  
-&emsp;&emsp;[Section 5-13-1: MS/MS fragment searcher](#section-5-13-1)  
-&emsp;&emsp;[Section 5-13-2: Amalgamation of different polarity peak list](#section-5-13-2)  
-[Chapter 6: Other utilities of MS-DIAL](#chapter-6)  
-&emsp;[Section 6-1: Link to MS-FINDER for searching unknowns](#section-6-1)  
-&emsp;[Section 6-2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets](#section-6-2)  
-&emsp;[Section 6-3: Molecular spectrum networking for metabolite annotations](#section-6-3)  
-[Chapter 7: MS-DIAL isotope tracking function](#chapter-7)  
-&emsp;[Section 7-1: Starting up your project](#section-7-1)  
-&emsp;[Section 7-2: Importing ABF files](#section-7-2)  
-&emsp;[Section 7-3: Setting parameters](#section-7-3)  
-&emsp;&emsp;[Section 7-3-1: Data collection tab](#section-7-3-1)  
-&emsp;&emsp;[Section 7-3-2: Peak detection tab and MS2Dec tab](#section-7-3-2)  
-&emsp;&emsp;[Section 7-3-3: Identification tab](#section-7-3-3)  
-&emsp;&emsp;[Section 7-3-4: Adduct tab](#section-7-3-4)  
-&emsp;&emsp;[Section 7-3-5: Alignment tab](#section-7-3-5)  
-&emsp;&emsp;[Section 7-3-6: Isotope tracking tab](#section-7-3-6)  
-&emsp;[Section 7-4: Data curation for isotope tracking result](#section-7-4)  
-[Chapter 8: Project for all ion fragmentation with multiple collision energies](#chapter-8)  
-&emsp;[Section 8-1: Starting up your project](#section-8-1)  
-&emsp;[Section 8-2: Importing ABF files](#section-8-2)  
-&emsp;[Section 8-3: Setting parameters](#section-8-3)  
-&emsp;&emsp;[Section 8-3-1: Data collection tab](#section-8-3-1)  
-&emsp;&emsp;[Section 8-3-2: Peak detection tab](#section-8-3-2)  
-&emsp;&emsp;[Section 8-3-3: MS2Dec tab](#section-8-3-3)  
-&emsp;&emsp;[Section 8-3-4: Identification tab](#section-8-3-4)  
-&emsp;&emsp;[Section 8-3-5: Adduct tab](#section-8-3-5)  
-&emsp;&emsp;[Section 8-3-6: Alignment tab](#section-8-3-6)  
-&emsp;[Section 8-4: Result checking](#section-8-4)  
-[Chapter 9: Graphical user interface of MS-DIAL in AIF mode](#chapter-9)  
-&emsp;[Section 9-1: Mass spectrum viewers in peak spot and alignment viewer](#section-9-1)  
-&emsp;[Section 9-2: MS/MS chromatogram viewer in peak viewer](#section-9-2)  
-&emsp;[Section 9-3: Compound search for the curation of peak identification](#section-9-3)  
-&emsp;[Section 9-4: Aligned sample table viewer for checking each sample](#section-9-4)  
-
+<div id="boxMenu">
+<h2 id="table-of-contents">Table of contents</h2>
+<p><a href="#chapter-1">Chapter 1: General introduction of MS-DIAL</a><br />
+&emsp;<a href="#section-1-1">Section 1-1: Downloading file converter to convert a vendor’s format into ABF</a><br />
+&emsp;<a href="#section-1-2">Section 1-2: Check the conditions for file conversion</a><br />
+&emsp;<a href="#section-1-3">Section 1-3: File conversion</a><br />
+&emsp;<a href="#section-1-4">Section 1-4: Start up a project of MS-DIAL</a><br />
+&emsp;<a href="#section-1-5">Section 1-5: Centroid or Profile? The content of ABF data</a><br />
+&emsp;<a href="#section-1-6">Section 1-6: Database (MSP or Text) for compound identification</a><br />
+&emsp;&emsp;<a href="#section-1-6-1">Section 1-6-1: MSP format for precursor- and MS/MS library</a><br />
+&emsp;&emsp;<a href="#section-1-6-2">Section 1-6-2: Adduct ion format</a><br />
+&emsp;&emsp;<a href="#section-1-6-3">Section 1-6-3: Text format library for retention time and accurate mass search (post identification)</a><br />
+&emsp;&emsp;<a href="#section-1-6-4">Section 1-6-4: MSP format as GC/MS library</a><br />
+&emsp;&emsp;<a href="#section-1-6-5">Section 1-6-5: Alkane- or FAME retention time dictionary for the calculation of retention index</a><br />
+<a href="#chapter-2">Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)</a><br />
+&emsp;<a href="#section-2-1">Section 2-1: Starting up your project</a><br />
+&emsp;<a href="#section-2-2">Section 2-2: Importing ABF files</a><br />
+&emsp;<a href="#section-2-3">Section 2-3: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-2-3-1">Section 2-3-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-2-3-2">Section 2-3-2: Peak detection tab</a><br />
+&emsp;&emsp;<a href="#section-2-3-3">Section 2-3-3: MS2Dec tab</a><br />
+&emsp;&emsp;<a href="#section-2-3-4">Section 2-3-4: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-2-3-5">Section 2-3-5: Adduct tab</a><br />
+&emsp;&emsp;<a href="#section-2-3-6">Section 2-3-6: Alignment tab</a><br />
+&emsp;<a href="#section-2-4">Section 2-4: Data curation for the reduction of false positive identifications</a><br />
+<a href="#chapter-3">Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL</a><br />
+&emsp;<a href="#section-3-1">Section 3-1: Starting up your project</a><br />
+&emsp;<a href="#section-3-2">Section 3-2: Importing ABF files</a><br />
+&emsp;<a href="#section-3-3">Section 3-3: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-3-3-1">Section 3-3-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-3-3-2">Section 3-3-2: Peak detection tab</a><br />
+&emsp;&emsp;<a href="#section-3-3-3">Section 3-3-3: MS2Dec tab</a><br />
+&emsp;&emsp;<a href="#section-3-3-4">Section 3-3-4: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-3-3-5">Section 3-3-5: Adduct tab</a><br />
+&emsp;&emsp;<a href="#section-3-3-6">Section 3-3-6: Alignment tab</a><br />
+&emsp;<a href="#section-3-4">Section 3-4: Data curation to reduce false positive identifications</a><br />
+<a href="#chapter-4">Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL</a><br />
+&emsp;<a href="#section-4-1">Section 4-1: Starting up your project</a><br />
+&emsp;<a href="#section-4-2">Section 4-2: Importing ABF files</a><br />
+&emsp;<a href="#section-4-3">Section 4-3: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-4-3-1">Section 4-3-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-4-3-2">Section 4-3-2: Peak detection tab</a><br />
+&emsp;&emsp;<a href="#section-4-3-3">Section 4-3-3: MS1Dec tab</a><br />
+&emsp;&emsp;<a href="#section-4-3-4">Section 4-3-4: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-4-3-5">Section 4-3-5: Alignment tab</a><br />
+&emsp;<a href="#section-4-4">Section 4-4: Data curation for the reduction of false positive identifications</a><br />
+<a href="#chapter-5">Chapter 5: Graphical user interface of MS-DIAL</a><br />
+&emsp;<a href="#section-5-1">Section 5-1: Mouse function</a><br />
+&emsp;<a href="#section-5-2">Section 5-2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project</a><br />
+&emsp;<a href="#section-5-3">Section 5-3: Overview of the MS-DIAL main window in GC/MS project</a><br />
+&emsp;<a href="#section-5-4">Section 5-4: Compound search for the result curation of peak identification</a><br />
+&emsp;<a href="#section-5-5">Section 5-5: Normalization and statistical analysis in MS-DIAL</a><br />
+&emsp;<a href="#section-5-6">Section 5-6: Export</a><br />
+&emsp;<a href="#section-5-7">Section 5-7: Save</a><br />
+&emsp;<a href="#section-5-8">Section 5-8: Open</a><br />
+&emsp;<a href="#section-5-9">Section 5-9: Option</a><br />
+&emsp;<a href="#section-5-10">Section 5-10: Manual annotation on Identification menu</a><br />
+&emsp;<a href="#section-5-11">Section 5-11: Chromatogram viewers</a><br />
+&emsp;<a href="#section-5-12">Section 5-12: Explanation of buttons and tabs of MS-DIAL</a><br />
+&emsp;&emsp;<a href="#section-5-12-1">Section 5-12-1: Display filters</a><br />
+&emsp;&emsp;<a href="#section-5-12-2">Section 5-12-2: Tabs of MS-DIAL</a><br />
+&emsp;<a href="#section-5-13">Section 5-13: Search</a><br />
+&emsp;&emsp;<a href="#section-5-13-1">Section 5-13-1: MS/MS fragment searcher</a><br />
+&emsp;&emsp;<a href="#section-5-13-2">Section 5-13-2: Amalgamation of different polarity peak list</a><br />
+<a href="#chapter-6">Chapter 6: Other utilities of MS-DIAL</a><br />
+&emsp;<a href="#section-6-1">Section 6-1: Link to MS-FINDER for searching unknowns</a><br />
+&emsp;<a href="#section-6-2">Section 6-2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets</a><br />
+&emsp;<a href="#section-6-3">Section 6-3: Molecular spectrum networking for metabolite annotations</a><br />
+<a href="#chapter-7">Chapter 7: MS-DIAL isotope tracking function</a><br />
+&emsp;<a href="#section-7-1">Section 7-1: Starting up your project</a><br />
+&emsp;<a href="#section-7-2">Section 7-2: Importing ABF files</a><br />
+&emsp;<a href="#section-7-3">Section 7-3: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-7-3-1">Section 7-3-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-7-3-2">Section 7-3-2: Peak detection tab and MS2Dec tab</a><br />
+&emsp;&emsp;<a href="#section-7-3-3">Section 7-3-3: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-7-3-4">Section 7-3-4: Adduct tab</a><br />
+&emsp;&emsp;<a href="#section-7-3-5">Section 7-3-5: Alignment tab</a><br />
+&emsp;&emsp;<a href="#section-7-3-6">Section 7-3-6: Isotope tracking tab</a><br />
+&emsp;<a href="#section-7-4">Section 7-4: Data curation for isotope tracking result</a><br />
+<a href="#chapter-8">Chapter 8: Project for all ion fragmentation with multiple collision energies</a><br />
+&emsp;<a href="#section-8-1">Section 8-1: Starting up your project</a><br />
+&emsp;<a href="#section-8-2">Section 8-2: Importing ABF files</a><br />
+&emsp;<a href="#section-8-3">Section 8-3: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-8-3-1">Section 8-3-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-8-3-2">Section 8-3-2: Peak detection tab</a><br />
+&emsp;&emsp;<a href="#section-8-3-3">Section 8-3-3: MS2Dec tab</a><br />
+&emsp;&emsp;<a href="#section-8-3-4">Section 8-3-4: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-8-3-5">Section 8-3-5: Adduct tab</a><br />
+&emsp;&emsp;<a href="#section-8-3-6">Section 8-3-6: Alignment tab</a><br />
+&emsp;<a href="#section-8-4">Section 8-4: Result checking</a><br />
+<a href="#chapter-9">Chapter 9: Graphical user interface of MS-DIAL in AIF mode</a><br />
+&emsp;<a href="#section-9-1">Section 9-1: Mass spectrum viewers in peak spot and alignment viewer</a><br />
+&emsp;<a href="#section-9-2">Section 9-2: MS/MS chromatogram viewer in peak viewer</a><br />
+&emsp;<a href="#section-9-3">Section 9-3: Compound search for the curation of peak identification</a><br />
+&emsp;<a href="#section-9-4">Section 9-4: Aligned sample table viewer for checking each sample</a></p>
+</div>
 
 ## Chapter 1
 ## General introduction of MS-DIAL
