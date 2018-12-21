@@ -83,24 +83,24 @@ MRMPROBS can import Analysis Base Framework (ABF) format data. MRMPROBS extracts
 
 ![alt](images/image_2.png)    
 
-1. MRMPROBS key index = metabolite name (abf)
+1\. MRMPROBS key index = metabolite name (abf)
  * Use half-width alphanumeric symbols for compound names in MRM method setting.  
  * Do not use the same compound name at different transition (precursor-product) sets.  
 
 
-2. MRMPROBS key index = Function (mzML)  
+2\. MRMPROBS key index = Function (mzML)  
  * ‘Function ID’ is utilized to extract the chromatogram data. Users should add the “function id” information to the reference library in addition to the normal library format. (see Appendix B)  
 
 &#042; The above two projects are for MRM data sets.  
 
-3. MRMPROBS key index = SCAN or DIA-MS (abf)  
+3\. MRMPROBS key index = SCAN or DIA-MS (abf)  
  * MRMPROBS can import GC/MS, LC/MS, and LC-DIA-MS (like SWATH) data sets.  
  * Prepare the reference library (see Appendix C) to extract the certain retention time range and *m/z* values.  
  * Use half-width alphanumeric symbols for compound names.  
 
 
-4. MRM-DIFF (abf, mzML)  
-See <http://prime.psc.riken.jp/Metabolomics_Software/MRM-DIFF/index.html>.  
+4\. MRM-DIFF (abf, mzML)  
+See <http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>.  
 
 
 
@@ -123,7 +123,7 @@ To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, an
 Also see FAQ for ABF converter  
 <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index3.html>  
 
-Summary of PC condition required for file conversion  
+**Summary of PC condition required for file conversion**
 
 |Vendo|Formats|Required|  
 |:-:|:-:|:-:|
@@ -139,14 +139,14 @@ Summary of PC condition required for file conversion
 
 **FAQ**  
 * Agilent: Almost all of Agilent’s raw data (.D) can readily be converted without any additional steps. However, the only exception is GCMS data sets obtained from ChemStation, which cannot be directly converted to ABF. Therefore, you have to convert your files into netCDF (AIA) in ChemStation. Then, convert your AIA files into ABF using our file converter.  
-* Bruker: Go to <https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html?. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).  
+* Bruker: Go to <https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html>. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).  
 * LECO: All of your data has to be converted to netCDF (AIA) first. Then, convert them into ABF using our file converter.  
-* Shimadzu: The compound table of the .lcd file must include the MRM conditions of the “.lcm” file. How to set this is described in Appendix A-1. In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (<http://proteowizard.sourceforge.net/index.shtml>). Then, convert them into ABF.   
+* Shimadzu: The compound table of the .lcd file must include the MRM conditions of the “.lcm” file. How to set this is described in **Appendix A**. In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (<http://proteowizard.sourceforge.net/index.shtml>). Then, convert them into ABF.   
 * Thermo: The following link explains how to install MSFileReader. <http://fields.scripps.edu/rawconv/>. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.  
-
-* Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. Unzip the archive file `watersrawsdkredist.zip` and copy `MassLynxRaw.dll` (64-bit) to `ABFCvtSvrWtrRw` folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
+* Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<http://www.waters.com/waters/home.htm?locale=en_US>). 2. Unzip the archive file 'watersrawsdkredist.zip' and copy 'MassLynxRaw.dll' (64-bit) to 'ABFCvtSvrWtrRw' folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   
 * NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <https://www.microsoft.com/en-us/download/details.aspx?id=15468>.   
 
+<br />
 
 
 ### Section 4-3
@@ -249,8 +249,8 @@ Users can utilize MRMPROBS software for scan type data such as GC/MS, LC/MS, and
 7 column.&emsp;&emsp;&emsp;&emsp;RT end: end time to draw the chromatogram  
 8 column.&emsp;&emsp;&emsp;&emsp;MS1 tolerance: mass accuracy for survey scan MS data  
 9 column.&emsp;&emsp;&emsp;&emsp;MS2 tolerance: mass accuracy for MS/MS spectra  
-10 column.&emsp;&emsp;&emsp;&emsp;MS level: put 1 for survey scan MS data (MS1), and put 2 for MS/MS.  
-11 column.&emsp;&emsp;&emsp;&emsp;Class: it’s used for the MRMPROBS viewer to filter out the chromatograms. Set ‘NA’ or something if not interest.  
+10 column.&emsp;&emsp;&emsp;MS level: put 1 for survey scan MS data (MS1), and put 2 for MS/MS.  
+11 column.&emsp;&emsp;&emsp;Class: it’s used for the MRMPROBS viewer to filter out the chromatograms. Set ‘NA’ or something if not interest.  
 
 **Below is the description of the ‘bridge’ from MS-DIAL to MRMPROBS**  
 ![alt](images/image_11.png)
@@ -322,7 +322,7 @@ Select ‘ExampleLibrary.txt’ and set the above parameters for this demonstrat
 * If you want to edit or update the retention time and amplitudes of metabolites in your reference library from an example file such as a QC or standard mixture, check “create new library" and choose the file name to which you want to refer. In this demonstration, ‘20_STD10uM_02’ is selected.  
 
 **[Recommended]**  
-Peak detection  
+*Peak detection*  
 Smoothing method: linear weighted moving average.  
 Smoothing level: 1-2  
 Minimum peak width: 3-5  
@@ -502,11 +502,11 @@ A tab-delimited text file can be exported for a raw data matrix, a processed dat
 ## How to obtain appropriate file conversion of the Shimadzu .lcd file.  
 Although you can do a content change of the .lcd file after LC-QqQ/MS (MRM) analysis, it is very useful to construct a suitable method file (.lcm format file) for the successful file convert of the MRMPROBS software.  
 
-1. Event name and channel (MRM transitions) rule.  
+1\. Event name and channel (MRM transitions) rule.  
 
 ![alt](images/image_32.png)  
 
-2. Update compound table  
+2\. Update compound table  
 After the method construction of MRM transitions, you should update the compound table *m/z* by the MRM event. If you can analyze the samples by using the updated method file, you do not have to perform any other tasks for the stable file convert.  
 
 ![alt](images/image_33.png)  
@@ -515,7 +515,7 @@ You can check the updated table by Method->Data Processing Parameters->Compound 
 
 ![alt](images/image_34.png)  
 
-3. If your data (.lcd) were not collected by a suitable method described above, you can improve the .lcd file by using the method file modified in the above way. After the construction of the modified method file, please open “Postrun Analysis” of LabSolutions.  
+3\. If your data (.lcd) were not collected by a suitable method described above, you can improve the .lcd file by using the method file modified in the above way. After the construction of the modified method file, please open “Postrun Analysis” of LabSolutions.  
 
 ![alt](images/image_35.png)   
 
@@ -527,7 +527,7 @@ Select the modified method file and improve your .lcd file including the compoun
 
 ![alt](images/image_37.png)   
 
-4. File convert  
+4\. File convert  
 Conditions: You can convert from .lcd files to .abf files on your computer by installing LabSolutions software. “TTFLDataExportVer5.dll” of LabSolutions ver. 5.53 SP4 or later is required for the file convert. Check the “TTFLDataExportVer5.dll” (Program Files (or &#042;86)>LabSolutions) file property. If the file size is less than 577,536 bytes, contact Shimadzu Inc. for a file change.  
 After “AnalysisBaseFileConverter.exe” is opened, drag and drop the .lcd files to this converter.  
 
