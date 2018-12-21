@@ -249,8 +249,8 @@ Users can utilize MRMPROBS software for scan type data such as GC/MS, LC/MS, and
 7 column.&emsp;&emsp;&emsp;&emsp;RT end: end time to draw the chromatogram  
 8 column.&emsp;&emsp;&emsp;&emsp;MS1 tolerance: mass accuracy for survey scan MS data  
 9 column.&emsp;&emsp;&emsp;&emsp;MS2 tolerance: mass accuracy for MS/MS spectra  
-10 column.&emsp;&emsp;&emsp;MS level: put 1 for survey scan MS data (MS1), and put 2 for MS/MS.  
-11 column.&emsp;&emsp;&emsp;Class: it’s used for the MRMPROBS viewer to filter out the chromatograms. Set ‘NA’ or something if not interest.  
+10 column.&emsp;&emsp;&emsp;&nbsp;MS level: put 1 for survey scan MS data (MS1), and put 2 for MS/MS.  
+11 column.&emsp;&emsp;&emsp;&nbsp;Class: it’s used for the MRMPROBS viewer to filter out the chromatograms. Set ‘NA’ or something if not interest.  
 
 **Below is the description of the ‘bridge’ from MS-DIAL to MRMPROBS**  
 ![alt](images/image_11.png)
