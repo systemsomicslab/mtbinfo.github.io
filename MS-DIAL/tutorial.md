@@ -839,7 +839,7 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 ![alt](images/image_76.png)
 
 <img src="images/image_77.png" width="3%"> This icon displays the raw EI or DIA-MS/MS chromatograms.  
-<img src="images/image_78.png" width="3%"" This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.  
+<img src="images/image_78.png" width="3%"> This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.  
 <img src="images/image_79.png" width="3%"> This icon displays both the raw and de-convoluted EI or DIA-MS/MS chromatograms.  
 
 ![alt](images/image_80.png)
@@ -850,7 +850,9 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 
 *Rep. vs. Ref.*: In combination with the **alignment viewer**, the window compares a representative EI or MS/MS spectrum and a reference EI or MS/MS spectrum. The representative EI or MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.   
 
-![alt](images/image_82.png)
+![alt](images/image_82.png)  
+<br />
+
 
 ### Section 5-13
 ### Search  
@@ -858,7 +860,9 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 #### MS/MS fragment searcher  
 In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’96.9597’ Da as product ion search in order to find the precursor ions contacting sulfate (SO<sub>4</sub><sup>-</sup>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  
 
-![alt](images/image_83.png)
+![alt](images/image_83.png)  
+<br />
+
 
 #### Section 5-13-2
 #### Amalgamation of different polarity peak list  
@@ -870,10 +874,10 @@ Example of mass difference for adduct type determination
 Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   
 1.	In negative ion mode project, select ‘Export’ -> ‘Peak list export’.  
 2.	Export a detected peak list (feature list) as tab delimited text format.  
-<img src="images/image_85.png" width=20%>
+<img src="images/image_85.png" width="20%">
 3.	Then, make the peak list containing *m/z* value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg ion features.txt’.   
-<img src="images/image_86.png" width=20%>
-4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.   
+<img src="images/image_86.png" width="20%">
+4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
 ![alt](images/image_87.png)
 
 
@@ -919,7 +923,9 @@ B.	Second way to perform the network analysis is to click the network button at 
 
 C.	 Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not show all of nodes and edges to be used in the network analysis. If you want to use all of information with the flexible graphical user interface, please export the node- and edge files from the export option. The exported results can be imported by the cytoscape program (<http://www.cytoscape.org/cy3.html>).   
 
-![alt](images/image_95.png)
+![alt](images/image_95.png)  
+<br />
+
 
 ## Chapter 7
 ## MS-DIAL isotope tracking function  
@@ -927,6 +933,7 @@ C.	 Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not s
 Stable isotope assisted metabolomics is a great approach to reveal the metabolic turnover of a nutrient source, to calculate flux balances, and to determine the molecular element (CNOS) of unknown molecules. Here, a project using LC-MS/MS data sets of non-labeled- and fully 13C labeled Arabidopsis thaliana samples for the comprehensive annotation of plant specialized metabolites is demonstrated. The purpose of this study was to determine the carbon element count of molecular formula by using 13C labeled plant tissues. The files used for this demonstration can be downloaded from <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
 ![alt](images/image_96.png)  
+<br />
 
 ### Section 7-1
 ### Starting up your project  
@@ -962,11 +969,11 @@ Note: Please finalize your file name here, because you cannot change it later.
 
 *Data collection parameters*: You can set analysis ranges (RT and MS1 axis). Here, set 1.5-10.5 min and 50-1500 Da for the ranges.  
 
-Centroid parameters: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding if your files are profile data. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively.   
+*Centroid parameters*: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding if your files are profile data. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively.   
 
 *Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  
 
-Multithreading: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
+*Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
    
 #### Section 7-3-2
 #### Peak detection tab and MS2Dec tab  
@@ -1021,10 +1028,10 @@ The result can be checked as described below. Practically, I recommend the follo
 4. As described in next page, please check ‘Filtering by the result of isotope labeled tracking’ in the alignment result export. Of course, if you are a programmer, you do not check it because you can do the filtering method by yourself.  
 5. Moreover, if you do right click at the panel of alignment spot viewer, then, follow as ‘Search formula and structure’ -> ‘Add components to search list’, you will get the mat files containing the information of determined carbon element number to be used in MS-FINDER.  
 
-![alt](images/image_105.png)
+![alt](images/image_105.png)  
 
-![alt](images/image_106.png)
-
+![alt](images/image_106.png)  
+<br />
 
 
 
@@ -1077,9 +1084,9 @@ Experimental_Information_ForAIF.txt (**tab-separated** file)
 **MS Type:** please set “SCAN” as MS1 scan  
 **Start m/z:** minimum m/z  
 **End m/z:** max m/z  
-<span style="color:red;">**Name:** cycle name to show viewers  
-**Collision Energy:** collision energy  
-**DecTarget:** 0 or 1. If you want to get deconvoluted spectra in this cycle, please set 1. Please set 1 at least 1 cycle.  </span>
+<span style="color:red;"><b>Name:</b> cycle name to show viewers<br />  
+<b>Collision Energy:</b> collision energy<br />  
+<b>DecTarget:</b> 0 or 1. If you want to get deconvoluted spectra in this cycle, please set 1. Please set 1 at least 1 cycle.  </span>
 
 
 ![alt](images/image_110.png)
