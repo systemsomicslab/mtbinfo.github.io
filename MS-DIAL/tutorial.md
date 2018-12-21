@@ -247,7 +247,7 @@ Figure: an example of text library
    
 #### Section 1-6-4
 #### MSP format as GC/MS library  
-MS-DIAL supports the MSP format (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) in ASCII text, same as in section 6-1. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   
+MS-DIAL supports the MSP format (<http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf>) in ASCII text, same as in **section 6-1**. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   
 
 ![alt](images/image_10.png)  
 Figure: an example of MSP format library for GC/MS  
@@ -422,7 +422,7 @@ Practically, what to manually curate the identification result of your represent
 ## Chapter 3
 ## LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL  
 
-Here, a project from data dependent MS/MS acquisition in combination with a user-defined MSP library (an integration library of MassBank, GNPS, and Respect) is demonstrated. The experimental protocol is described in the previous research: http://pubs.acs.org/doi/abs/10.1021/acs.jafc.5b04890. The ABF files for this demonstration can be downloaded from our website: http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html.   
+Here, a project from data dependent MS/MS acquisition in combination with a user-defined MSP library (an integration library of MassBank, GNPS, and Respect) is demonstrated. The experimental protocol is described in the previous research: <http://pubs.acs.org/doi/abs/10.1021/acs.jafc.5b04890>. The ABF files for this demonstration can be downloaded from our website: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>.   
 
 This section uses total 6 files and the MSP file is contained in the same folder of this demonstration. Also, there is a parameter file (Param.med) in this folder to be used in MS-DIAL for the quick start.  
 
@@ -500,7 +500,7 @@ Figure: Explanation about purification parameters
 
 ![alt](images/image_33.png)  
 
-*MSP file*: Set your MSP file here. (Tutorial data: MSMS-AllPublic-Curated-Pos.msp.) In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  
+*MSP file*: Set your MSP file here. (Tutorial data: **MSMS-AllPublic-Curated-Pos.msp**.) In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  
 
 *Parameters*: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). However, since the retention times of this MSP file are not recorded by the method of this demonstration, set the tolerance to 100 or larger in order to ignore the effect of retention time tolerance. The two mass tolerances for MS1 and MS2 are required for the compound search. This demonstration’s MSP file has the theoretical value of precursor *m/z* for all of authentic compounds. Therefore, the MS1 tolerance for time-of-flight MS was set to 0.025 Da here. On the other hand, since this MSP file also includes low resolution (QqQ etc.) MS data, 0.2 or more should be suitable to widely utilize all of the queries. The cutoff of the identification score should be greater than 0.7 or 0.8 to avoid false positives.  
 
@@ -511,10 +511,10 @@ Figure: Explanation about purification parameters
 ![alt](images/image_34.png)  
 
 MS/MS tab:  
-3.	*Relative abundance cut off*: the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  
+*Relative abundance cut off*: the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  
 
 Post ident. Tab:  
-4.	*Only report the top hit*: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
+*Only report the top hit*: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
 
 
 #### Section 3-3-5
@@ -566,6 +566,8 @@ Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part o
 *	MS-DIAL can also process your LC/MS data like GC/MS.   
 *	If you have accurate GC/MS data, a parameter to set its accuracy is given in the parameter setting section.  
 * If your data is a kind of precursor oriented GC/MS/MS technique such as GC-CI- (chemical ionization), GC-FI- (field ionization), GC-PI- (photonic ionization), and GC-APCI-MS, it should be dedicated to ‘ESI (LC/MS, LC/MS/MS, or precursor-oriented GC/MS/MS’ part as ionization type. See chapter 3.  
+<br />
+
 
 ### Section 4-2
 ### Importing ABF files  
@@ -613,7 +615,7 @@ The peak identification of GC/MS based untargeted analysis is straightforward, b
 There are two methods to calculate retention indexes: 1) Kovats on the basis of alkane mixture, and 2) Fiehn on the basis on FAME (fatty acid methyl ester) mixture. These mixtures can be bought for example from Sigma-Aldrich (49452-U for C7-C40 saturated alkane mixture) and from Agilent (<http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf>). Here, you have to prepare a tab-delimited file which includes the pair-list of carbon number and its retention time.  
 ![alt](images/image_45.png)  
 
-The figure above describes the way to check the retention times of Alkane mixture (using AMDIS), and the same way can be used for FAME mixture. Note that **for FAME based Fiehn RI calculation**, you MUST prepare all of retention information of C8, C9, C10, C12, C14, C16, C18, C20, C22, C24, C26, C28, and C30 to calculate Fiehn RIs. On the other hand, all of alkanes is not required for the Kovats calculation.   
+The figure above describes the way to check the retention times of Alkane mixture (using AMDIS), and the same way can be used for FAME mixture. Note that for **FAME based Fiehn RI calculation**, you MUST prepare all of retention information of C8, C9, C10, C12, C14, C16, C18, C20, C22, C24, C26, C28, and C30 to calculate Fiehn RIs. On the other hand, all of alkanes is not required for the Kovats calculation.   
 
 From version 2.42, MS-DIAL supports ‘retention index’ based peak alignment. Some metabolomics studies can be acquired over months / years.  Cutting 10-15 cm of the GC column during instrument maintenance makes retention times shorter but this does not influence retention index. In some cases, there are many isomers (e.g., analysis of volatiles), thus, use of wide retention time tolerance (e.g., 0.5-1 min) could lead to wrong peak alignment. In order to deal with this requirement, users have to define the ‘pair’ of analysis file path and carbon-RT dictionary file in the parameter setting. Use ‘auto fill’ of context menu to apply a dictionary file into all of the other analysis files.  
 
@@ -636,6 +638,7 @@ Even if you use accurate GC/MS data, 0.5 for *m/z* tolerance is recommended unle
 &emsp;&emsp;&emsp;&emsp;If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. If you can prepare many QC sample data, tick the “QC at least filter” box. Then a peak will be removed if it is missing in any of the QC samples. Recently, the option termed as ‘identification after alignment’ was prepared. If you do not want to execute the compound identification function for each sample file, and if you want to execute it only for the alignment table, please check it. When you use NIST or Willy EI-MS database (containing > 4 million records), this option may be useful to reduce the computational time.  
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the EI spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
+<br />
 
 ### Section 4-4
 ### Data curation for the reduction of false positive identifications  
@@ -643,17 +646,19 @@ MS-DIAL can automatically identify the metabolite peaks by the similarity calcul
 Practically, what you have to do is to curate the identification result of an alignment result file registered in ‘**Alignment navigator**’ since the identification result of its alignment file will be reflected as the final output. By the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
 &#042; Note: in contrast to LC/MS (precursor oriented data), each alignment spot does not describe a ‘precursor’ ion of metabolite but instead describe the quant mass (or unique mass, unique *m/z*) of the deconvoluted peak. The representative quant mass is determined by the voting way from quant masses of all biological samples.   
-![alt](images/image_47.png)
+![alt](images/image_47.png)  
+<br />
 
 ## Chapter 5
 ## Graphical user interface of MS-DIAL  
 ### Section 5-1
 ### Mouse function  
-A)	Mouse right click (or hold) and move: zoom in and out  
-B)	Mouse left click (or hold) and move: select and scroll  
-C)	Mouse left double click: reset range and select files in the file navigator  
-D)	Mouse wheel: zoom in and out  
-E)	Right click: popup context menu  
+*	Mouse right click (or hold) and move: zoom in and out  
+*	Mouse left click (or hold) and move: select and scroll  
+*	Mouse left double click: reset range and select files in the file navigator  
+*	Mouse wheel: zoom in and out  
+*	Right click: popup context menu  
+
 ![alt](images/image_48.png)
 <span style="color:red;">&#042; Red rectangle: acceptable click point</span>
 <br />  
@@ -692,7 +697,9 @@ On **Bar chart of aligned spots** of top panel, you can see the summary of the t
 ### Compound search for the result curation of peak identification  
 The automatic identification process cannot escape from mis-identification. MS-DIAL provides the user-interface so that users can manually correct the identification result. In this option, you can customize the identification criteria into three levels: “confident”, “unsettled”, and “unknown.” For example, in the phospholipid identification, we often determine only the cumulative composition such as PC 36:1 without positions of acyl chains, e.g. PC(18:0/18:1). You can add “unsettled” tag to such peaks as the signpost to comment that “we only checked the cumulative composition”.   
 Information of identification is available not only in the “peak viewer” but also in the “alignment viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  
-![alt](images/image_53.png)
+
+![alt](images/image_53.png)  
+
 A)	Mouse double click in each row of the library information to show identification details.  
 B)	Add a tolerance value for identification and click the “Search” button.  
 C)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  
@@ -720,6 +727,7 @@ B)	Alignment result export
 C)	Context menu strip  
 
 A)	*Peak list export*: You can get the peak list information of each sample including retention time, *m/z*, MS/MS spectra information, and so on. Available formats are MSP, MGF or Text.  
+
 ![alt](images/image_56.png)
 
 Step1.	Choose an export folder path.  
@@ -728,6 +736,7 @@ Step3.	Select export format.
 Step4.	Click the export button.  
 
 B)	*Alignment result export*: You can get data matrix or spectral information.  
+
 ![alt](images/image_57.png)
 
 Step1.	Choose an export folder path.  
@@ -745,6 +754,7 @@ Step4.	Click the export button.
 ![alt](images/image_59.png)
 
 **Your data processing parameter can be saved as MED format file.** When you want to use your method file for your data processing method, select your MED format file in the data processing setting.  
+
 ![alt](images/image_60.png)
 
 <br />
@@ -784,6 +794,7 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ![alt](images/image_67.png)
 
 *Display total ion chromatogram*: You can see the total ion chromatogram of the focused sample.  
+
 ![alt](images/image_68.png)
 
 *Display extracted ion chromatogram*: You can see the extracted ion chromatograms which you want to display for the focused sample.  
@@ -827,9 +838,9 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 
 ![alt](images/image_76.png)
 
-<img src="images/image_77.png" width=3%> This icon displays the raw EI or DIA-MS/MS chromatograms.  
-<img src="images/image_78.png" width=3%> This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.  
-<img src="images/image_79.png" width=3%> This icon displays both the raw and de-convoluted EI or DIA-MS/MS chromatograms.  
+<img src="images/image_77.png" width="3%"> This icon displays the raw EI or DIA-MS/MS chromatograms.  
+<img src="images/image_78.png" width="3%"" This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.  
+<img src="images/image_79.png" width="3%"> This icon displays both the raw and de-convoluted EI or DIA-MS/MS chromatograms.  
 
 ![alt](images/image_80.png)
    
