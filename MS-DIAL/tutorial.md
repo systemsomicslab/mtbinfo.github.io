@@ -22,6 +22,7 @@ MS-DIAL screenshot
 <br />
 
 <div id="boxMenu">
+<h1 id="ms-dial-tutorial">MS-DIAL tutorial</h1>
 <h2 id="table-of-contents">Table of contents</h2>
 <p><a href="#chapter-1">Chapter 1: General introduction of MS-DIAL</a><br />
 &emsp;<a href="#section-1-1">Section 1-1: Downloading file converter to convert a vendor’s format into ABF</a><br />
