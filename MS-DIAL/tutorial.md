@@ -1084,9 +1084,9 @@ Experimental_Information_ForAIF.txt (**tab-separated** file)
 **MS Type:** please set “SCAN” as MS1 scan  
 **Start m/z:** minimum m/z  
 **End m/z:** max m/z  
-<span style="color:red;"><b>Name:</b> cycle name to show viewers<br />  
-<b>Collision Energy:</b> collision energy<br />  
-<b>DecTarget:</b> 0 or 1. If you want to get deconvoluted spectra in this cycle, please set 1. Please set 1 at least 1 cycle.  </span>
+<span style="color:red;"><b>Name:</b> cycle name to show viewers  
+<b>Collision Energy:</b> collision energy  
+<b>DecTarget:</b> 0 or 1. If you want to get deconvoluted spectra in this cycle, please set 1. Please set 1 at least 1 cycle.</span>
 
 
 ![alt](images/image_110.png)
@@ -1175,6 +1175,7 @@ The cutoff of the identification score should be greater than 0.6 or 0.7.
 *Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. If you can prepare many QC sample data, tick the “QC at least filter” box. Then a peak will be removed if it is missing in any of the QC samples.  
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
+<br />
 
 
 ### Section 8-4
@@ -1186,6 +1187,7 @@ MS-DIAL can automatically identify metabolite peaks by the similarity calculatio
 ![alt](images/image_119.png)  
 
 Ion intensities of tryptophan are stable across samples; however, the intensity of kynurenine, which is synthesized from tryptophan, is very low in the mutant sample (bna2). Please refer to the original paper for details (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). For further information about GUI of MS-DIAL, see Chapter 5 & Chapter 9.  
+<br />
 
 
 ## Chapter 9
