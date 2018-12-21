@@ -19,6 +19,7 @@ MS-FINDER screenshot
 <br />
 
 <div id="boxMenu">
+<h1 id="ms-finder-tutorial">MS-FINDER tutorial</h1>
 <h2 id="table-of-contents">Table of contents</h2>
 <p><a href="#section-1">Section 1: Software environments</a><br />
 <a href="#section-2">Section 2: Required programs</a><br />
@@ -51,6 +52,7 @@ MS-FINDER screenshot
 <a href="#section-15">Section 15: Help</a></p>
 </div>
 
+   
 ## Section 1
 ## Software environments  
 * Windows OS (.NET Framework 4.5 or later): Windows 7 or later  
