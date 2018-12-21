@@ -17,6 +17,7 @@ MRMPROBS screenshot
 <br />
 
 <div id="boxMenu">
+<h1 id="mrmprobs-tutorial">MRMPROBS tutorial</h1>
 <h2 id="table-of-contents">Table of contents</h2>
 <p><a href="#section-1">Section 1: Software environments</a><br />
 <a href="#section-2">Section 2: Required software programs and files</a><br />
