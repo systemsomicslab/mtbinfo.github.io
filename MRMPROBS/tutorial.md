@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/style.css">
 # MRMPROBS tutorial  
 <div style="text-align: right;">
 Edited in 2016/11/16  
@@ -17,46 +16,48 @@ hiroshi.tsugawa@riken.jp
 MRMPROBS screenshot  
 <br />
 
-## Table of contents  
-[Section 1: Software environments](#section-1)  
-[Section 2: Required software programs and files](#section-2)  
-[Section 3: Project type and condition](#section-3)  
-[Section 4: ABF file conversion](#section-4)  
-&emsp;[Section 4-1: Downloading the ABF converter](#section-4-1)  
-&emsp;[Section 4-2: Check the conditions for file conversion](#section-4-2)  
-&emsp;[Section 4-3: File conversion](#section-4-3)  
-[Section 5: Reference file format](#section-5)  
-&emsp;[Section 5-1: Reference library for Project type 1: MRMPROBS key index = metabolite name (abf)](#section-5-1)  
-&emsp;[Section 5-2: Reference library for Project type 2: MRMPROBS key index = Function (mzML)](#section-5-2)  
-&emsp;[Section 5-3: Reference library for Project type 3: MRMPROBS key index = SCAN or DIA-MS (abf)](#section-5-3)  
-&emsp;&emsp;[Section 5-3-1: Reference format for DIA-MS data](#section-5-3-1)  
-&emsp;&emsp;[Section 5-3-2: Dictionary file for DIA-MS data processing](#section-5-3-2)  
-&emsp;&emsp;[Section 5-3-3: Reference format for GC/MS and LC/MS data](#section-5-3-3)  
-[Section 6: Starting MRMPROBS](#section-6)  
-&emsp;[Section 6-1: Summary for MRM demonstration data sets](#section-6-1)  
-&emsp;[Section 6-2: Starting up your project](#section-6-2)  
-&emsp;[Section 6-3: Importing Abf files](#section-6-3)  
-&emsp;[Section 6-4: Parameter](#section-6-4)  
-[Section 7: MRMPROBS viewer](#section-7)  
-&emsp;[Section 7-1: Mouse operation in the chromatogram viewer](#section-7-1)  
-&emsp;[Section 7-2: Library editor (optional)](#section-7-2)  
-&emsp;[Section 7-3: Tool button](#section-7-3)  
-&emsp;[Section 7-4: Tab](#section-7-4)  
-&emsp;[Section 7-5: Button](#section-7-5)  
-&emsp;[Section 7-6: List Box](#section-7-6)  
-&emsp;[Section 7-7: Details on the MRMPROBS function](#section-7-7)  
-&emsp;&emsp;[Section 7-7-1: File menu](#section-7-7-1)  
-&emsp;&emsp;[Section 7-7-2: Data reprocessing](#section-7-7-2)  
-&emsp;&emsp;[Section 7-7-3: Statistical analysis](#section-7-7-3)  
-&emsp;&emsp;[Section 7-7-4: Missing value methods](#section-7-7-4)  
-&emsp;&emsp;[Section 7-7-5: Normalization](#section-7-7-5)  
-&emsp;&emsp;[Section 7-7-6: Window menu](#section-7-7-6)  
-&emsp;&emsp;[Section 7-7-7: View menu](#section-7-7-7)  
-&emsp;&emsp;[Section 7-7-8: Option menu](#section-7-7-8)  
-&emsp;&emsp;[Section 7-7-9: Export menu](#section-7-7-9)  
-[Appendix A: How to obtain appropriate file conversion of the Shimadzu .lcd file](#appendix-a)  
-[Appendix B: Third option of MRMPROBS: via mzML file](#appendix-b)  
-
+<div id="boxMenu">
+<h2 id="table-of-contents">Table of contents</h2>
+<p><a href="#section-1">Section 1: Software environments</a><br />
+<a href="#section-2">Section 2: Required software programs and files</a><br />
+<a href="#section-3">Section 3: Project type and condition</a><br />
+<a href="#section-4">Section 4: ABF file conversion</a><br />
+&emsp;<a href="#section-4-1">Section 4-1: Downloading the ABF converter</a><br />
+&emsp;<a href="#section-4-2">Section 4-2: Check the conditions for file conversion</a><br />
+&emsp;<a href="#section-4-3">Section 4-3: File conversion</a><br />
+<a href="#section-5">Section 5: Reference file format</a><br />
+&emsp;<a href="#section-5-1">Section 5-1: Reference library for Project type 1: MRMPROBS key index = metabolite name (abf)</a><br />
+&emsp;<a href="#section-5-2">Section 5-2: Reference library for Project type 2: MRMPROBS key index = Function (mzML)</a><br />
+&emsp;<a href="#section-5-3">Section 5-3: Reference library for Project type 3: MRMPROBS key index = SCAN or DIA-MS (abf)</a><br />
+&emsp;&emsp;<a href="#section-5-3-1">Section 5-3-1: Reference format for DIA-MS data</a><br />
+&emsp;&emsp;<a href="#section-5-3-2">Section 5-3-2: Dictionary file for DIA-MS data processing</a><br />
+&emsp;&emsp;<a href="#section-5-3-3">Section 5-3-3: Reference format for GC/MS and LC/MS data</a><br />
+<a href="#section-6">Section 6: Starting MRMPROBS</a><br />
+&emsp;<a href="#section-6-1">Section 6-1: Summary for MRM demonstration data sets</a><br />
+&emsp;<a href="#section-6-2">Section 6-2: Starting up your project</a><br />
+&emsp;<a href="#section-6-3">Section 6-3: Importing Abf files</a><br />
+&emsp;<a href="#section-6-4">Section 6-4: Parameter</a><br />
+<a href="#section-7">Section 7: MRMPROBS viewer</a><br />
+&emsp;<a href="#section-7-1">Section 7-1: Mouse operation in the chromatogram viewer</a><br />
+&emsp;<a href="#section-7-2">Section 7-2: Library editor (optional)</a><br />
+&emsp;<a href="#section-7-3">Section 7-3: Tool button</a><br />
+&emsp;<a href="#section-7-4">Section 7-4: Tab</a><br />
+&emsp;<a href="#section-7-5">Section 7-5: Button</a><br />
+&emsp;<a href="#section-7-6">Section 7-6: List Box</a><br />
+&emsp;<a href="#section-7-7">Section 7-7: Details on the MRMPROBS function</a><br />
+&emsp;&emsp;<a href="#section-7-7-1">Section 7-7-1: File menu</a><br />
+&emsp;&emsp;<a href="#section-7-7-2">Section 7-7-2: Data reprocessing</a><br />
+&emsp;&emsp;<a href="#section-7-7-3">Section 7-7-3: Statistical analysis</a><br />
+&emsp;&emsp;<a href="#section-7-7-4">Section 7-7-4: Missing value methods</a><br />
+&emsp;&emsp;<a href="#section-7-7-5">Section 7-7-5: Normalization</a><br />
+&emsp;&emsp;<a href="#section-7-7-6">Section 7-7-6: Window menu</a><br />
+&emsp;&emsp;<a href="#section-7-7-7">Section 7-7-7: View menu</a><br />
+&emsp;&emsp;<a href="#section-7-7-8">Section 7-7-8: Option menu</a><br />
+&emsp;&emsp;<a href="#section-7-7-9">Section 7-7-9: Export menu</a><br />
+<a href="#appendix-a">Appendix A: How to obtain appropriate file conversion of the Shimadzu .lcd file</a><br />
+<a href="#appendix-b">Appendix B: Third option of MRMPROBS: via mzML file</a></p>
+</div>
+<br />
 
 ## Section 1   
 ## Software environments  
