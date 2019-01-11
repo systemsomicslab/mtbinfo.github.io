@@ -1,6 +1,6 @@
 # MS-FINDER tutorial  
 <div style ="text-align: right;">
-Last edited in Sep. 10, 2018  
+Last edited in Dec. 6, 2018  
 </div>
 
 ## Abstract  
@@ -157,7 +157,7 @@ For Trifluoroacetic acid: TFA, CFCOOH
 ### Section 3-5   
 ### User defined structure database format  
 
-MS-FINDER supports the structure elucidations from the candidates that users provide. The following format file should be prepared as tab-delimited text file. The identifiers of InChIKey, short InChIKey, and database ID are not required, but the values must be filled by some mimic values. The files of exact mass, formula, and SMILES must be prepared.   
+MS-FINDER supports the structure elucidations from the candidates that users provide. The following format file should be prepared as tab-delimited text file. The identifiers of InChIKey, short InChIKey, and database ID are not required, but the values must be filled by some mimic values. If you set the correct InChIKeys, the database scoring is also utilized for ranking structures. The files of exact mass, formula, and SMILES must be prepared.   
 
 ![alt](images/image_4.png)  
    
