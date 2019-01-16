@@ -9,7 +9,7 @@ header{
 }
 
 footer{
-	top:145px;
+	top:180px;
 	left:3%;
 }
 
@@ -28,7 +28,7 @@ section {
 
 #boxMenu{
 	position: fixed;
-	top:200px;
+	top:235px;
 	left:3%;
 	height:73%;
 	width:30%;
