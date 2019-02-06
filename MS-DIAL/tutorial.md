@@ -86,6 +86,7 @@ MS-DIAL screenshot
 &emsp;<a href="#section-5-13">Section 5-13: Search</a><br />
 &emsp;&emsp;<a href="#section-5-13-1">Section 5-13-1: MS/MS fragment searcher</a><br />
 &emsp;&emsp;<a href="#section-5-13-2">Section 5-13-2: Amalgamation of different polarity peak list</a><br />
+&emsp;<a href="#section-5-14">Section 5-14: Pathway map</a><br />
 <a href="#chapter-6">Chapter 6: Other utilities of MS-DIAL</a><br />
 &emsp;<a href="#section-6-1">Section 6-1: Link to MS-FINDER for searching unknowns</a><br />
 &emsp;<a href="#section-6-2">Section 6-2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets</a><br />
@@ -708,8 +709,9 @@ C)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown
    
 ### Section 5-5
 ### Normalization and statistical analysis in MS-DIAL  
-A)	Data normalization by internal standards or LOESS algorithm  
-B)	Principal component analysis  
+1.	Data normalization by internal standards or LOESS algorithm  
+2.	Principal component analysis  
+3.  Partial least squares (PLS) and orthogonal partial least squares (OPLS)
 
 A)	If you want to use internal standards to normalize your peak list, you have to set the IS information in **Option** menu. MS-DIAL also supports LOESS and cubic spline algorithm to normalize batch or amplitude drifts. In order to use the LOESS algorithm, you have to set “quality control” and “analytical order” information correctly in the **Option** menu.  
 B)	If you want to use the other statistics, please go to PRIMe web site:  
@@ -718,7 +720,40 @@ B)	If you want to use the other statistics, please go to PRIMe web site:
 &#042; Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_&#042;&#042;&#042;’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘176’ which was annotated LysoPC 17:0 from the setting below.  
 
 ![alt](images/image_54.png)
-![alt](images/image_55.png)  
+![alt](images/image_55.png)
+![alt](images/image_127.png)
+
+*	You can choose the metabolite data set from “Identified”, “Annotated” and “Unknown”.
+*	Finally, click the Done button.
+
+Output of the PCA
+
+![alt](images/image_128.png)
+
+*	The left side of the upper row: PCA score plot
+*	The right side of the upper row: PCA loading plot
+*	The upper bar graph (lower low): PCA loading plot of principal component 1 (Red: positive correlation, Blue: negative correlation)
+*	The lower bar graph (lower low): PCA loading plot of principal component 2 (Red: positive correlation, Blue: negative correlation)
+
+![alt](images/image_129.png)
+
+*	You can choose the method of PLS or OPLS (DA: discriminant analysis, R: regression analysis).
+*	You can choose the metabolite data set from “Identified”, “Annotated” and “Unknown”.
+*	Finally, click the Done button.
+
+**!** File setting for PLS before analyses
+1. Set Y (response) variables at menu -> option -> file property
+2. For (O)PLS-DA, use a binary (0 or 1) value as the response. Non-zero values are recognized as 1 in (O)PLS-DA testing.
+3. For (O)PLS-R, set sequential values.
+
+Output of the PLS
+
+![alt](images/image_130.png)
+
+*	The left side of the upper row: PLS score plot
+*	The right side of the upper row: PLS loading plot
+*	The upper bar graph (lower low): PLS loading plot of principal component 1 (Red: positive correlation, Blue: negative correlation)
+*	The lower bar graph (lower low): PLS loading plot of principal component 2 (Red: positive correlation, Blue: negative correlation)
 
 
 ### Section 5-6
@@ -881,8 +916,29 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
 ![alt](images/image_87.png)
 
+### Section 5-14
+### Pathway map  
 
-   
+1. “Data visualization” -> “Pathway”  
+
+![alt](images/image_125.png)
+
+*	You can select one of 3 type of pathway, i.e. animal pathway, plant pathway and user-defined pathway (two formats, graphml (VANTED) and gpml (Wikipathway) are accepted). In lipidomics project, the label name of nodes is used for mapping aligned data. In metabolomics project, InChIKey is used. Please register the InChIKey to tooltip in Vanted. In Wikipathway, there is the field (see the tutorial). Currently, the first layer is used for matching node and annotated data.
+*	You can also load up to 4 different project aligned data (class setting must be equal, and now, the project must be closed when loaded).
+*	Finally, click the Mapping button.
+
+
+2. You can get the pathway map.
+
+![alt](images/image_126.png)
+*	Right double click reset the display range.
+*	Right click and drag for zoom in.
+*	Mouse wheel for up-down scroll.
+*	Mouse wheel + Ctrl for zoom in-out.
+*	Mouse wheel + Shift for left-right scroll.
+*	Mouse click + Shift or Ctrl for changing node position.
+
+
 ## Chapter 6
 ## Other utilities of MS-DIAL  
 ### Section 6-1
