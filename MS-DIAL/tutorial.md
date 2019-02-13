@@ -904,7 +904,8 @@ In LC-MS/MS project, there is a ‘search’ function to find precursor ions con
 #### Amalgamation of different polarity peak list  
 The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see *m/z* 273.076 in positive and *m/z* 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  
 
-<img src="images/image_84.png" width="60%">
+<img src="images/image_84.png" width="60%">  
+  
 Example of mass difference for adduct type determination  
 
 Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   
@@ -912,7 +913,7 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 2.	Export a detected peak list (feature list) as tab delimited text format.  
 ![alt](images/image_85.png)
 3.	Then, make the peak list containing *m/z* value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg ion features.txt’.   
-<img src="images/image_86.png" width="50%">
+<img src="images/image_86.png" width="40%">
 4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
 ![alt](images/image_87.png)
 
