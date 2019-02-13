@@ -920,7 +920,7 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 ### Section 5-14
 ### Pathway map  
 
-1. “Data visualization” -> “Pathway”  
+1\. “Data visualization” -> “Pathway”  
 
 ![alt](images/image_125.png)
 
@@ -929,7 +929,7 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 *	Finally, click the Mapping button.
 
 
-2. You can get the pathway map.
+2\. You can get the pathway map.
 
 ![alt](images/image_126.png)
 *	Right double click reset the display range.
