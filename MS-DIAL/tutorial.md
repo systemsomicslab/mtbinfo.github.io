@@ -431,7 +431,7 @@ This section uses total 6 files and the MSP file is contained in the same folder
 ![alt](images/image_27.png)
 
 **Experiment summary:**  
-Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 m (50×1.0 mm).  
+Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 μm (50×1.0 mm).  
 Solvent A: water with 0.1% acetic acid  
 Solvent B: acetonitrile with 0.1% acetic acid  
 Mass spectrometer: data dependent method with positive ion mode.  
