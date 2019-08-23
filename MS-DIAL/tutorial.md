@@ -417,7 +417,7 @@ If you can prepare many QC sample data, tick the “Detected in all QCs” box. 
 ### Section 2-4
 ### Data curation for the reduction of false positive identifications  
 MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor *m/z*, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications as well as true positives. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified. Of course, the ultimate goal is the perfect identification without any false positive- and negative identifications.   
-Practically, what you have to do is to manually curate the identification result of your representative alignment file since the identification result of its alignment file will be reflected in the final output such as ‘peak height’ matrix etc. Using the GUI of MS-DIAL, you can check if an aligned spot is a false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
+Practically, what to manually curate the identification result of your representative alignment file since the identification result of its alignment file will be reflected in the final output such as ‘peak height’ matrix etc. Using the GUI of MS-DIAL, you can check if an aligned spot is a false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
 ![alt](images/image_26.png)
    
@@ -431,7 +431,7 @@ This section uses total 6 files and the MSP file is contained in the same folder
 ![alt](images/image_27.png)
 
 **Experiment summary:**  
-Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 μm (50×1.0 mm).  
+Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 m (50×1.0 mm).  
 Solvent A: water with 0.1% acetic acid  
 Solvent B: acetonitrile with 0.1% acetic acid  
 Mass spectrometer: data dependent method with positive ion mode.  
@@ -905,7 +905,7 @@ In LC-MS/MS project, there is a ‘search’ function to find precursor ions con
 The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see *m/z* 273.076 in positive and *m/z* 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  
 
 <img src="images/image_84.png" width="60%">  
-  
+
 Example of mass difference for adduct type determination  
 
 Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   
@@ -1230,7 +1230,7 @@ The cutoff of the identification score should be greater than 0.6 or 0.7.
 #### Alignment tab  
 ![alt](images/image_117.png)  
 
-*Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. If you can prepare many QC sample data, tick the “QC at least filter” box. Then a peak will be removed if it is missing in any of the QC samples.  
+*Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.  
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 <br />
@@ -1283,3 +1283,134 @@ When you select a different reference spectrum, the mass spectrum viewers will b
 
 This viewer shows each sample’s peak information including chromatogram peak shapes in an alignment spot. The value of ‘-2’ in “Peak ID” column means that the peak is not detected by peak picking process. (but calculated by gap-filling method). In the case of gap-filled peak, the colors of the “Peak Int.” and “Peak Area” columns become light blue. In normal, the colors (red) reflect the level of peak intensity or peak area. You cannot refine the peak and alignment yet, but that function will be developed.   
    
+## Chapter 10
+## LC-Ion mobility project
+
+A project dealing with LC-Ion mobility is demonstrated.  
+
+This tutorial uses LC-Ion mobility tandem MS (PASEF) data set which are downloadable from the below link.   
+<http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html>  
+
+![alt](images/image_131.png)  
+
+**Experiment summary:**  
+Liquid chromatography: total 30 min run per sample with Waters Acquity UPLC BEH peptide C18 column (50×2.1 mm; 1.7 μm).  
+Ion mobility: Bruker PASEF acquisition doing ion mobility (IM) separation with data dependent MS/MS acquisition (DDA).  
+Data: Total 10 LC-ESI(-)-IM-DDA-MS data from blank, mouse liver (n=3), mouse kidney (n=3), and mouse skeletal muscle (n=3) are demonstrated in this tutorial.
+
+### Section 10-1
+### Convert a vendor's format into IBF
+
+The first step is to convert your vendor’s format into IBF format. The file converter is included in the MS-DIAL package.   
+
+* Bruker: Raw data can readily be converted into .ibf format without any additional steps.
+* Waters: Raw data can readily be converted into .ibf format without any additional steps.  
+* Agilent: Please convert your data into .mzML format by means of ProteoWizard msconvert at first.
+
+1.	Start “IbfConverter.exe”.   
+2.	Drag & drop vendor files into this program.  
+3.	Click “Convert”.  
+4.	The IBF files are generated in the same directory as the raw data files. (**See the figure below**)  
+
+![alt](images/image_132.png)   
+
+
+### Section 10-2
+### Starting up your project  
+
+![alt](images/image_133.png)
+
+1. File -> new project  
+2. Set your project file path to the directory of your IBF files    
+3. Choose data type ‘centroid data’ for both MS1 and MS/MS  
+4. Choose negative ion mode  
+5. Choose target omics as lipidomics  
+
+### Section 10-3
+### Importing IBF files  
+
+![alt](images/image_134.png)  
+
+1.	Select IBF files  
+2.	If the file is a “blank” or “quality control” sample, then set the type as such. (in this example, you do not have any QC sample.)  
+
+Note: Please finalize your file name here, because you cannot change it later.  
+
+### Section 10-4
+### Setting parameters  
+
+![alt](images/image_135.png)  
+
+&lowast; For the quick start and its explanations, load ‘ionmobility_demo_param_neg.med2’ as shown above.  
+
+#### Section 10-4-1
+#### Data collection tab  
+
+![alt](images/image_136.png)   
+
+*Data collection parameters*: You can set analysis ranges (RT and MS1 axis). Here, set 0-20 min and 150-1700 Da for the ranges.  
+
+*Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.
+
+*Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
+
+#### Section 10-4-2
+#### Peak detection tab and MS2Dec tab  
+
+![alt](images/image_137.png)   
+
+The details are described in Chapter 2&3. In Waters and Bruker QTOF, the minimum peak height can be set to 300-500 as long as I confirmed. Here, 500 is set for minimum peak height because the demonstration file was obtained by Waters Xevo QTOF.  
+MS2Dec tab is mainly for data independent MS/MS project. Please see Section 2-3-3 for details.  
+
+#### Section 10-4-3
+#### Identification tab  
+
+![alt](images/image_138.png)   
+
+*MSP file*: In the case that you selected ‘lipidomics’ project, select what you want to find in your data sets for lipid profiling. Here, tick all lipids.
+
+*Parameters*: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5).
+The two mass tolerances for MS1 and MS2 are required for the compound search and they are dependent on your instrument performance.
+The cutoff of the identification score should be greater than 0.7 or 0.8.  
+If the checkbox of ‘Use retention information for scoring’ is checked, the scoring of retention time is used for the calculation of total score which is used for the identification cut off. If the checkbox of ‘Use retention information for filtering’ is checked, the program do not search beyond the RT tolerance value.
+
+*Text file*: If you want to perform “post identification” processing, set your text file here.
+
+#### Section 10-4-4
+#### Adduct tab  
+
+![alt](images/image_139.png)   
+
+Adduct ion setting: You can tick the adduct ions and charge values to be considered.  
+&lowast; see also the section 3-3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  
+
+#### Section 10-4-5
+#### Alignment tab  
+
+![alt](images/image_140.png)   
+
+*Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file in 'Reference file'. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter.
+
+#### Section 10-4-6
+#### Mobility tab  
+
+![alt](images/image_141.png)   
+
+*Mobility type*: Choose your instrument type. The unit of mobility tolerance is different for each type.
+
+*Peak picking*: The parameter of "Accumulated RT range" is used to accumulate the mobility axis spectra. After the peak picking is performed in the retention time axis, the program expands the ions to the mobility axis. If the peak top in retention time axis is 5.0 min and 0.2 min is set as "accumulated RT range", the mobility scan data from 4.8 min to 5.2 min is accumulated. Then, the extracted ion mobilogram (EIM) is constructed by the accumulated mobility spectra followed by the peak picking in mobility axis.  
+
+*Identification*: If the checkbox of ‘Use CCS for scoring’ is checked, the scoring of CCS is used for the calculation of total score which is used for the identification cut off. If the checkbox of ‘Use CCS for filtering metabolites’ is checked, the program do not search beyond the CCS tolerance value.
+
+### Section 10-5
+### Result checking  
+
+MS-DIAL can automatically identify metabolite peaks by the similarity calculation of retention time, precursor m/z, isotopic ratios, and MS/MS spectrum with the reference databases. You can easily check the result from alignment ion spot table.   
+
+
+![alt](images/image_142.png)
+
+
+Center window (**Peak spot viewer**): You can check the metabolite peaks in both retention time- and mobility dimensions. Here, the peak in retention time axis and mobility axis is termed as "RT peak" and "IM peak", respectively. Please make sure that in the ion mobility data, the MS/MS spectrum is always assigned to the IM peak, and therefore the annotation is performed for the IM peak property. Namely, one RT peak has several IM peaks, and the annotation result of RT peak is defined by one representative IM peak result which has the highest score in annotation.   
+
+**Alignment table**: the IM peak rows should have the information of mobility and CCS properties while the properties are described as "-1" for RT peak property.
