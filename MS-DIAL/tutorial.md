@@ -117,7 +117,18 @@ MS-DIAL screenshot
 &emsp;<a href="#section-9-1">Section 9-1: Mass spectrum viewers in peak spot and alignment viewer</a><br />
 &emsp;<a href="#section-9-2">Section 9-2: MS/MS chromatogram viewer in peak viewer</a><br />
 &emsp;<a href="#section-9-3">Section 9-3: Compound search for the curation of peak identification</a><br />
-&emsp;<a href="#section-9-4">Section 9-4: Aligned sample table viewer for checking each sample</a></p>
+&emsp;<a href="#section-9-4">Section 9-4: Aligned sample table viewer for checking each sample</a><br />
+<a href="#chapter-10">Chapter 10: LC-Ion mobility project</a><br />
+&emsp;<a href="#section-10-1">Section 10-1: Convert a vendor's format into IBF</a><br />
+&emsp;<a href="#section-10-2">Section 10-2: Starting up your project</a><br />
+&emsp;<a href="#section-10-3">Section 10-3: Importing IBF files</a><br />
+&emsp;<a href="#section-8-3">Section 10-4: Setting parameters</a><br />
+&emsp;&emsp;<a href="#section-10-4-1">Section 10-4-1: Data collection tab</a><br />
+&emsp;&emsp;<a href="#section-10-4-2">Section 10-4-2: Peak detection tab and MS2Dec tab</a><br />
+&emsp;&emsp;<a href="#section-10-4-3">Section 10-4-3: Identification tab</a><br />
+&emsp;&emsp;<a href="#section-10-4-4">Section 10-4-4: Adduct tab</a><br />
+&emsp;&emsp;<a href="#section-10-4-5">Section 10-4-5: Alignment tab</a><br />
+&emsp;&emsp;<a href="#section-10-4-6">Section 10-4-6: Mobility tab</a></p>
 </div>
 
 ## Chapter 1
