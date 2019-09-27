@@ -128,7 +128,7 @@ MS-DIAL screenshot
 &emsp;&emsp;<a href="#section-10-4-3">Section 10-4-3: Identification tab</a><br />
 &emsp;&emsp;<a href="#section-10-4-4">Section 10-4-4: Adduct tab</a><br />
 &emsp;&emsp;<a href="#section-10-4-5">Section 10-4-5: Alignment tab</a><br />
-&emsp;&emsp;<a href="#section-10-4-6">Section 10-4-6: Mobility tab</a>
+&emsp;&emsp;<a href="#section-10-4-6">Section 10-4-6: Mobility tab</a><br />
 &emsp;<a href="#section-10-5">Section 10-5: Setting parameters</a></p>
 </div>
 
