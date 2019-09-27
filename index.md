@@ -7,7 +7,7 @@
 MS-FINDER is a universal program for compound annotation supporting EI-MS (GC/MS) and ESI-MS/MS spectra. It aims to provide solutions for 1) spectral searching, 2) formula prediction, and 3) structure elucidation for unknown spectra.
 
 ### [MS-DIAL](/mtbinfo.github.io/MS-DIAL/tutorial "MS-DIAL") 
-[Japanese](/mtbinfo.github.io/MS-DIAL/tutorial_japanese "MS-DIAL") 
+[-- Japanese](/mtbinfo.github.io/MS-DIAL/tutorial_japanese "MS-DIAL Japan") 
 
 MS-DIAL is a universal program for untargeted metabolomics- and lipidomics supporting any type of chromatography/mass spectrometry methods (GC/MS, GC-MS/MS, LC/MS, and LC-MS/MS etc.).
 
