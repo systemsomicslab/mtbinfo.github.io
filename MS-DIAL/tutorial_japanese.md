@@ -1,6 +1,6 @@
-# MS-DIAL tutorial
+# MS-DIALチュートリアル
 <div style="text-align: right;">
-Last edited in Sep. 14, 2018
+最終編集日：2019年10月1日
 </div>
 
 ## はじめに
