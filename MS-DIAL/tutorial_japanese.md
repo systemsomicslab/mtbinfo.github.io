@@ -171,7 +171,7 @@ Bruker、LECO、Shimadzu、Thermo、Watersなどのファイルを変換する�
 * LECO: 最初にすべてのデータをnetCDF (AIA) に変換してから、ダウンロードしたファイルコンバーターを使ってABFに変換してください。  
 *	Shimadzu: 生データを直接変換した場合は、まずデータを一般的なデータ形式（netCDFまたはmzML）に変換してください。 GC/MSの場合は、GCMS solutionを使用してデータをnetCDFに変換します。 LC-ITTOF/MSの場合は、ProteoWizard（<http://proteowizard.sourceforge.net/index.shtml>）を使用してデータをmzMLに変換してください。 次に、それらをABFに変換します。  
 *	Thermo: 次のリンクはMSFileReaderのインストール方法を説明しています： <http://fields.scripps.edu/rawconv/> 。GC/MSデータの場合は、まずデータをnetCDFに変換する必要があります。次に、ダウロードしたファイルコンバーターを使ってABFに変換します。 GC-QExactive生データをABFに直接変換できることは確認済みですが、一部のGC/MSデータ（DSQなど）は最初にnetCDFに変換する必要がありました。  
-*	Waters: 1. MassLyncs Raw Data Reader Interface Library をダウンロード(<http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US>). 2. アーカイブファイル watersrawsdkredist.zipを解凍し、MassLynxRaw.dll（64ビット）をファイルコンバーターの ABFCvtSvrWtrRwフォルダーにコピーしてください。 32ビット環境は、ファイル変換はまだサポートされていません。   
+*	Waters: 1. MassLyncs Raw Data Reader Interface Library をダウンロード(<a href="http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US">http://www.waters.com/waters/supportList.htm?cid=511442&filter=documenttype|DWNL&locale=en_US</a>). 2. アーカイブファイル watersrawsdkredist.zipを解凍し、MassLynxRaw.dll（64ビット）をファイルコンバーターの ABFCvtSvrWtrRwフォルダーにコピーしてください。 32ビット環境は、ファイル変換はまだサポートされていません。   
 *	NetCDF: J＃依存関係の問題でエラーが発生したら、以下のサイトからMicrosoft Visual J＃2.0ライブラリをダウンロードしてインストールしてください。   
 
 ### セクション1-3
