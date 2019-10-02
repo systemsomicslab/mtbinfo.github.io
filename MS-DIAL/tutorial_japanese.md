@@ -1,4 +1,4 @@
-# MS-DIALチュートリアル
+# MS-DIAL　チュートリアル
 <div style="text-align: right;">
 最終編集日：2019年10月1日
 </div>
