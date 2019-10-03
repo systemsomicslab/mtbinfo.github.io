@@ -230,7 +230,7 @@ MS-FINDER provides two options for compound annotation: one is by spectral datab
 
 *Formula calculation setting:* You can set the parameters for formula calculation.   
 
-*LOWIS and SENIOR check:* to generate formula candidates that match the valence rules of formula elements. The valences of hetero atoms, i.e. N, O, S, and P are currently set to 3, 2, 6, and 5, respectively.   
+*LEWIS and SENIOR check:* to generate formula candidates that match the valence rules of formula elements. The valences of hetero atoms, i.e. N, O, S, and P are currently set to 3, 2, 6, and 5, respectively.   
 
 *Isotopic ratio tolerance:* to calculate the isotopic score. The tolerance should be utilized as the sigma value for the Gaussian scoring as described in the MS-FINDER paper.   
 
