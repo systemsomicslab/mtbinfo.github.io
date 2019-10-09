@@ -3,6 +3,7 @@
 ## Tutorials
 
 ### [MS-FINDER](/mtbinfo.github.io/MS-FINDER/tutorial "MS-FINDER")
+[-- Japanese](/mtbinfo.github.io/MS-FINDER/tutorial_japanese "MS-FINDER Japan")
 
 MS-FINDER is a universal program for compound annotation supporting EI-MS (GC/MS) and ESI-MS/MS spectra. It aims to provide solutions for 1) spectral searching, 2) formula prediction, and 3) structure elucidation for unknown spectra.
 
