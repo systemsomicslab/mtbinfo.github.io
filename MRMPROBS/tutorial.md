@@ -1,7 +1,9 @@
 # MRMPROBS tutorial  
+
 <div style="text-align: right;">
 Edited in 2016/11/16  
 </div>
+
 ## Introduction  
 MRMPROBS is launched as a universal program for targeted metabolomics using not only multiple reaction monitoring (MRM)- or selected reaction monitoring (SRM) but also SCAN and data independent MS/MS acquisition (DIA) data. Originally, the previous MRMPROBS program was developed to deal with large scale MRM assay’s data sets monitoring 500-1000 small molecules in a single run simultaneously. The program provided 1) a user-friendly graphical user interface (GUI) for data curation and 2) an objective evaluation system of small molecule identifications. Here, it was expanded for DIA-MS data (like SWATH-MS) and for SCAN data (like GC/MS and LC/MS).  
 &emsp;&emsp;&emsp;&emsp;All data-processing workflow from data import to statistical analysis is supported. This tutorial will introduce the workflow for 1) MRM data, 2) SWATH-MS (DIA) data, and 3) GC/MS data for targeted metabolomics. In this MRMPROBS project, your feedback would be appreciated to improve the identification and quantification systems as well as the user interface.   
@@ -282,7 +284,7 @@ This library can be easily exported by MS-DIAL software: <http://prime.psc.riken
 
 &#042; The tutorial uses 40 demonstration files and the reference library which are downloadable from the above link. The common measurement conditions of the demonstration files were as follows.   
 
-Liquid chromatography: total 25 min run per sample with CELI L-column2 ODC (150 mm×2.1 mm, 3 m).  
+Liquid chromatography: total 25 min run per sample with CELI L-column2 ODC (150 mm×2.1 mm, 3 μm).  
 Mass spectrometer: MRM method with negative ion mode.  
 Target metabolite number: 60  
 Total transitions: 166  
