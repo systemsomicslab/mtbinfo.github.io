@@ -48,7 +48,7 @@ MRMPROBSのスクリーンショット
 &emsp;<a href="#セクション7-5">セクション7-5: ボタン</a><br />
 &emsp;<a href="#セクション7-6">セクション7-6: リストボックス</a><br />
 &emsp;<a href="#セクション7-7">セクション7-7: MRMPROBSで行う解析について</a><br />
-&emsp;&emsp;<a href="セクション7-7-1">セクション7-7-1: Fileメニュー</a><br />
+&emsp;&emsp;<a href="#セクション7-7-1">セクション7-7-1: Fileメニュー</a><br />
 &emsp;&emsp;<a href="#セクション7-7-2">セクション7-7-2: Data reprocessing</a><br />
 &emsp;&emsp;<a href="#セクション7-7-3">セクション7-7-3: Statistical analysis</a><br />
 &emsp;&emsp;<a href="#セクション7-7-4">セクション7-7-4: Missing value methods</a><br />
