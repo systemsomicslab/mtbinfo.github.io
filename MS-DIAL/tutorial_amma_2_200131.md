@@ -349,9 +349,15 @@ After the peak detection algorithm is applied along the MS axis with a very low 
 *Data collection parameters*: <br>
 You can set analysis ranges (RT and MS1 axis). In this demonstration, your expected data range is 0.5-10 min for 100-1250 Da.  
 
-*Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), **the maximum charged number** can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  
+*Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), **the maximum charged number** can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data. <br>
+Check **Consider Cl and Br elements** if you assume that your samples contain any halogen element as halogens have unique characteristic of isotope.
 
 *Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)   
+
+*Execute retention time corrections*: For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessing and spectral library construction methodology' in the website of MS-DIAL shown below(URL: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/>).
+
+![alt](images/new_images/Picture10.png)  
+
 
 #### Section 2-3-2
 #### Peak detection tab  
@@ -364,7 +370,8 @@ MS-DIAL provides two simple thresholds: **minimum values for peak width** and **
 （津川さんの回答）理想的にはユーザーの経験則で決めるべき。-->
 It is ideal that users put values here based on your own experience that you got looking at the trend of your data. However FYI (based on our experience) the minimum peak height may be set to 500 as a default value for this demo data of Sciex.    <br><!--
 （早く結果が欲しいせっかちなユーザーさん方のために言うとすると）津川的サイエックスSCIEX（今回のデモデータ）の経験でのデフォ値は500-->
-Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.
+Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.<br>
+**Minimum peak width** indicates a threshold of peak width for filtering. See detail by reading the second slide (title 'In MS-DIAL program') below.
 
 **The width of mass slice** is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive.
 
@@ -450,6 +457,8 @@ If you already have a suitable quality control (QC) data, typically a mixed samp
 If you want to remove specific peaks that are not fully detected in the alignment, specify **the peak count filter**. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. <br>
 Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.
 
+*Retention time factor and MS1 factor*: These values indicate the importance of either RT or MS1 to compare and evaluate the similarity of the spectra among samples based on RT and MS1 tolerance.
+
 *Remove features based on blank information*: <br><!--
 追加文考え中
     これにチェックを入れないと、blankを入れている意味が無い（ので絶対チェック入れるもの）
@@ -473,6 +482,8 @@ If you check this, even the features removed as they did not reached the thresho
   <!--くどいので不要かもしれない文 In that case, when you check the box 'Blank filter' in the pane 'Peak spot navigator' in the main window, these removable features describe above will be disappeared in the figure on the pane 'Alignment spot viewer'. -->If you uncheck this, removable features will be deleted and thus that data will not be included anymore in all analyzed data, meaning you cannot see that data in the main window after alignment.
   <!--閾値以下で除外したものをデータとして残しておいて目印を付けるか否か。これにチェックを入れると、検出・同定・アラインメント後の結果に除外データが（除外したデータとして）残り、見ることができる。-->
   <!--（言いたいこと）blank filterを押すとremovable featureは出なくなる。データとしては残してくれる assign the tagはobjectとproperty(つまりinfomatics)に関連した言葉で分析屋さんが理解できるかどうかは津川さんにも分からない。ので、とりあえず分析屋さんが分かりやすい言葉で文章を書いてみる-->
+
+*Gap filling by compulsion*: If you check this, minor gaps are regarded as significant peaks even if they do not reach the thresholds. This is validated by default.
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
