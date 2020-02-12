@@ -1,0 +1,1578 @@
+      <!DOCTYPE html>
+      <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>tutorial_amma</title>
+            <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; overflow-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { overflow-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; overflow-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.markdown-preview pre.editor-colors { user-select: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item input[type="checkbox"] { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview .task-list-item { list-style-type: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #e5c07b;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+        </head>
+        <body class='markdown-preview' data-use-github-style><h1 id="ms-dial-tutorial">MS-DIAL tutorial</h1>
+<div style="text-align: right;">
+Last edited in Sep. 14, 2018
+</div>
+
+<h2 id="abstract">ABSTRACT</h2>
+<p>MS-DIAL was launched as a universal program for untargeted metabolomics that supports multiple instruments (GC/MS, GC/MS/MS, LC/MS, and LC/MS/MS) and MS vendors (Agilent, Bruker, LECO, Sciex, Shimadzu, Thermo, and Waters). Common data formats such as netCDF (AIA) and mzML, can also be managed in our project. In addition, we released several MSP files including both EI- and MS/MS spectra as a ‘start-up kit’. Moreover, MS-DIAL internally has a version of Fiehn lab’s GC/MS database (oriented by FAME RI index), and in silico retention time- and MS/MS database for LC/MS/MS based lipidomics. The isotope labeled tracking can also be executed in LC/MS project.<br>   It features (1) spectral deconvolution for both GC/MS and data-independent MS/MS, (2) streamlined criteria for peak identification, (3) support of all data processing steps from raw data import to statistical analysis, and (4) user-friendly graphic user interface.<br>   MS-DIAL has been developed as the collaborative work between Prof. Masanori Arita team (RIKEN) and Prof. Oliver Fiehn team (UC Davis) supported by the JST/NSF SICORP “Metabolomics for the low carbon society” project.  </p>
+<div style="text-align: right;">
+Hiroshi Tsugawa<br>
+RIKEN Center for Sustainable Resource Science<br>
+hiroshi.tsugawa@riken.jp
+</div>
+
+<p>Lead developer: Hiroshi Tsugawa (RIKEN)<br>Main contributors: Diego Pedrosa (UC Davis), Tomas Cajka (Institute of Physiology CAS), Ipputa Tada (NIG), Haruki Uchino (Keio)  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_1.png">
+MS-DIAL screenshot<br><br></p>
+<div id="boxMenu">
+<h1 id="ms-dial-tutorial">MS-DIAL tutorial</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<p><a href="#chapter-1">Chapter 1: General introduction of MS-DIAL</a><br>
+ <a href="#section-1-1">Section 1-1: Downloading file converter to convert a vendor’s format into ABF</a><br>
+ <a href="#section-1-2">Section 1-2: Check the conditions for file conversion</a><br>
+ <a href="#section-1-3">Section 1-3: File conversion</a><br>
+ <a href="#section-1-4">Section 1-4: Start up a project of MS-DIAL</a><br>
+ <a href="#section-1-5">Section 1-5: Centroid or Profile? The content of ABF data</a><br>
+ <a href="#section-1-6">Section 1-6: Database (MSP or Text) for compound identification</a><br>
+  <a href="#section-1-6-1">Section 1-6-1: MSP format for precursor- and MS/MS library</a><br>
+  <a href="#section-1-6-2">Section 1-6-2: Adduct ion format</a><br>
+  <a href="#section-1-6-3">Section 1-6-3: Text format library for retention time and accurate mass search (post identification)</a><br>
+  <a href="#section-1-6-4">Section 1-6-4: MSP format as GC/MS library</a><br>
+  <a href="#section-1-6-5">Section 1-6-5: Alkane- or FAME retention time dictionary for the calculation of retention index</a><br>
+<a href="#chapter-2">Chapter 2: LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)</a><br>
+ <a href="#section-2-1">Section 2-1: Starting up your project</a><br>
+ <a href="#section-2-2">Section 2-2: Importing ABF files</a><br>
+ <a href="#section-2-3">Section 2-3: Setting parameters</a><br>
+  <a href="#section-2-3-1">Section 2-3-1: Data collection tab</a><br>
+  <a href="#section-2-3-2">Section 2-3-2: Peak detection tab</a><br>
+  <a href="#section-2-3-3">Section 2-3-3: MS2Dec tab</a><br>
+  <a href="#section-2-3-4">Section 2-3-4: Identification tab</a><br>
+  <a href="#section-2-3-5">Section 2-3-5: Adduct tab</a><br>
+  <a href="#section-2-3-6">Section 2-3-6: Alignment tab</a><br>
+ <a href="#section-2-4">Section 2-4: Data curation for the reduction of false positive identifications</a><br>
+<a href="#chapter-3">Chapter 3: LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL</a><br>
+ <a href="#section-3-1">Section 3-1: Starting up your project</a><br>
+ <a href="#section-3-2">Section 3-2: Importing ABF files</a><br>
+ <a href="#section-3-3">Section 3-3: Setting parameters</a><br>
+  <a href="#section-3-3-1">Section 3-3-1: Data collection tab</a><br>
+  <a href="#section-3-3-2">Section 3-3-2: Peak detection tab</a><br>
+  <a href="#section-3-3-3">Section 3-3-3: MS2Dec tab</a><br>
+  <a href="#section-3-3-4">Section 3-3-4: Identification tab</a><br>
+  <a href="#section-3-3-5">Section 3-3-5: Adduct tab</a><br>
+  <a href="#section-3-3-6">Section 3-3-6: Alignment tab</a><br>
+ <a href="#section-3-4">Section 3-4: Data curation to reduce false positive identifications</a><br>
+<a href="#chapter-4">Chapter 4: Nominal and accurate GC/MS based metabolic profiling in MS-DIAL</a><br>
+ <a href="#section-4-1">Section 4-1: Starting up your project</a><br>
+ <a href="#section-4-2">Section 4-2: Importing ABF files</a><br>
+ <a href="#section-4-3">Section 4-3: Setting parameters</a><br>
+  <a href="#section-4-3-1">Section 4-3-1: Data collection tab</a><br>
+  <a href="#section-4-3-2">Section 4-3-2: Peak detection tab</a><br>
+  <a href="#section-4-3-3">Section 4-3-3: MS1Dec tab</a><br>
+  <a href="#section-4-3-4">Section 4-3-4: Identification tab</a><br>
+  <a href="#section-4-3-5">Section 4-3-5: Alignment tab</a><br>
+ <a href="#section-4-4">Section 4-4: Data curation for the reduction of false positive identifications</a><br>
+<a href="#chapter-5">Chapter 5: Graphical user interface of MS-DIAL</a><br>
+ <a href="#section-5-1">Section 5-1: Mouse function</a><br>
+ <a href="#section-5-2">Section 5-2: Overview of the MS-DIAL main window in LC/MS (precursor oriented) project</a><br>
+ <a href="#section-5-3">Section 5-3: Overview of the MS-DIAL main window in GC/MS project</a><br>
+ <a href="#section-5-4">Section 5-4: Compound search for the result curation of peak identification</a><br>
+ <a href="#section-5-5">Section 5-5: Normalization and statistical analysis in MS-DIAL</a><br>
+ <a href="#section-5-6">Section 5-6: Export</a><br>
+ <a href="#section-5-7">Section 5-7: Save</a><br>
+ <a href="#section-5-8">Section 5-8: Open</a><br>
+ <a href="#section-5-9">Section 5-9: Option</a><br>
+ <a href="#section-5-10">Section 5-10: Manual annotation on Identification menu</a><br>
+ <a href="#section-5-11">Section 5-11: Chromatogram viewers</a><br>
+ <a href="#section-5-12">Section 5-12: Explanation of buttons and tabs of MS-DIAL</a><br>
+  <a href="#section-5-12-1">Section 5-12-1: Display filters</a><br>
+  <a href="#section-5-12-2">Section 5-12-2: Tabs of MS-DIAL</a><br>
+ <a href="#section-5-13">Section 5-13: Search</a><br>
+  <a href="#section-5-13-1">Section 5-13-1: MS/MS fragment searcher</a><br>
+  <a href="#section-5-13-2">Section 5-13-2: Amalgamation of different polarity peak list</a><br>
+ <a href="#section-5-14">Section 5-14: Pathway map</a><br>
+<a href="#chapter-6">Chapter 6: Other utilities of MS-DIAL</a><br>
+ <a href="#section-6-1">Section 6-1: Link to MS-FINDER for searching unknowns</a><br>
+ <a href="#section-6-2">Section 6-2: Bridge to MRMPROBS for DIA-MS or GC/MS data sets</a><br>
+ <a href="#section-6-3">Section 6-3: Molecular spectrum networking for metabolite annotations</a><br>
+<a href="#chapter-7">Chapter 7: MS-DIAL isotope tracking function</a><br>
+ <a href="#section-7-1">Section 7-1: Starting up your project</a><br>
+ <a href="#section-7-2">Section 7-2: Importing ABF files</a><br>
+ <a href="#section-7-3">Section 7-3: Setting parameters</a><br>
+  <a href="#section-7-3-1">Section 7-3-1: Data collection tab</a><br>
+  <a href="#section-7-3-2">Section 7-3-2: Peak detection tab and MS2Dec tab</a><br>
+  <a href="#section-7-3-3">Section 7-3-3: Identification tab</a><br>
+  <a href="#section-7-3-4">Section 7-3-4: Adduct tab</a><br>
+  <a href="#section-7-3-5">Section 7-3-5: Alignment tab</a><br>
+  <a href="#section-7-3-6">Section 7-3-6: Isotope tracking tab</a><br>
+ <a href="#section-7-4">Section 7-4: Data curation for isotope tracking result</a><br>
+<a href="#chapter-8">Chapter 8: Project for all ion fragmentation with multiple collision energies</a><br>
+ <a href="#section-8-1">Section 8-1: Starting up your project</a><br>
+ <a href="#section-8-2">Section 8-2: Importing ABF files</a><br>
+ <a href="#section-8-3">Section 8-3: Setting parameters</a><br>
+  <a href="#section-8-3-1">Section 8-3-1: Data collection tab</a><br>
+  <a href="#section-8-3-2">Section 8-3-2: Peak detection tab</a><br>
+  <a href="#section-8-3-3">Section 8-3-3: MS2Dec tab</a><br>
+  <a href="#section-8-3-4">Section 8-3-4: Identification tab</a><br>
+  <a href="#section-8-3-5">Section 8-3-5: Adduct tab</a><br>
+  <a href="#section-8-3-6">Section 8-3-6: Alignment tab</a><br>
+ <a href="#section-8-4">Section 8-4: Result checking</a><br>
+<a href="#chapter-9">Chapter 9: Graphical user interface of MS-DIAL in AIF mode</a><br>
+ <a href="#section-9-1">Section 9-1: Mass spectrum viewers in peak spot and alignment viewer</a><br>
+ <a href="#section-9-2">Section 9-2: MS/MS chromatogram viewer in peak viewer</a><br>
+ <a href="#section-9-3">Section 9-3: Compound search for the curation of peak identification</a><br>
+ <a href="#section-9-4">Section 9-4: Aligned sample table viewer for checking each sample</a><br>
+<a href="#chapter-10">Chapter 10: LC-Ion mobility project</a><br>
+ <a href="#section-10-1">Section 10-1: Convert a vendor's format into IBF</a><br>
+ <a href="#section-10-2">Section 10-2: Starting up your project</a><br>
+ <a href="#section-10-3">Section 10-3: Importing IBF files</a><br>
+ <a href="#section-10-4">Section 10-4: Setting parameters</a><br>
+  <a href="#section-10-4-1">Section 10-4-1: Data collection tab</a><br>
+  <a href="#section-10-4-2">Section 10-4-2: Peak detection tab and MS2Dec tab</a><br>
+  <a href="#section-10-4-3">Section 10-4-3: Identification tab</a><br>
+  <a href="#section-10-4-4">Section 10-4-4: Adduct tab</a><br>
+  <a href="#section-10-4-5">Section 10-4-5: Alignment tab</a><br>
+  <a href="#section-10-4-6">Section 10-4-6: Mobility tab</a><br>
+ <a href="#section-10-5">Section 10-5: Setting parameters</a></p>
+</div>
+
+<h2 id="chapter-1">Chapter 1</h2>
+<h2 id="general-introduction-of-ms-dial">General introduction of MS-DIAL</h2>
+<p>The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. <strong>Figure 1</strong> shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>.    </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_2.png"><br><br></p>
+<h3 id="section-1-1">Section 1-1</h3>
+<h3 id="downloading-file-converter-to-convert-a-vendors-format-into-abf">Downloading file converter to convert a vendor’s format into ABF</h3>
+<ol>
+<li>Go to <a href="http://www.reifycs.com/AbfConverter/index.html">http://www.reifycs.com/AbfConverter/index.html</a>  </li>
+<li>Check the requirements and license terms, and download the converter. (<strong>Figure 2</strong>)  
+* File converter is freely available.  </li>
+</ol>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_3.png">  
+   </p>
+<h3 id="section-1-2">Section 1-2</h3>
+<h3 id="check-the-conditions-for-file-conversion">Check the conditions for file conversion</h3>
+<p>To convert files of some MS vendors including Bruker, LECO, Shimadzu, Thermo, and Waters, the specific data access library needs to be installed on your PC (<strong>Table 1</strong>).   </p>
+<p><strong>Table 1: Summary of PC condition required for file conversion</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">Vendor</th>
+<th align="center">Formats</th>
+<th align="center">Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Agilent</td>
+<td align="center">.D</td>
+<td align="center">None, but the files from Chemstation should be converted to netCDF</td>
+</tr>
+<tr>
+<td align="center">Bruker</td>
+<td align="center">.D</td>
+<td align="center">CompassXtract</td>
+</tr>
+<tr>
+<td align="center">LECO</td>
+<td align="center">.PEG</td>
+<td align="center">All PEG files should be first converted to netCDF (AIA).</td>
+</tr>
+<tr>
+<td align="center">Sciex</td>
+<td align="center">.WIFF</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">Shimadzu for GC/MS</td>
+<td align="center">.QGD</td>
+<td align="center">GCMS solution</td>
+</tr>
+<tr>
+<td align="center">Shimadzu for LC/MS</td>
+<td align="center">.LCD</td>
+<td align="center">LCMS solutions</td>
+</tr>
+<tr>
+<td align="center">Thermo</td>
+<td align="center">.RAW</td>
+<td align="center">MSFileReader</td>
+</tr>
+<tr>
+<td align="center">Waters</td>
+<td align="center">.RAW</td>
+<td align="center">MassLynx Raw Data Reader Interface Library</td>
+</tr>
+<tr>
+<td align="center">netCDF</td>
+<td align="center">.CDF</td>
+<td align="center">Microsoft Visual J# 2.0</td>
+</tr>
+</tbody></table>
+<p><strong>FAQ (see the latest at <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index3.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index3.html</a>)</strong>  </p>
+<ul>
+<li>Agilent: Almost all of Agilent’s raw data (.D) can readily be converted without any additional steps. However, the only exception is GCMS data sets obtained from ChemStation, which cannot be directly converted to ABF. Therefore, you have to convert your files into netCDF (AIA) in ChemStation. Then, convert your AIA files into ABF using our file converter.  </li>
+<li>Bruker: Go to <a href="https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html">https://www.bruker.com/service/support-upgrades/software-downloads/mass-spectrometry.html</a>. You have to register first and obtain the installer. Finally, download and install the version compatible with your operating system environment (32-bit or 64-bit).  </li>
+<li>LECO: All of your data has to be converted to netCDF (AIA) first. Then, convert them into ABF using our file converter.  </li>
+<li>Shimadzu: In case that you had a direct conversion of raw data, please convert your data into the common data format (netCDF or mzML). For GC/MS, convert your data into netCDF using GCMS solution. For LC-ITTOF/MS, convert your data into mzML using ProteoWizard (<a href="http://proteowizard.sourceforge.net/index.shtml">http://proteowizard.sourceforge.net/index.shtml</a>). Then, convert them into ABF.  </li>
+<li>Thermo: The following link explains how to install MSFileReader. <a href="https://github.com/frallain/pymsfilereader/tree/master/MSFileReader">https://github.com/frallain/pymsfilereader/tree/master/MSFileReader</a>. For GC/MS data, you may have to convert your data into netCDF. Then, convert them into ABF using our converter. We validated the direct conversion of GC-QExactive raw data to ABF, but some GC/MS data (DSQ etc) had to be converted to netCDF first.  </li>
+<li>Waters: 1. Download MassLyncs Raw Data Reader Interface Library (<a href="http://www.waters.com/waters/supportList.htm?cid=511442&amp;filter=documenttype|DWNL&amp;locale=en_US">http://www.waters.com/waters/supportList.htm?cid=511442&amp;filter=documenttype|DWNL&amp;locale=en_US</a>). 2. Unzip the archive file ‘watersrawsdkredist.zip’ and copy ‘MassLynxRaw.dll’ (64-bit) to ‘ABFCvtSvrWtrRw’ folder in the ABF converter. Note that 32–bit environments are not supported yet for file conversion.   </li>
+<li>NetCDF: When you get an error about the J# dependency problem, download and install the Microsoft Visual J# 2.0 library at <a href="https://www.microsoft.com/en-us/download/details.aspx?id=15468">https://www.microsoft.com/en-us/download/details.aspx?id=15468</a>.   </li>
+</ul>
+<h3 id="section-1-3">Section 1-3</h3>
+<h3 id="file-conversion">File conversion</h3>
+<ol>
+<li>Start “AnalysisBaseFileConverter.exe”.   </li>
+<li>Drag &amp; drop MS vendor files into this program.  </li>
+<li>Click “Convert”.  </li>
+<li>The ABF files are generated in the same directory as the raw data files. (<strong>Figure 3</strong>)  </li>
+</ol>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_4.png">  </p>
+<h3 id="section-1-4">Section 1-4</h3>
+<h3 id="start-up-a-project-of-ms-dial">Start up a project of MS-DIAL</h3>
+<p>This tutorial demonstrates three projects, (1) GC/MS, (2) LC/MS or LC/MS/MS (DDA: data dependent acquisition), and (3) LC/MS/MS (data independent acquisition) for the explanation of parameters and required files. In this section, three projects are summarized and you will find a minimum requirement for these processes. The details for LC/MS/MS (DIA), LC/MS/MS (DDA), and GC/MS processing are described in Chapter 2, Chapter 3, and Chapter 4, respectively.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_5.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_6.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_7.png"></p>
+<p>* <span style="color:red;">Prepare the above dictionary file as tab-delimited text.</span><br>* In the case of SWATH data-independent analysis, the experiment file can be made at PeakView (Show-&gt;sample information). Do not change the column orders. The word “SCAN” should be kept.   </p>
+<p>   </p>
+<h3 id="section-1-5">Section 1-5</h3>
+<h3 id="centroid-or-profile-the-content-of-abf-data">Centroid or Profile? The content of ABF data</h3>
+<p>One of the problems of ABF file is that we have to determine the data type, i.e. centroid or profile, by ourselves. If your data type is ‘centroid’, the MS-DIAL program does not have to execute the process of spectral centroiding. On the other hand, MS-DIAL should perform the centroiding process for ‘profile’ mode data. We have validated the types for several instruments as follows.<br>(what is the difference between centroid and profile? <a href="http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html">http://blog.acdlabs.com/elucidation/2008/03/what-is-the-dif.html</a>)  </p>
+<p>✓ SCIEX QTOF: Profile<br>✓    Thermo Q-Exactive: Profile<br>✓    Thermo LTQ-Orbitrap: Profile for MS1 and Centroid for MS/MS<br>✓    All nominal GC/MS data: Centroid  </p>
+<p>For the other instruments, the data type of ABF depends on your MS settings.  </p>
+<p>✓    Agilent: The ABF converter will recognize your data type as ‘centroid’ if you set the export type as ‘centroid’ or ‘both’ in your MassHunter software. Otherwise, ‘profile’ is assumed.  </p>
+<p>The data types of Bruker LC-QTOF and FT-ICR, and Waters LC-Xevo QTOF and Synapt G2 were mostly centroid: you have to select ‘centroid’ as data type in the MS-DIAL program. However, there is no guarantee yet.   </p>
+<p>✓    mzML: it depends on the export method by the ProteoWizard program etc.  </p>
+<p><span style="color:red;"> *  It's much better to check your data type in MS-DIAL as follows before you start your real project:</span>  </p>
+<ol>
+<li>Start MS-DIAL project as 'Centroid' mode by a representative file.  </li>
+<li>See the MS1 and MS2 spectrum in ‘Peak spot viewer’ and check the 'shape' of the spectra.  </li>
+<li>If the shape appears to require centroiding, restart the project in 'Profile' mode.  </li>
+</ol>
+<h3 id="section-1-6">Section 1-6</h3>
+<h3 id="database-msp-or-text-for-compound-identification">Database (MSP or Text) for compound identification</h3>
+<p>The database formats for GC/MS or LC/MS datasets are described in this section. The main difference between GC/MS (EI-MS) and LC/MS (ESI-MS/MS) is the availability of precursor ion and its MS/MS. While a precursor <em>m/z</em> and its MS/MS are mostly available in ESI (or the other soft ionization)-MS/MS, the molecular ion in EI-MS is difficult to detect owning to the hard ionization. Several MSP files are downloadable as a starter kit for MS-DIAL at <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>.  </p>
+<h4 id="section-1-6-1">Section 1-6-1</h4>
+<h4 id="msp-format-for-precursor--and-msms-library">MSP format for precursor- and MS/MS library</h4>
+<p>MS-DIAL supports the MSP (<a href="http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf">http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf</a>) format in ASCII text (below <strong>Figure</strong>). In addition, the software can utilize “RETENTIONTIME: ”, “PRECURSORTYPE: ”, and “FORMULA:” information for metabolite identification (cases are ignored).  Retention time information must be specified in minutes [min] scale when possible. The adduct ion information, i.e. here ‘Precursor type’, will be used for the adduct ion search algorithm (see section 7).  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_8.png">
+Figure: an example of MSP format library  
+   </p>
+<h4 id="section-1-6-2">Section 1-6-2</h4>
+<h4 id="adduct-ion-format">Adduct ion format</h4>
+<p>Adduct ion information should be formatted as described in this section: [M+Na]+, [M+2H]2+, [M-2H2O+H]+, [2M+FA-H]-, etc.  </p>
+<ol>
+<li>The parentheses ‘[’ and ‘]’ must be used to bracket the ion information.  </li>
+<li>The char + and - are required after ']' and the number must be written before + or -.  </li>
+<li>When you want to define the organic formula like C6H12O5, you have to write it without any replicate elements or parentheses like [M+C2H5COOH-H] or [M+H+(CH3)3SiOH].  </li>
+<li>The beginning figure of organic formula like '2'H2O is recognized as the H2O × 2. Again, do not use 2(H2O) to specify this.  </li>
+<li>Sequential equations are acceptable: [2M+H-C6H12O5+Na]2+ (very apt.)  </li>
+<li>MS-DIAL accepts some abbreviations or common organic formulas for adduct types as follows.<br>  For Acetonitrile: ACN, CH3CN<br>  For Methanol: CH3OH<br>  For Isopropanol: IsoProp, C3H7OH<br>  For Dimethyl sulfoxide: DMSO<br>  For Formic acid: FA, HCOOH<br>  For Acetic acid: Hac, CH3COOH<br>  For Trifluoroacetic acid: TFA, CFCOOH  </li>
+</ol>
+<p>   </p>
+<h4 id="section-1-6-3">Section 1-6-3</h4>
+<h4 id="text-format-library-for-retention-time-and-accurate-mass-search-post-identification">Text format library for retention time and accurate mass search (post identification)</h4>
+<p>MS-DIAL also supports tab-delimited text format library for peak identification by means of retention time and MS1 accurate mass information. The identification process is performed after completing peak identification based on MSP format library. This is why we call this identification processing “post identification”. The first row should include header information. The first, second, third, and fourth columns should contain the metabolite name, accurate mass [Da], retention time [min], and adduct ion, respectively. This library can be easily created in Microsoft Excel. Save the spreadsheet in “Tab delimited text format”. This option is useful for internal standard identifications etc. (Even if you don’t have MS/MS libraries, the peak identification based on retention time and accurate mass is available from this option.)   </p>
+<p>* The minimum requirement for this text library is just ‘metabolite name’ and ‘<em>m/z</em>’ information; i.e. the first two columns are required. Retention time and adduct ion fields provide additional information for MS-DIAL in peak identification and adduct ion picking, respectively.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_9.png"><br>Figure: an example of text library  
+   </p>
+<h4 id="section-1-6-4">Section 1-6-4</h4>
+<h4 id="msp-format-as-gcms-library">MSP format as GC/MS library</h4>
+<p>MS-DIAL supports the MSP format (<a href="http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf">http://www.nist.gov/srd/upload/NIST1a11Ver2-0Man.pdf</a>) in ASCII text, same as in <strong>section 6-1</strong>. MS-DIAL accepts two fields for ‘retention’ information as the reference: “RETENTIONTIME: ” or “RT”, and “RETENTIONINDEX” or “RI”. Retention time information must be specified in minute [min] scale when possible.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_10.png"><br>Figure: an example of MSP format library for GC/MS  </p>
+<p>   </p>
+<h4 id="section-1-6-5">Section 1-6-5</h4>
+<h4 id="alkane--or-fame-retention-time-dictionary-for-the-calculation-of-retention-index">Alkane- or FAME retention time dictionary for the calculation of retention index</h4>
+<p>Retention time and retention index are used for routine identification of metabolites in GC/MS based metabolomics. The current MS-DIAL program has three options for the use of retention information: 1) retention time, 2) alkane mix based retention index, and 3) FAME (fatty acid methyl ester) mix based retention index.  </p>
+<p>See the experimental details of alkane and FAME mixtures.<br>Alkanes: <a href="http://www.sciencedirect.com/science/article/pii/S1389172311001848">http://www.sciencedirect.com/science/article/pii/S1389172311001848</a><br>Alkanes: <a href="https://en.wikipedia.org/wiki/Kovats_retention_index">https://en.wikipedia.org/wiki/Kovats_retention_index</a><br>FAMEs: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805091/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805091/</a>  </p>
+<p>In order to calculate the retention indexes of detected peaks, users have to prepare a dictionary including the pairs of the carbon number and its retention time as tab-delimited text (see next page).   </p>
+<p><strong>FAQ</strong>  </p>
+<ul>
+<li>By alkane mixture, the calculation of retention index is based on Kovats’s method (temperature programmed chromatography).  </li>
+<li>By FAME mixture, the calculation is based on Fiehn’s method. Importantly, FAMEs of carbon number C8, C9, C10, C12, C14, C16, C18, C20, C22, C24, C26, C28, and C30 (total 13 FAMEs) must be included in this dictionary to calculate Fiehn’s index. A polynomial regression of fifth order is applied to chromatographic peaks between C9 and C28. The peaks between C8 (and its earlier) and C9 and between C28 and C30 (and its later) are interpolated by a linear regression. The original indexes are based on the retention time (sec) * 1000 of authentic standards.  </li>
+</ul>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_11.png"><br>Figure: examples of Alkanes or Fames dictionaries  </p>
+<p>   </p>
+<h2 id="chapter-2">Chapter 2</h2>
+<h2 id="lcmsms-data-independent-msms-project-with-ms-dials-lipidblast-database-in-silico-retention-time-and-msms-library-for-lipids">LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)</h2>
+<p>A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids (MS-DIAL’s LipidBlast) is demonstrated. The experimental protocol is described in previous research: <a href="http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html">http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html</a>.   </p>
+<p>This tutorial uses 23 demonstration files which are downloadable from the below link.<br><a href="http://prime.psc.riken.jp/?action=drop_index">http://prime.psc.riken.jp/?action=drop_index</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\new_images\Slide1.PNG"></p>
+<p><strong>Experiment summary:</strong><br>Liquid chromatography: total 15 min run per sample with Waters Acquity UPLC CSH C18 column (100×2.1 mm; 1.7 μm).<br>Mass spectrometer: SWATH method with negative ion mode.<br>   MS1 accumulation time, 100 ms<br>   MS2 accumulation time, 10 ms<br>   Collision energy, 45 V<br>   Collision energy spread, 15 V<br>   Cycle time, 731 ms<br>   Q1 window, 21 Da<br>   Mass range, <em>m/z</em> 100-1250  </p>
+<h3 id="section-2-1">Section 2-1</h3>
+<h3 id="starting-up-your-project">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\new_images\Picture1.png"></p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your ABF files  </li>
+<li>Select your method type as ‘Data independent MS/MS’  </li>
+<li>Select the experimental file: <strong>ABSciex_Experiment_Information_CSH21Da.txt</strong>.  </li>
+<li>Choose data type profile data for both MS1 and MS/MS  </li>
+<li>Choose negative ion mode  </li>
+<li>Choose target omics as lipidomics<br>If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library since MS-DIAL internally contains an enriched LipidBlast for QTOFMS. Instead, you should select compounds needed by your data sets. On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification.  </li>
+</ol>
+<p><strong>* see section 4 of chapter 1 as well for more detail</strong>  </p>
+<h3 id="section-2-2">Section 2-2</h3>
+<h3 id="importing-abf-files">Importing ABF files</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\new_images\%E7%84%A1%E9%A1%8C2.png"></p>
+<ol>
+<li>Select ABF files  </li>
+<li>If the file is a “quality control” sample for peak alignment, then set the type as such.  </li>
+</ol>
+<p>Note:<br>Please finalize your file name here, because you cannot change it later.<br>If you want to define the injection volume of each file, you can type each volume in the column "Inject. volume (μL)".
+   </p>
+<h3 id="section-2-3">Section 2-3</h3>
+<h3 id="setting-parameters">Setting parameters</h3>
+<h4 id="section-2-3-1">Section 2-3-1</h4>
+<h4 id="data-collection-tab">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\new_images\%E7%84%A1%E9%A1%8C3.png">  </p>
+<p><em>Mass accuracy</em>: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively. Importantly, this MS2 tolerance value is also used to build the MS/MS chromatogram for a certain <em>m/z</em> trace. The MS/MS chromatograms are dedicated to the MS2Dec deconvolution program.  </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). In this demonstration, your expected data range is 0.5-10 min for 100-1250 Da.  </p>
+<p><em>Isotope recognition</em>: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  </p>
+<p><em>Multithreading</em>: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager-&gt;open resource monitor)   </p>
+<h4 id="section-2-3-2">Section 2-3-2</h4>
+<h4 id="peak-detection-tab">Peak detection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\new_images\%E7%84%A1%E9%A1%8C4.png">  </p>
+<p><em>Peak detection parameters</em>: MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>).
+For FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more. <br>
+The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. <br>
+Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. <br>
+If you already know unwanted <em>m/z</em> peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  </p>
+<p>   
+A part of <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_17.png"><br><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_18.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_19.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_20.png"></p>
+<h4 id="section-2-3-3">Section 2-3-3</h4>
+<h4 id="ms2dec-tab">MS2Dec tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_21.png">  </p>
+<p>The sigma window value is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks.   </p>
+<p>In addition, you may be able to set a cut off value to reduce the MS noises (see Section 3-3 of Chapter 3). Finally, if you want to remove the product ions after the focused precursor ion (recommended for metabolomics and lipidomics), check “Exclude after precursor.”  </p>
+<p><em>Keep the isotopic ions until</em>: in fact, the isotopic patterns in MS1 spectra are frequently disturbed. On the other hand, there are some cases that the isotopic patterns in MS/MS spectra are clearer than that of MS1 spectra, which can be used for the accurate annotation of molecular formula. If you set this parameter as 5, the ions until precursor + 5 Da are kept after MS2Dec algorithm is finished.   </p>
+<p><em>Keep the isotopic ions w/o MS2Dec</em>: sometimes, the MS2Dec algorithm may erase the precursor’s isotopic ions due to the mathematics issues. Therefore, you can keep the raw MS/MS spectra only for the precursor’s isotopic ions by this option.   
+   </p>
+<h4 id="section-2-3-4">Section 2-3-4</h4>
+<h4 id="identification-tab">Identification tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_22.png"></p>
+<p><em>MSP file</em>: In the case that you selected ‘lipidomics’ project, select what you want to find in your data sets for lipid profiling. Here, for algae lipidomics, tick the above figure’s lipids: FA, lysoPC, lysoPE, PA, PC, PE, PG, PI, PS, MGDG, DGDG, and SQDG.  </p>
+<p><em>Parameters</em>: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). For example, our internal lipid DB includes the predicted RT information optimized for our 15 min LC method. If suitable RT information is unavailable, set the tolerance 100 or larger (larger than your LC time).<br>The two mass tolerances for MS1 and MS2 are required for the compound search and they are dependent on your instrument performance.<br>The cutoff of the identification score should be greater than 0.7 or 0.8.  </p>
+<p><em>Text file</em>: If you want to perform “post identification” processing, set your text file here. (Tutorial data: <strong>Lipid_Nega_IS_PostIdentification_vs1.txt</strong>)  </p>
+<p><em>Parameters</em>: The meanings of parameters are the same as MSP based identification.  </p>
+<p><em>Advanced library search option</em>: The options for your library search are defined here. In the current program (2014/11/30), there are two options for the library search.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_23.png">  </p>
+<p>MS/MS tab:  </p>
+<ol>
+<li><em>Relative abundance cut off</em>: the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  </li>
+</ol>
+<p>Post ident. Tab:  </p>
+<ol start="2">
+<li><em>Only report the top hit</em>: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  </li>
+</ol>
+<h4 id="section-2-3-5">Section 2-3-5</h4>
+<h4 id="adduct-tab">Adduct tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_24.png">  </p>
+<p>Adduct ion setting: You can tick the adduct ions and charge values to be considered.<br>* see also the section 3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  </p>
+<p>   </p>
+<h4 id="section-2-3-6">Section 2-3-6</h4>
+<h4 id="alignment-tab">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_25.png">  </p>
+<p><em>Parameters</em>: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)∗100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.<br>If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.   </p>
+<p><strong>Note:</strong> When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  </p>
+<p>   </p>
+<h3 id="section-2-4">Section 2-4</h3>
+<h3 id="data-curation-for-the-reduction-of-false-positive-identifications">Data curation for the reduction of false positive identifications</h3>
+<p>MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor <em>m/z</em>, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications as well as true positives. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified. Of course, the ultimate goal is the perfect identification without any false positive- and negative identifications.<br>Practically, what to manually curate the identification result of your representative alignment file since the identification result of its alignment file will be reflected in the final output such as ‘peak height’ matrix etc. Using the GUI of MS-DIAL, you can check if an aligned spot is a false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_26.png">
+   </p>
+<h2 id="chapter-3">Chapter 3</h2>
+<h2 id="lcms-or-lcmsms-data-dependent-msms-project-with-user-defined-msms-database-msp-format-in-ms-dial">LC/MS or LC/MS/MS (data dependent MS/MS) project with user-defined MS/MS database (MSP format) in MS-DIAL</h2>
+<p>Here, a project from data dependent MS/MS acquisition in combination with a user-defined MSP library (an integration library of MassBank, GNPS, and Respect) is demonstrated. The experimental protocol is described in the previous research: <a href="http://pubs.acs.org/doi/abs/10.1021/acs.jafc.5b04890">http://pubs.acs.org/doi/abs/10.1021/acs.jafc.5b04890</a>. The ABF files for this demonstration can be downloaded from our website: <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>.   </p>
+<p>This section uses total 6 files and the MSP file is contained in the same folder of this demonstration. Also, there is a parameter file (Param.med) in this folder to be used in MS-DIAL for the quick start.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_27.png"></p>
+<p><strong>Experiment summary:</strong><br>Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 m (50×1.0 mm).<br>Solvent A: water with 0.1% acetic acid<br>Solvent B: acetonitrile with 0.1% acetic acid<br>Mass spectrometer: data dependent method with positive ion mode.<br>   Collision energy, 35 V<br>   Collision energy spread, 15 V<br>   Cycle time, 125 ms<br>   Mass range, <em>m/z</em> 60-1250  
+   </p>
+<h3 id="section-3-1">Section 3-1</h3>
+<h3 id="starting-up-your-project-1">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_28.png"></p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your ABF files  </li>
+<li>Select your method type as conventional LC/MS or data dependent MS/MS  </li>
+<li>Choose data type profile data for both MS1 and MS/MS  </li>
+<li>Choose positive ion mode  </li>
+<li>Choose target omics as metabolomics<br>If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library. Instead, you should select compounds needed by your data sets (see <strong>chapter 2</strong>). On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification.  </li>
+</ol>
+<p>* see section 4 of chapter 1 as well  </p>
+<p>   </p>
+<h3 id="section-3-2">Section 3-2</h3>
+<h3 id="importing-abf-files-1">Importing ABF files</h3>
+<ol>
+<li>Select ABF files  </li>
+<li>If the file is a “quality control” sample for peak alignment, then set the type as such. (in this example, you do not have to change this setting.)  </li>
+</ol>
+<p>Note: Please finalize your file name here, because you cannot change it later.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_29.png"></p>
+<p>   </p>
+<h3 id="section-3-3">Section 3-3</h3>
+<h3 id="setting-parameters-1">Setting parameters</h3>
+<h4 id="section-3-3-1">Section 3-3-1</h4>
+<h4 id="data-collection-tab-1">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_30.png">  </p>
+<p>* For the quick start and its explanations, load ‘Param.med’ as shown above.  </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). Here, set 0.4-3.5 min and 50-1000 Da for the ranges.  </p>
+<p><em>Centroid parameters</em>: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding if your files are profile data. By default, mass spectrum of ±0.01 and ±0.05 Da range from each peak top is integrated in MS1 and MS2, respectively.   </p>
+<p><em>Isotope recognition</em>: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  </p>
+<p><em>Multithreading</em>: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager-&gt;open resource monitor)  
+   </p>
+<h4 id="section-3-3-2">Section 3-3-2</h4>
+<h4 id="peak-detection-tab-1">Peak detection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_31.png">  </p>
+<p><em>Peak detection parameters</em>: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>). For FT-ICR or Orbirap data, the minimum peak height should be more than 20,000.  </p>
+<p><em>Peak spotting parameters</em>: The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. If you already know unwanted <em>m/z</em> peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  
+   </p>
+<h4 id="section-3-3-3">Section 3-3-3</h4>
+<h4 id="ms2dec-tab-1">MS2Dec tab</h4>
+<p>Unless you have data independent MS/MS data sets, you can skip this part. However, as shown below, you may set a cutoff value to reduce the MS noises. Note that what is shown below is not the same as data sets described earlier, but we found that this parameter was very important to reduce the computational time and the underestimation of spectral similarities especially in Waters or Agilent instruments.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_32.png"><br>Figure: Explanation about purification parameters  
+   </p>
+<h4 id="section-3-3-4">Section 3-3-4</h4>
+<h4 id="identification-tab-1">Identification tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_33.png">  </p>
+<p><em>MSP file</em>: Set your MSP file here. (Tutorial data: <strong>MSMS-AllPublic-Curated-Pos.msp</strong>.) In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  </p>
+<p><em>Parameters</em>: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). However, since the retention times of this MSP file are not recorded by the method of this demonstration, set the tolerance to 100 or larger in order to ignore the effect of retention time tolerance. The two mass tolerances for MS1 and MS2 are required for the compound search. This demonstration’s MSP file has the theoretical value of precursor <em>m/z</em> for all of authentic compounds. Therefore, the MS1 tolerance for time-of-flight MS was set to 0.025 Da here. On the other hand, since this MSP file also includes low resolution (QqQ etc.) MS data, 0.2 or more should be suitable to widely utilize all of the queries. The cutoff of the identification score should be greater than 0.7 or 0.8 to avoid false positives.  </p>
+<p><em>Text file</em>: If you want to perform “post identification” processing, set your text file here. (There is no text DB for this demonstration.)  </p>
+<p><em>Advanced library search option</em>: The options for your library search are defined here. In the current program (2014/11/30), there are two options for the library search.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_34.png">  </p>
+<p>MS/MS tab:<br><em>Relative abundance cut off</em>: the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  </p>
+<p>Post ident. Tab:<br><em>Only report the top hit</em>: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  </p>
+<h4 id="section-3-3-5">Section 3-3-5</h4>
+<h4 id="adduct-tab-1">Adduct tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_35.png"><br>You can tick the adduct ions and charge values to be considered.<br>In addition, own definition for adduct ions can be set. (see the adduct format in Section 6-2 of Chapter 1)  </p>
+<h4 id="section-3-3-6">Section 3-3-6</h4>
+<h4 id="alignment-tab-1">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_36.png">  </p>
+<p><em>Parameters</em>: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample, which are not monitored in the representative file, can be automatically interpolated by the algorithm of MS-DIAL (gap-filling). In this demonstration, 0717_kinetex_wine_50_4min_pos_IDA_A1 is selected as the representative file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (here set 0.05 min and 0.025 Da.). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)∗100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.<br>If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.   </p>
+<p><strong>Note:</strong> When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  </p>
+<h3 id="section-3-4">Section 3-4</h3>
+<h3 id="data-curation-to-reduce-false-positive-identifications">Data curation to reduce false positive identifications</h3>
+<p>MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor <em>m/z</em>, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified.<br>Practically, what you have to do is to curate the identification result of an alignment file since the identification result of its alignment file will be reflected in the final output like ‘peak height’ data matrix. Using the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_37.png">  
+   </p>
+<h2 id="chapter-4">Chapter 4</h2>
+<h2 id="nominal-and-accurate-gcms-based-metabolic-profiling-in-ms-dial">Nominal and accurate GC/MS based metabolic profiling in MS-DIAL</h2>
+<p>Gas chromatography coupled with mass spectrometry is a robust and stable technique for metabolic profiling. Practically, it should be the first choice for untargeted metabolome analyses in terms of easier operation and maintenance over LC/MS. Moreover, the compound identification of GC/MS is currently straightforward owing to huge amount of retention time (and retention index) and EI spectrum databases.<br>Here, a project using GC/MS data sets of Arabidopsis knock out mutants (a part of this study) is demonstrated. The detail is shown in <a href="http://prime.psc.riken.jp/meko/">http://prime.psc.riken.jp/meko/</a>. The alkane mixture based retention index (Kovats) is used. The other methods using FAME mixture based retention index (Fiehn) or retention times are also explained. The files used for this demonstration can be downloaded from <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_38.png">  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_39.png">  </p>
+<h3 id="section-4-1">Section 4-1</h3>
+<h3 id="starting-up-your-project-2">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_40.png">  </p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your ABF files  </li>
+<li>Select your ionization type as EI (GC/MS)  </li>
+<li>Choose data type centroid data  </li>
+<li>Choose positive ion mode  </li>
+</ol>
+<p>* see section 4 of chapter 1 as well for the explanation of ‘Data type’.  </p>
+<p><strong>FAQ:</strong>   </p>
+<ul>
+<li>MS-DIAL can also process your LC/MS data like GC/MS.   </li>
+<li>If you have accurate GC/MS data, a parameter to set its accuracy is given in the parameter setting section.  </li>
+<li>If your data is a kind of precursor oriented GC/MS/MS technique such as GC-CI- (chemical ionization), GC-FI- (field ionization), GC-PI- (photonic ionization), and GC-APCI-MS, it should be dedicated to ‘ESI (LC/MS, LC/MS/MS, or precursor-oriented GC/MS/MS’ part as ionization type. See chapter 3.  <br>
+
+
+</li>
+</ul>
+<h3 id="section-4-2">Section 4-2</h3>
+<h3 id="importing-abf-files-2">Importing ABF files</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_41.png">  </p>
+<ol>
+<li>Select ABF files  </li>
+<li>If the file is a “quality control” sample for peak alignment, then set the type as such. (in this example, you do not have any QC sample.)  </li>
+</ol>
+<p>Note: Please finalize your file name here, because you cannot change it later.  </p>
+<h3 id="section-4-3">Section 4-3</h3>
+<h3 id="setting-parameters-2">Setting parameters</h3>
+<h4 id="section-4-3-1">Section 4-3-1</h4>
+<h4 id="data-collection-tab-2">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_42.png">  </p>
+<p>* For the quick start and its explanations, load ‘Param.med’ as shown above.  </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). For example, if your expected (meaningful) data range is 4-13.5 min for 60-500 Da (in this example), so set the parameters.  </p>
+<p><em>Multithreading</em>: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager-&gt;open resource monitor)  
+   </p>
+<h4 id="section-4-3-2">Section 4-3-2</h4>
+<h4 id="peak-detection-tab-2">Peak detection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_43.png">  </p>
+<p><em>Peak detection parameters</em>: The workflow of GC/MS deconvolution is 1) peak picking in each <em>m/z</em> chromatogram, and 2) deconvolution on the basis of detected peak spots. The algorithm of this peak picking is the same as LC/MS parts except for exclusion mass list which was removed from the parameter list in GC/MS processing.<br>Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>). For GC-Q-Exactive data, the minimum peak height should be 50,000 or more (at a first trial).  </p>
+<p><em>Peak spotting parameters</em>: If your data is obtained by high resolution GCMS such as Agilent GC-QTOFMS and GC-QExactive, check ‘accurate MS’. Then, set the width of mass slice. From our experience, 0.1 or 0.05 is suitable for accurate GCMS. In addition, put the mass accuracy which is used for the construction of EI-chromatograms followed by the deconvolution (MS1Dec) program.  </p>
+<h4 id="section-4-3-3">Section 4-3-3</h4>
+<h4 id="ms1dec-tab">MS1Dec tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_44.png">  </p>
+<p>The sigma window value is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved chromatographic peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks.   </p>
+<p>In addition, you may set a cutoff value to reduce the MS noises (see Section 3-3 of Chapter 3). This is the same as LC/MS part.  </p>
+<p>   </p>
+<h4 id="section-4-3-4">Section 4-3-4</h4>
+<h4 id="identification-tab-2">Identification tab</h4>
+<p>The peak identification of GC/MS based untargeted analysis is straightforward, but you have to carefully check your conditions especially about retention index for the comprehensive identification of metabolites. In fact, MS-DIAL can use ‘retention time’ as the index of retention information, but it is highly recommended to use retention indexes for the routine identifications. * Since there is retention time information as well in our curated MSP DBs, you may be able to choose ‘retention time’ as the index. However, you should use larger retention time tolerance, at the cost of increasing false positives.<br>There are two methods to calculate retention indexes: 1) Kovats on the basis of alkane mixture, and 2) Fiehn on the basis on FAME (fatty acid methyl ester) mixture. These mixtures can be bought for example from Sigma-Aldrich (49452-U for C7-C40 saturated alkane mixture) and from Agilent (<a href="http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf">http://www.agilent.com/cs/library/usermanuals/Public/G1676-90001_Fiehn.pdf</a>). Here, you have to prepare a tab-delimited file which includes the pair-list of carbon number and its retention time.<br><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_45.png">  </p>
+<p>The figure above describes the way to check the retention times of Alkane mixture (using AMDIS), and the same way can be used for FAME mixture. Note that for <strong>FAME based Fiehn RI calculation</strong>, you MUST prepare all of retention information of C8, C9, C10, C12, C14, C16, C18, C20, C22, C24, C26, C28, and C30 to calculate Fiehn RIs. On the other hand, all of alkanes is not required for the Kovats calculation.   </p>
+<p>From version 2.42, MS-DIAL supports ‘retention index’ based peak alignment. Some metabolomics studies can be acquired over months / years.  Cutting 10-15 cm of the GC column during instrument maintenance makes retention times shorter but this does not influence retention index. In some cases, there are many isomers (e.g., analysis of volatiles), thus, use of wide retention time tolerance (e.g., 0.5-1 min) could lead to wrong peak alignment. In order to deal with this requirement, users have to define the ‘pair’ of analysis file path and carbon-RT dictionary file in the parameter setting. Use ‘auto fill’ of context menu to apply a dictionary file into all of the other analysis files.  </p>
+<p>* AMDIS (<a href="http://chemdata.nist.gov/mass-spc/amdis/downloads/">http://chemdata.nist.gov/mass-spc/amdis/downloads/</a>) is a nice and very robust program for GC/MS analysis. It can also be used to check the retention times of both alkanes and FAMEs since you can directly see your raw data without any processing. In contrast, MS-DIAL has to be executed first to check raw data sets.  </p>
+<p><em>MSP file</em>: Set your MSP file here. (Tutorial data: <strong>GCMS DB_MassBank-Restek-RIKEN.msp</strong>.) Importantly, as long as you use FAME mixture, you do not have to prepare your own MSP since MS-DIAL internally has the Fiehn BinBase spectra records. Of course, you can choose your own MSP file for FAME based GC/MS metabolome analysis.  </p>
+<p><em>Parameters</em>: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). In the case that you choose ‘retention index’ as the identification index, set about 10-20 for alkane (Kovats index) and about 2000-3000 for FAME (Fiehn index) for ‘Retention index tolerance’.<br>Even if you use accurate GC/MS data, 0.5 for <em>m/z</em> tolerance is recommended unless you have your own high resolution EI library. The EI similarity cut off is used for the first filtering of compound identifications, and then the cutoff of the identification score which is the total score of retention time similarity and EI spectral similarity will be used for the final ranking of compound identification.   </p>
+<p>   </p>
+<h4 id="section-4-3-5">Section 4-3-5</h4>
+<h4 id="alignment-tab-2">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_46.png">  </p>
+<p><em>Parameters</em>: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample which are not monitored in the representative file can be automatically interpolated by the algorithm of MS-DIAL (gap-filling).<br>    In this demonstration, Const13_1 is selected as the representative file. The RT and EI similarity tolerances for peak alignment depend on your chromatographic conditions (set 0.075 min and 70% here). Note that you can use retention index as the criteria for peak alignment once the carbon-RT dictionary files are defined correctly in the identification tab (see the identification tab section).<br>    If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)∗100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. If you can prepare many QC sample data, tick the “QC at least filter” box. Then a peak will be removed if it is missing in any of the QC samples. Recently, the option termed as ‘identification after alignment’ was prepared. If you do not want to execute the compound identification function for each sample file, and if you want to execute it only for the alignment table, please check it. When you use NIST or Willy EI-MS database (containing &gt; 4 million records), this option may be useful to reduce the computational time.  </p>
+<p><strong>Note:</strong> When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the EI spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.<br><br></p>
+<h3 id="section-4-4">Section 4-4</h3>
+<h3 id="data-curation-for-the-reduction-of-false-positive-identifications-1">Data curation for the reduction of false positive identifications</h3>
+<p>MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention index (or retention time) and EI spectrum with the reference databases. However, there are also false positive identifications in the result of peak identifications as well as true positives. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified.<br>Practically, what you have to do is to curate the identification result of an alignment result file registered in ‘<strong>Alignment navigator</strong>’ since the identification result of its alignment file will be reflected as the final output. By the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  </p>
+<p>* Note: in contrast to LC/MS (precursor oriented data), each alignment spot does not describe a ‘precursor’ ion of metabolite but instead describe the quant mass (or unique mass, unique <em>m/z</em>) of the deconvoluted peak. The representative quant mass is determined by the voting way from quant masses of all biological samples.<br><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_47.png"><br><br></p>
+<h2 id="chapter-5">Chapter 5</h2>
+<h2 id="graphical-user-interface-of-ms-dial">Graphical user interface of MS-DIAL</h2>
+<h3 id="section-5-1">Section 5-1</h3>
+<h3 id="mouse-function">Mouse function</h3>
+<ul>
+<li>Mouse right click (or hold) and move: zoom in and out  </li>
+<li>Mouse left click (or hold) and move: select and scroll  </li>
+<li>Mouse left double click: reset range and select files in the file navigator  </li>
+<li>Mouse wheel: zoom in and out  </li>
+<li>Right click: popup context menu  </li>
+</ul>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_48.png">
+<span style="color:red;">* Red rectangle: acceptable click point</span>
+<br><br><br>  </p>
+<h3 id="section-5-2">Section 5-2</h3>
+<h3 id="overview-of-the-ms-dial-main-window-in-lcms-precursor-oriented-project">Overview of the MS-DIAL main window in LC/MS (precursor oriented) project</h3>
+<p>In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the center window (<strong>Peak spot viewer</strong>), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (<strong>Survey scan spectrum</strong>) displays the MS1 spectrum of the focused peak and the upper window (<strong>Extracted ion chromatogram of focused spot</strong>) displays the extracted ion chromatogram of the focused peak. The right window (<strong>Exp. vs. Ref.</strong>) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘<strong>MS2 chrom.</strong>’ And ‘<strong>Raw vs. Purified</strong>’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘MS2 Chrom.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_49.png"></p>
+<p>On <strong>Alignment spot viewer</strong>, each spot shows an aligned spot including all retention time, accurate mass, intensity, and MS/MS spectrum of all samples. As in the <strong>Peak spot viewer</strong>, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check all retention times and accurate masses of aligned samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.<br>On <strong>Rep. vs. Ref.</strong> tab of right panel, in combination with the <strong>alignment spot viewer</strong>, the window compares a representative MS/MS spectrum and a reference MS/MS spectrum. The representative MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.<br>On <strong>Bar chart of aligned spots</strong> of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -&gt; File property’.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_50.png"></p>
+<p>   </p>
+<h3 id="section-5-3">Section 5-3</h3>
+<h3 id="overview-of-the-ms-dial-main-window-in-gcms-project">Overview of the MS-DIAL main window in GC/MS project</h3>
+<p>The main viewer of MS-DIAL GC/MS is mostly the same as the viewer of LC/MS part. The specific difference between GC/MS part and LC/MS part are in ‘<strong>Peak spot viewer</strong>’. The peak picking and deconvolution results of a GC/MS file are shown in the center window by mouse left double click of the file name in the File navigator. In the center window (<strong>Peak spot viewer</strong>), each circle spot denotes the detected peak on each mass (<em>m/z</em>) trace: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. However, in contrast to LC/MS part, these circle spots are not meaningful very much. Instead, the <strong>reverse triangle</strong> is the important description to recognize detected metabolites.<br>Once you click one of the reverse triangles, you can see the detail of detected (deconvoluted) peak. The left window (<strong>Survey scan spectrum</strong>) displays the MS1 spectrum of the focused peak and the upper window (<strong>Extracted ion chromatogram of focused spot</strong>) displays the extracted ion chromatogram of the quant mass of focused peak. The right window (<strong>Exp. vs. Ref.</strong>) displays the EI spectrum (blue or black) and the reference MS/MS spectrum (red). The detail of deconvolution is shown in ‘<strong>EI chrom.</strong>’ And ‘<strong>Raw vs. Purified</strong>’ tabs of the right panel. The EI chromatograms (both raw- and deconvoluted) are depicted in ‘EI Chrom.’. In addition, the raw- and deconvoluted (purified) EI spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_51.png"></p>
+<p>   
+On <strong>Alignment spot viewer</strong>, the description is also mostly the same as that of LC/MS part. Each spot shows an aligned spot including all retention time, <strong>quant mass</strong>, intensity, and EI spectrum of all samples. As in the <strong>Peak spot viewer</strong>, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check the difference of retention times of aligned samples. Note that the difference of Y-axis does not have any physical meaning: the drawing of Y-axis is performed randomly to separately draw each samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.<br>On <strong>Rep. vs. Ref.</strong> tab of right panel, in combination with the <strong>alignment spot viewer</strong>, the window compares a representative EI spectrum and a reference EI spectrum. The representative EI is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.<br>On <strong>Bar chart of aligned spots</strong> of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -&gt; File property’.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_52.png"></p>
+<p>   </p>
+<h3 id="section-5-4">Section 5-4</h3>
+<h3 id="compound-search-for-the-result-curation-of-peak-identification">Compound search for the result curation of peak identification</h3>
+<p>The automatic identification process cannot escape from mis-identification. MS-DIAL provides the user-interface so that users can manually correct the identification result. In this option, you can customize the identification criteria into three levels: “confident”, “unsettled”, and “unknown.” For example, in the phospholipid identification, we often determine only the cumulative composition such as PC 36:1 without positions of acyl chains, e.g. PC(18:0/18:1). You can add “unsettled” tag to such peaks as the signpost to comment that “we only checked the cumulative composition”.<br>Information of identification is available not only in the “peak viewer” but also in the “alignment viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_53.png">  </p>
+<p>A)    Mouse double click in each row of the library information to show identification details.<br>B)    Add a tolerance value for identification and click the “Search” button.<br>C)    You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  </p>
+<p>   </p>
+<h3 id="section-5-5">Section 5-5</h3>
+<h3 id="normalization-and-statistical-analysis-in-ms-dial">Normalization and statistical analysis in MS-DIAL</h3>
+<ol>
+<li>Data normalization by internal standards or LOESS algorithm  </li>
+<li>Principal component analysis  </li>
+<li>Partial least squares (PLS) and orthogonal partial least squares (OPLS)</li>
+</ol>
+<p>A)    If you want to use internal standards to normalize your peak list, you have to set the IS information in <strong>Option</strong> menu. MS-DIAL also supports LOESS and cubic spline algorithm to normalize batch or amplitude drifts. In order to use the LOESS algorithm, you have to set “quality control” and “analytical order” information correctly in the <strong>Option</strong> menu.<br>B)    If you want to use the other statistics, please go to PRIMe web site:<br><a href="http://prime.psc.riken.jp/Metabolomics_Software/StatisticalAnalysisOnMicrosoftExcel/index.html">http://prime.psc.riken.jp/Metabolomics_Software/StatisticalAnalysisOnMicrosoftExcel/index.html</a>  </p>
+<p>* Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_***’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘176’ which was annotated LysoPC 17:0 from the setting below.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_54.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_55.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_127.png"></p>
+<ul>
+<li>You can choose the metabolite data set from “Identified”, “Annotated” and “Unknown”.</li>
+<li>Finally, click the Done button.</li>
+</ul>
+<p>Output of the PCA</p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_128.png"></p>
+<ul>
+<li>The left side of the upper row: PCA score plot</li>
+<li>The right side of the upper row: PCA loading plot</li>
+<li>The upper bar graph (lower low): PCA loading plot of principal component 1 (Red: positive correlation, Blue: negative correlation)</li>
+<li>The lower bar graph (lower low): PCA loading plot of principal component 2 (Red: positive correlation, Blue: negative correlation)</li>
+</ul>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_129.png"></p>
+<ul>
+<li>You can choose the method of PLS or OPLS (DA: discriminant analysis, R: regression analysis).</li>
+<li>You can choose the metabolite data set from “Identified”, “Annotated” and “Unknown”.</li>
+<li>Finally, click the Done button.</li>
+</ul>
+<p><strong>!</strong> File setting for PLS before analyses</p>
+<ol>
+<li>Set Y (response) variables at menu -&gt; option -&gt; file property</li>
+<li>For (O)PLS-DA, use a binary (0 or 1) value as the response. Non-zero values are recognized as 1 in (O)PLS-DA testing.</li>
+<li>For (O)PLS-R, set sequential values.</li>
+</ol>
+<p>Output of the PLS</p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_130.png"></p>
+<ul>
+<li>The left side of the upper row: PLS score plot</li>
+<li>The right side of the upper row: PLS loading plot</li>
+<li>The upper bar graph (lower low): PLS loading plot of principal component 1 (Red: positive correlation, Blue: negative correlation)</li>
+<li>The lower bar graph (lower low): PLS loading plot of principal component 2 (Red: positive correlation, Blue: negative correlation)</li>
+</ul>
+<h3 id="section-5-6">Section 5-6</h3>
+<h3 id="export">Export</h3>
+<p>A)    Peak list export<br>B)    Alignment result export<br>C)    Context menu strip  </p>
+<p>A)    <em>Peak list export</em>: You can get the peak list information of each sample including retention time, <em>m/z</em>, MS/MS spectra information, and so on. Available formats are MSP, MGF or Text.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_56.png"></p>
+<p>Step1.    Choose an export folder path.<br>Step2.    Choose files which you want to export.<br>Step3.    Select export format.<br>Step4.    Click the export button.  </p>
+<p>B)    <em>Alignment result export</em>: You can get data matrix or spectral information.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_57.png"></p>
+<p>Step1.    Choose an export folder path.<br>Step2.    Choose an alignment file which you want to export.<br>Step3.    Select export format if you want to export the representative spectra.<br>Step4.    Click the export button.    </p>
+<h3 id="section-5-7">Section 5-7</h3>
+<h3 id="save">Save</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_58.png"></p>
+<p><strong>Your project is managed in MTD file.</strong> Although your project is saved automatically whenever you do the data processing method, this program is not saved after your manual modification such as the curation of identification result, internal standard setting, and file or class information setting. Therefore, you have to save your project from this option after your modification.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_59.png"></p>
+<p><strong>Your data processing parameter can be saved as MED format file.</strong> When you want to use your method file for your data processing method, select your MED format file in the data processing setting.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_60.png"></p>
+<br>
+
+<h3 id="section-5-8">Section 5-8</h3>
+<h3>Open</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_61.png"></p>
+<p>The project file is saved as MTD file format automatically whenever you perform data processing method. The manual save is described in section 7. <strong>You can re-start your project from the MTB file.</strong> The manual curation of peak identification result is highly recommended. In addition, the manual annotation can be set from <em>Identification</em> menu.  </p>
+<p>   </p>
+<h3 id="section-5-9">Section 5-9</h3>
+<h3 id="option">Option</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_62.png"></p>
+<p>You can set properties of aligned peaks and files. In the file properties, you can reset file type, class ID, or analytical order (but not the file name). If you clear the check box of the “Included” column, the corresponding data are no longer used in the statistical analysis. In the alignment properties, you can set internal standard information for each aligned peak. Please make sure to assign “alignment ID” in the “internal standard” column.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_63.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_64.png"></p>
+<br>
+### Section 5-10
+### Manual annotation on Identification menu  
+
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_65.png"></p>
+<p><em>Identification setting</em>: You can manually correct identification result. This option may be useful to check internal standards which are not included in the reference library.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_66.png">
+   </p>
+<h3 id="section-5-11">Section 5-11</h3>
+<h3 id="chromatogram-viewers">Chromatogram viewers</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_67.png"></p>
+<p><em>Display total ion chromatogram</em>: You can see the total ion chromatogram of the focused sample.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_68.png"></p>
+<p><em>Display extracted ion chromatogram</em>: You can see the extracted ion chromatograms which you want to display for the focused sample.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_69.png"></p>
+<h3 id="section-5-12">Section 5-12</h3>
+<h3 id="explanation-of-buttons-and-tabs-of-ms-dial">Explanation of buttons and tabs of MS-DIAL</h3>
+<h4 id="section-5-12-1">Section 5-12-1</h4>
+<h4 id="display-filters">Display filters</h4>
+<p><em>Label</em>: You can check the peak information such as retention time, accurate mass, metabolite name, adduct ion name and isotope ion in the center window of MS-DIAL. Shown below are examples.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_70.png">
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_71.png">
+ <br><em>Height filter</em>: This filter is used to check the peak abundance. Each peak is assigned a rank with respect to its peak abundance in the focused sample.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_72.png"></p>
+<p><em>Display filter</em>   </p>
+<ol>
+<li>“Identified” shows only identified peaks with the MS/MS spectrum.  </li>
+<li>“Annotated” shows only identified peaks without the MS/MS spectrum.  </li>
+<li>“Molecular ion” shows de-isotoped molecular ions only.  </li>
+<li>“MS/MS” shows only peaks having the MS/MS spectrum.  </li>
+<li>“Unknown” shows only unknown peaks.  </li>
+</ol>
+<h4 id="section-5-12-2">Section 5-12-2</h4>
+<h4 id="tabs-of-ms-dial">Tabs of MS-DIAL</h4>
+<br>
+![alt](images/image_73.png)
+
+<p>This viewer is prepared especially for data independent MS/MS analysis or GC/MS analysis.<br><em>Exp. vs. Ref.</em>: The upper spectrum (blue or black) displays the centroided information of the MS/MS spectrum. The lower spectrum (red) displays the reference MS/MS spectrum. In case of data independent MS/MS or GC/MS analysis, de-convoluted MS/MS spectrum can be displayed by clicking the de-convolution icon <img width="3%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_74.png">.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_75.png"></p>
+<p><em>MS2 Chrom.</em>: The MS/MS chromatograms inside the sky-blue rectangle in the center window are displayed. In GC/MS part (named MS1 Chrom.), there is no sky-blue rectangle in the viewer, and the peak width is automatically determined by the algorithm of MS-DIAL instead.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_76.png"></p>
+<p><img width="3%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_77.png"> This icon displays the raw EI or DIA-MS/MS chromatograms.<br><img width="3%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_78.png"> This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.<br><img width="3%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_79.png"> This icon displays both the raw and de-convoluted EI or DIA-MS/MS chromatograms.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_80.png">
+ <br><em>Raw vs. Purified.</em>: The upper and bottom windows display the raw and de-convoluted EI or DIA-MS/MS spectrum, respectively.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_81.png"></p>
+<p><em>Rep. vs. Ref.</em>: In combination with the <strong>alignment viewer</strong>, the window compares a representative EI or MS/MS spectrum and a reference EI or MS/MS spectrum. The representative EI or MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_82.png"><br><br></p>
+<h3 id="section-5-13">Section 5-13</h3>
+<h3 id="search">Search</h3>
+<h4 id="section-5-13-1">Section 5-13-1</h4>
+<h4 id="msms-fragment-searcher">MS/MS fragment searcher</h4>
+<p>In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’96.9597’ Da as product ion search in order to find the precursor ions contacting sulfate (SO<sub>4</sub><sup>-</sup>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_83.png"><br><br></p>
+<h4 id="section-5-13-2">Section 5-13-2</h4>
+<h4 id="amalgamation-of-different-polarity-peak-list">Amalgamation of different polarity peak list</h4>
+<p>The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see <em>m/z</em> 273.076 in positive and <em>m/z</em> 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  </p>
+<img width="60%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_84.png">  
+
+<p>Example of mass difference for adduct type determination  </p>
+<p>Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   </p>
+<ol>
+<li>In negative ion mode project, select ‘Export’ -&gt; ‘Peak list export’.  </li>
+<li>Export a detected peak list (feature list) as tab delimited text format.<br><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_85.png"></li>
+<li>Then, make the peak list containing <em>m/z</em> value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg ion features.txt’.   <img width="40%" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_86.png"></li>
+<li>Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -&gt; “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
+<img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_87.png"></li>
+</ol>
+<h3 id="section-5-14">Section 5-14</h3>
+<h3 id="pathway-map">Pathway map</h3>
+<p>1. “Data visualization” -&gt; “Pathway”  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_125.png"></p>
+<ul>
+<li>You can select one of 3 type of pathway, i.e. animal pathway, plant pathway and user-defined pathway (two formats, graphml (VANTED) and gpml (Wikipathway) are accepted). In lipidomics project, the label name of nodes is used for mapping aligned data. In metabolomics project, InChIKey is used. Please register the InChIKey to tooltip in Vanted. In Wikipathway, there is the field (see the tutorial). Currently, the first layer is used for matching node and annotated data.</li>
+<li>You can also load up to 4 different project aligned data (class setting must be equal, and now, the project must be closed when loaded).</li>
+<li>Finally, click the Mapping button.</li>
+</ul>
+<p>2. You can get the pathway map.</p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_126.png"></p>
+<ul>
+<li>Right double click reset the display range.</li>
+<li>Right click and drag for zoom in.</li>
+<li>Mouse wheel for up-down scroll.</li>
+<li>Mouse wheel + Ctrl for zoom in-out.</li>
+<li>Mouse wheel + Shift for left-right scroll.</li>
+<li>Mouse click + Shift or Ctrl for changing node position.</li>
+</ul>
+<h2 id="chapter-6">Chapter 6</h2>
+<h2 id="other-utilities-of-ms-dial">Other utilities of MS-DIAL</h2>
+<h3 id="section-6-1">Section 6-1</h3>
+<h3 id="link-to-ms-finder-for-searching-unknowns">Link to MS-FINDER for searching unknowns</h3>
+<p>MS-FINDER aims to provide 4lutions for 1) formula predictions, 2) fragment annotations, and 3) structure elucidations by means of survey scan MS and MS/MS spectra of unknowns. The detail of MS-FINDER is described in <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-FINDER/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-FINDER/index.html</a>. <strong>Note that you have to download the MS-FIDNER program from the website above on your PC.</strong><br>The current MS-DIAL program can send the unknown query. On the first time that you try to send a query into MS-FINDER, a pop up window will be generated, and then select ‘MSFINDER.exe’ from its dialog box. Moreover, MS-DIAL can export all of peak- or alignment spots as ‘MAT’ format file which can be imported by MS-FINDER (<strong>Add components to search list</strong>).   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_88.png"></p>
+<h3 id="section-6-2">Section 6-2</h3>
+<h3 id="bridge-to-mrmprobs-for-dia-ms-or-gcms-data-sets">Bridge to MRMPROBS for DIA-MS or GC/MS data sets</h3>
+<p>The purpose of this section is to announce the utility of ‘MRMPROBS’ instead of MS-DIAL for SWATH-MS or other DIA-MS data. MRMPROBS was originally developed for targeted metabolomics using triple quadrupole MS data (multiple reaction monitoring, MRM; selected reaction monitoring, SRM). It also supports the entire workflow from data import until statistical analysis as MS-DIAL does. Compared to the MS-DIAL program, MRMPROBS is optimized for targeted metabolomics: 1) users can manually curate the peak left- and right edges of chromatographic peaks, 2) users can simultaneously check all samples’ peaks of a targeted compound, and 3) users can easily curate the identification results. <a href="http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_89.png"></p>
+<p>    MRMPROBS is now launched as a universal program to deal with DIA-MS data and GC/MS data as well as QqQ-MS data. While the current MS-DIAL program always calculates the peak intensity (height) and peak area of compounds by the survey scan MS1 data, MRMPROBS can utilize the MS/MS chromatograms for metabolite quantifications. In addition, the tools for untargeted analysis like MS-DIAL will often provide the false positive things in the process of peak picking, deconvolution, and peak alignment. In contrast, users can easily parse the targeted compounds with the user-friendly graphical user interface. The ‘bridge’ from MS-DIAL to MRMPROBS was described in next figure. The workflow can also be utilized for GC/MS data. The detail of MRMPROBS is fully described in the tutorial of MRMPROBS program.<br><a href="http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_90.png">
+Workflow of the ‘bridge’ from MS-DIAL to MRMPROBS   </p>
+<br>
+### Section 6-3
+### Molecular spectrum networking for metabolite annotations  
+The molecular spectrum networking is a useful technique to get the insight for unknown metabolite structures as used in GNPS and MS2LDA projects. The basic hypothesis is that the mass spectra should be similar (and partially same) among a metabolite subfamily (class). In addition, the metabolic profile’s similarity among aligned ion spots is also a useful information to know the biosynthesis regulations among samples. There are several methods to perform the molecular spectrum networking analysis in MS-DIAL. Note that please set FireFox as the default html viewer for the rapid browsing of your result.  
+
+<p>A.    Follow as ‘Data visualization’ -&gt; ‘Molecular spectrum networking’. Then, follow the below setting. If you select ‘Alignment spots’, the analysis is performed for the alignment spots displayed in ‘alignment spot viewer’. The mass tolerance [Da] should be the mass accuracy of MS/MS spectrum. For nominal mass GC-MS project, the tolerance should be set to 0.25 Da. The similarity cut off is applied to the score of ‘Bonanza spectral clustering algorithm’ [Falkner, J. A., Falkner, J. W., Yocum, A. K. &amp; Andrews, P. C. J. Proteome Res. 7, 4614–4622 (2008)]: the algorithm is a little bit modified form the original one, and the detail will be described after new paper is published. MS-DIAL also provides the retention time tolerance where the target retention time is defined as what you select in the spot viewer.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_91.png"></p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_92.png"></p>
+<p>B.    Second way to perform the network analysis is to click the network button at the right panel of MS-DIAL as shown below. This method is used to find the spots having similar MS/MS spectrum or similar metabolic profile among samples with the focused spot.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_93.png"></p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_94.png"></p>
+<p>C.     Due to the limitation of cytoscape.js as used in A and B, MS-DIAL does not show all of nodes and edges to be used in the network analysis. If you want to use all of information with the flexible graphical user interface, please export the node- and edge files from the export option. The exported results can be imported by the cytoscape program (<a href="http://www.cytoscape.org/cy3.html">http://www.cytoscape.org/cy3.html</a>).   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_95.png"><br><br></p>
+<h2 id="chapter-7">Chapter 7</h2>
+<h2 id="ms-dial-isotope-tracking-function">MS-DIAL isotope tracking function</h2>
+<p>Stable isotope assisted metabolomics is a great approach to reveal the metabolic turnover of a nutrient source, to calculate flux balances, and to determine the molecular element (CNOS) of unknown molecules. Here, a project using LC-MS/MS data sets of non-labeled- and fully 13C labeled Arabidopsis thaliana samples for the comprehensive annotation of plant specialized metabolites is demonstrated. The purpose of this study was to determine the carbon element count of molecular formula by using 13C labeled plant tissues. The files used for this demonstration can be downloaded from <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_96.png"><br><br></p>
+<h3 id="section-7-1">Section 7-1</h3>
+<h3 id="starting-up-your-project-3">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_97.png"></p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your ABF files  </li>
+<li>Select your ionization type as soft ionization  </li>
+<li>Choose data type centroid data  </li>
+<li>Choose negative ion mode  </li>
+</ol>
+<p>   </p>
+<h3 id="section-7-2">Section 7-2</h3>
+<h3 id="importing-abf-files-3">Importing ABF files</h3>
+<ol>
+<li>Select ABF files  </li>
+<li>Class ID in this demonstration is set to ‘Non-labeled’ and ‘Uniform-labeled’.  </li>
+</ol>
+<p>Note: Please finalize your file name here, because you cannot change it later.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_98.png"></p>
+<p>   </p>
+<h3 id="section-7-3">Section 7-3</h3>
+<h3 id="setting-parameters-3">Setting parameters</h3>
+<h4 id="section-7-3-1">Section 7-3-1</h4>
+<h4 id="data-collection-tab-3">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_99.png"></p>
+<p>* For the quick start and its explanations, load ‘Param.med’ as shown above.  </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). Here, set 1.5-10.5 min and 50-1500 Da for the ranges.  </p>
+<p><em>Centroid parameters</em>: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding if your files are profile data. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively.   </p>
+<p><em>Isotope recognition</em>: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  </p>
+<p><em>Multithreading</em>: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager-&gt;open resource monitor)  
+   </p>
+<h4 id="section-7-3-2">Section 7-3-2</h4>
+<h4 id="peak-detection-tab-and-ms2dec-tab">Peak detection tab and MS2Dec tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_100.png"></p>
+<p>The details are described in Chapter 2&amp;3. In Waters and Bruker QTOF, the minimum peak height can be set to 300-500 as long as I confirmed. Here, 300 is set for minimum peak height because the demonstration file was obtained by Waters Xevo QTOF.  </p>
+<h4 id="section-7-3-3">Section 7-3-3</h4>
+<h4 id="identification-tab-3">Identification tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_101.png"></p>
+<p><em>MSP file</em>: Set your MSP file here. (Tutorial data: <strong>MSMS-AllPublic-Curated-Neg.msp.</strong>)   </p>
+<p><em>Parameters</em>: Normally, there is no compatibility for retention time in LC-MS project in contrast to GC-MS. Therefore, the checkbox of ‘Use retention information for scoring’ was recently prepared. If the checkbox is unchecked, the scoring of retention time is not used for the calculation of total score which is used for the identification cut off.   </p>
+<p>Please make sure that in isotope tracking project, the identification result of non-labeled sample as set as ‘reference file’ is reflected in the alignment result.   </p>
+<h4 id="section-7-3-4">Section 7-3-4</h4>
+<h4 id="adduct-tab-2">Adduct tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_102.png"></p>
+<p>You can tick the adduct ions and charge values to be considered. In doing the metabolome analysis for plant specialized metabolites, the losses for C6H10O4, C6H10O5, and C6H8O6 etc may be added because there are many in source fragment ions detected in hexosylmetabolites.  </p>
+<p>   </p>
+<h4 id="section-7-3-5">Section 7-3-5</h4>
+<h4 id="alignment-tab-3">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_103.png"></p>
+<p><em>Parameters</em>: The details of alignment parameter are shown in chapter 2 and 3.   </p>
+<p><strong>Note:</strong> Please set one of ‘non-labeled’ biological samples as the reference file when the isotope tracking function is used.  
+   </p>
+<h4 id="section-7-3-6">Section 7-3-6</h4>
+<h4 id="isotope-tracking-tab">Isotope tracking tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_104.png"></p>
+<p>When the isotope tracking function is used, check ‘tracking of isotope labels’. And select your labeled element (in this project, select ‘13C’). Currently, MS-DIAL requires at least one ‘non-labeled’ sample data in order to know which peaks should be considered as ‘baseline’.<br>    If you have the targeted formula list as shown above (top-right), please make the tab-delimited text file containing (first column) formula, (second column) <em>m/z</em>, (third column) retention time, and (last column, as option) adduct type. MS-DIAL will first identify the metabolites for non-labeled reference file by means of the library, and then, the isotope recognitions are performed.<br>    If you have fully labeled sample data, check ‘set fully-labeled reference file’, and then, select one of the fully labeled sample data. In this demonstration, please follow the above setting (the targeted formula list is not prepared).   </p>
+<p>   </p>
+<h3 id="section-7-4">Section 7-4</h3>
+<h3 id="data-curation-for-isotope-tracking-result">Data curation for isotope tracking result</h3>
+<p>The result can be checked as described below. Practically, I recommend the following procedures for the data analysis of isotope labeled metabolomics.  </p>
+<ol>
+<li>It’s much better ‘NOT’ to perform the peak alignment at the first run of data analysis. It means that please perform peak spotting only.  </li>
+<li>Then, please curate the identification result for non-labeled reference file because the identification result is reflected in the alignment result.  </li>
+<li>After the curation is finished, run the peak alignment function with the setting of isotope tracking function.   </li>
+<li>As described in next page, please check ‘Filtering by the result of isotope labeled tracking’ in the alignment result export. Of course, if you are a programmer, you do not check it because you can do the filtering method by yourself.  </li>
+<li>Moreover, if you do right click at the panel of alignment spot viewer, then, follow as ‘Search formula and structure’ -&gt; ‘Add components to search list’, you will get the mat files containing the information of determined carbon element number to be used in MS-FINDER.  </li>
+</ol>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_105.png">  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_106.png"><br><br></p>
+<h2 id="chapter-8">Chapter 8</h2>
+<h2 id="project-for-all-ion-fragmentation-with-multiple-collision-energies">Project for all ion fragmentation with multiple collision energies</h2>
+<p>We recently started the development for data independent MS/MS acquisition data from all-ion approach (such as MSE, all-ions, or all ion fragementations) with ‘multiple collision energies (like a sequential loop of 0V, 10V, and 40V)’. Here, a project is demonstrated using LC/MS/MS data sets from yeast strains, which have already published (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). The abf files used for this demonstration can be downloaded from the below link.<br><a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_107.png"></p>
+<p>This chapter uses total 7 files and the MSP file is contained in the same folder of this demonstration. Also, there is a parameter file (Param.med) in this folder to be used in MS-DIAL for the quick start.   </p>
+<p><strong>Experiment summary:</strong><br><strong>Samples:</strong> The demo project contains 7 files in total:<br>Blank2 - blank sample<br>QC1, QC2 - quality control samples pooled from multiple yeast strain samples<br>Sc1, Sc2, Sc3 - WT yeast strain samples<br>Sc4 - <em>bna2</em> yeast strain  </p>
+<p>Data was collected on a 1290 Infinity II ultrahigh performance liquid chromatography (UHPLC) system coupled to a 6550 iFunnel quadrupole time-of-flight (Q-TOF) mass spectrometer equipped with a dual AJS electrospray ionization source (Agilent Technologies) as published in Naz et al 2017 (DOI: 10.1021/acs.analchem.7b00925).  </p>
+<p><strong>Liquid chromatography:</strong> Polar metabolites were separated on a HILIC SeQuant ZIC-HILIC (Merck, Darmstadt, Germany) column 100 Å (100 × 2.1 mm, 3.5 μm particle size) coupled to a guard column (2.1 × 2 mm, 3.5 μm particle size) and an inline-filter. Sample analysis in positive ionization mode was performed using water with 0.1% formic acid (solvent A) and acetonitrile with 0.1% formic acid (solvent B). The elution gradient used was as follows: isocratic step at 95% B for 1.5 min, 95 to 40% B in 12 min, maintained at 40% B for 2 min, then decreasing to 25% B at 14.2 min, maintained for 2.8 min, then returned to initial conditions over 1 min, and then the column was equilibrated at initial conditions for 7 min. The flow rate was 0.3 mL/min; injection volume was 2 μL, and the column oven was maintained at 25 °C.  </p>
+<p><strong>Mass spectrometer:</strong> Nitrogen (purity &gt;99.999%) was used as a sheath gas and drying gas at a flow of 8 and 15 L/min, respectively. The drying and sheath gas temperature was set at 250 °C with the nebulizer pressure at 35 psig and voltage 3000 V. The fragmentor voltage was set at 380 V. The acquisition was obtained with a mass range of 40−1200 <em>m/z</em> in AIF mode, where a single high-resolution full scan is acquired, including three sequential experiments at three alternating collision energies (one full scan at 0 eV, followed by one MS/ MS scan at 10 eV, and then followed by one MS/MS scan at 30 eV). The data acquisition rate was 6 scans/s. Data was acquired in centroid mode.          </p>
+<p>An internal lock mass mixture (Agilent Technologies) was prepared at a final concentration of 2 μM purine (C5H4N4) and 2.5 μM HP-0921 (C18H18O6N3P3F24) in acetonitrile:water (19:1, v/v). The internal lock mass mixture was constantly infused at a flow rate of 1 mL/min (split 1:100) using an isocratic pump together with the LC eluent for constant mass correction [positive ionization mode: purine (<em>m/z</em> 121.0509), HP-0921 (<em>m/z</em> 922.0098); Although observed mass accuracy will depends upon the resolution, potential metabolite coelution, and isobaric compounds, a mass accuracy of &lt;5 ppm was expected.  </p>
+<p>   </p>
+<h3 id="section-8-1">Section 8-1</h3>
+<h3 id="starting-up-your-project-4">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_108.png"></p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your ABF files  </li>
+<li>Select your method type as ‘All-ions with multiple CEs’  </li>
+<li>Select the experimental file: <strong>Experimental_Information_ForAIF.txt</strong>. (see the next page)  </li>
+<li>Choose data type centroid data for both MS1 and MS/MS  </li>
+<li>Choose positive ion mode  </li>
+<li>Choose target omics as metabolomics  
+   </li>
+</ol>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_109.png">
+Experimental_Information_ForAIF.txt (<strong>tab-separated</strong> file)  </p>
+<p><strong>* To handle multiple collision energy data, please use this modified dictionary file format.</strong> First four columns are the same as the original dictionary file (see Section 4 of Chapter 1). The additional columns are set as follows;<br><strong>ID:</strong> experimental ID from 0<br><strong>MS Type:</strong> please set “SCAN” as MS1 scan<br><strong>Start m/z:</strong> minimum m/z<br><strong>End m/z:</strong> max m/z<br><span style="color:red;"><b>Name:</b> cycle name to show viewers<br><b>Collision Energy:</b> collision energy<br><b>DecTarget:</b> 0 or 1. If you want to get deconvoluted spectra in this cycle, please set 1. Please set 1 at least 1 cycle.</span></p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_110.png">
+Examples of the modified dictionary file  </p>
+<h3 id="section-8-2">Section 8-2</h3>
+<h3 id="importing-abf-files-4">Importing ABF files</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_111.png"></p>
+<ol>
+<li>Select ABF files  </li>
+<li>Change the sample names and set the sample type and class  </li>
+</ol>
+<p><strong>Note:</strong> Please finalize your file name here, because you cannot change it later.  </p>
+<p>   </p>
+<h3 id="section-8-3">Section 8-3</h3>
+<h3 id="setting-parameters-4">Setting parameters</h3>
+<h4 id="section-8-3-1">Section 8-3-1</h4>
+<h4 id="data-collection-tab-4">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_112.png"></p>
+<p>* For the quick start and its explanations, load ‘Param.med’.      </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). In this demonstration, your expected data range is 1.5-15 min for 40-1200 Da.<br>Note: The chromatographic peaks are highly coeluted in the beginning of this LC-MS data, i.e. 0-1.5 min area. Therefore the AIF data deconvolution is applied for 1.5-15 min in this demonstration.  </p>
+<p><em>Centroid parameters</em>: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding. By default, mass spectrum of ±0.01 and ±0.01 Da range from each peak top is integrated in MS1 and MS2, respectively. Importantly, this MS2 tolerance value is also used to build the MS/MS chromatogram for a certain <em>m/z</em> trace. The MS/MS chromatograms are dedicated to the MS2Dec deconvolution program.  </p>
+<h4 id="section-8-3-2">Section 8-3-2</h4>
+<h4 id="peak-detection-tab-3">Peak detection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_113.png"></p>
+<p><em>Peak detection parameters</em>: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf</a>). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.<br><strong>Note:</strong> check the smoothing level at the raw data<br><strong>Note:</strong> it is recommended to set the minimum peak height at least 2-5 fold higher than the noise level, otherwise the data analysis will take very long time. To check the noise level you can for example check several scans in the non-busy region of the mass spectrum. The small peaks not found consistently across the scans can be regarded as noise.   </p>
+<p><em>Peak spotting parameters</em>: The width of mass slice is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive. If you already know unwanted m/z peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  </p>
+<p>In this demonstration, the m/z values for calibrant compounds, i.e. purine and HP-921, are set in the exclusion list.<br>Purine 121.0509 [M+H]+<br>HP-921 922.0098 [M+H]+ and 923.0129 [M+H]+ isotope with 0.01 tolerance  </p>
+<h4 id="section-8-3-3">Section 8-3-3</h4>
+<h4 id="ms2dec-tab-2">MS2Dec tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_114.png"></p>
+<p>The sigma window value is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks.<br>In addition, you may be able to set a cut off value to reduce the MS noises (see Section 3-3 of Chapter 3). Finally, if you want to remove the product ions with higher m/z than the focused precursor ion (recommended for metabolomics and lipidomics), check “Exclude after precursor”.  </p>
+<h4 id="section-8-3-4">Section 8-3-4</h4>
+<h4 id="identification-tab-4">Identification tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_115.png"></p>
+<p><em>MSP file</em>: Set your MSP file here (Tutorial data: <strong>AIF_tutorial_library.msp</strong>). In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  </p>
+<p><em>MSP libary contains</em><br>Tryptophan, Kynurenine, Kynurenic acid, 3-hydroxyanthranillic acid, 3-hydroxykynurenine, internal standards (MES, CHES, PIPES, HEPES)<br><em>Parameters</em>: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). The two mass tolerances for MS1 and MS2 are required for the compound search and they are dependent on your instrument performance.<br>The cutoff of the identification score should be greater than 0.6 or 0.7.  </p>
+<p><em>Text file</em>: If you want to perform “post identification” processing, set your text file here.   </p>
+<p><em>Parameters</em>: The meanings of parameters are the same as MSP based identification.  </p>
+<h4 id="section-8-3-5">Section 8-3-5</h4>
+<h4 id="adduct-tab-3">Adduct tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_116.png">  </p>
+<p><em>Adduct ion setting</em>: You can tick the adduct ions and charge values to be considered.<br>* see also the section 3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  </p>
+<h4 id="section-8-3-6">Section 8-3-6</h4>
+<h4 id="alignment-tab-4">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_117.png">  </p>
+<p><em>Parameters</em>: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.  </p>
+<p><strong>Note:</strong> When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.<br><br></p>
+<h3 id="section-8-4">Section 8-4</h3>
+<h3 id="result-checking">Result checking</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_118.png">  </p>
+<p>MS-DIAL can automatically identify metabolite peaks by the similarity calculation of retention time, precursor <em>m/z</em>, isotopic ratios, and MS/MS spectrum with the reference databases. You can easily check the result from alignment ion spot table.  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_119.png">  </p>
+<p>Ion intensities of tryptophan are stable across samples; however, the intensity of kynurenine, which is synthesized from tryptophan, is very low in the mutant sample (bna2). Please refer to the original paper for details (Ohashi et al., 2017, DOI:10.1038/s41598-017-12392-6). For further information about GUI of MS-DIAL, see Chapter 5 &amp; Chapter 9.<br><br></p>
+<h2 id="chapter-9">Chapter 9</h2>
+<h2 id="graphical-user-interface-of-ms-dial-in-aif-mode">Graphical user interface of MS-DIAL in AIF mode</h2>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_120.png">  </p>
+<p>If you choose “All-ions with multiple CEs” as method type in the project, the <strong>AIF Viewer Controller</strong> will be launched when you open the project. The controller currently has 6 buttons to lunch additional viewers.   </p>
+<p>   </p>
+<h3 id="section-9-1">Section 9-1</h3>
+<h3 id="mass-spectrum-viewers-in-peak-spot-and-alignment-viewer">Mass spectrum viewers in peak spot and alignment viewer</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_121.png">  </p>
+<p>These viewers show mass spectrum with different collision energies in parallel. <strong>Mass Spectrum Viewer</strong> in peak viewer has two tabs. The window (<strong>A</strong>) on <strong>Exp. vs. Ref.</strong> tab displays the deconvoluted MS/MS spectrum (blue, the upper part) and the reference MS/MS spectrum (red, the lower part). The window (<strong>B</strong>) on <strong>Raw. vs Dec.</strong> tab displays the raw- and deconvoluted MS/MS spectrum on the upper and lower panel respectively. The window (<strong>C</strong>, <strong>Mass Spectrum Viewer in alignment</strong>) displays the deconvoluted MS/MS spectrum (blue, upper) and the reference (red, lower).   </p>
+<h3 id="section-9-2">Section 9-2</h3>
+<h3 id="msms-chromatogram-viewer-in-peak-viewer">MS/MS chromatogram viewer in peak viewer</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_122.png">  </p>
+<p>The detail of deconvolution is shown in the <strong>MS2 chromatogram</strong> viewer. The window displays the raw- and deconvoluted MS/MS chromatogram on the upper and lower panel respectively. Please use this viewer for checking the quality of deconvolution.   </p>
+<h3 id="section-9-3">Section 9-3</h3>
+<h3 id="compound-search-for-the-curation-of-peak-identification">Compound search for the curation of peak identification</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_123.png">  </p>
+<p>This function is almost the same as the compound search in the main viewer. Please refer to Section 4 of Chapter 5. Additionally, you can change a compound library by clicking the “Import new Library” button. After changing a library file, you cannot click the confidence/unsettled button. In that case, please change the annotation using the ion table directly.<br>When you select a different reference spectrum, the mass spectrum viewers will be changed (the score and the reference MS/MS spectrum). Then, please also launch Mass Spectrum Viewer when you use this function.   </p>
+<h3 id="section-9-4">Section 9-4</h3>
+<h3 id="aligned-sample-table-viewer-for-checking-each-sample">Aligned sample table viewer for checking each sample</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_124.png">  </p>
+<p>This viewer shows each sample’s peak information including chromatogram peak shapes in an alignment spot. The value of ‘-2’ in “Peak ID” column means that the peak is not detected by peak picking process. (but calculated by gap-filling method). In the case of gap-filled peak, the colors of the “Peak Int.” and “Peak Area” columns become light blue. In normal, the colors (red) reflect the level of peak intensity or peak area. You cannot refine the peak and alignment yet, but that function will be developed.   
+   </p>
+<h2 id="chapter-10">Chapter 10</h2>
+<h2 id="lc-ion-mobility-project">LC-Ion mobility project</h2>
+<p>A project dealing with LC-Ion mobility is demonstrated.  </p>
+<p>This tutorial uses LC-Ion mobility tandem MS (PASEF) data set which are downloadable from the below link.<br><a href="http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html">http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/index.html</a>  </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_131.png">  </p>
+<p><strong>Experiment summary:</strong><br>Liquid chromatography: total 30 min run per sample with Waters Acquity UPLC BEH peptide C18 column (50×2.1 mm; 1.7 μm).<br>Ion mobility: Bruker PASEF acquisition doing ion mobility (IM) separation with data dependent MS/MS acquisition (DDA).<br>Data: Total 10 LC-ESI(-)-IM-DDA-MS data from blank, mouse liver (n=3), mouse kidney (n=3), and mouse skeletal muscle (n=3) are demonstrated in this tutorial.</p>
+<h3 id="section-10-1">Section 10-1</h3>
+<h3 id="convert-a-vendors-format-into-ibf">Convert a vendor's format into IBF</h3>
+<p>The first step is to convert your vendor’s format into IBF format. The file converter is included in the MS-DIAL package.   </p>
+<ul>
+<li>Bruker: Raw data can readily be converted into .ibf format without any additional steps.</li>
+<li>Waters: Raw data can readily be converted into .ibf format without any additional steps.  </li>
+<li>Agilent: Please convert your data into .mzML format by means of ProteoWizard msconvert at first.</li>
+</ul>
+<ol>
+<li>Start “IbfConverter.exe”.   </li>
+<li>Drag &amp; drop vendor files into this program.  </li>
+<li>Click “Convert”.  </li>
+<li>The IBF files are generated in the same directory as the raw data files. (<strong>See the figure below</strong>)  </li>
+</ol>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_132.png">   </p>
+<h3 id="section-10-2">Section 10-2</h3>
+<h3 id="starting-up-your-project-5">Starting up your project</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_133.png"></p>
+<ol>
+<li>File -&gt; new project  </li>
+<li>Set your project file path to the directory of your IBF files    </li>
+<li>Choose data type ‘centroid data’ for both MS1 and MS/MS  </li>
+<li>Choose negative ion mode  </li>
+<li>Choose target omics as lipidomics  </li>
+</ol>
+<h3 id="section-10-3">Section 10-3</h3>
+<h3 id="importing-ibf-files">Importing IBF files</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_134.png">  </p>
+<ol>
+<li>Select IBF files  </li>
+<li>If the file is a “blank” or “quality control” sample, then set the type as such. (in this example, you do not have any QC sample.)  </li>
+</ol>
+<p>Note: Please finalize your file name here, because you cannot change it later.  </p>
+<h3 id="section-10-4">Section 10-4</h3>
+<h3 id="setting-parameters-5">Setting parameters</h3>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_135.png">  </p>
+<p>∗ For the quick start and its explanations, load ‘ionmobility_demo_param_neg.med2’ as shown above.  </p>
+<h4 id="section-10-4-1">Section 10-4-1</h4>
+<h4 id="data-collection-tab-5">Data collection tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_136.png">   </p>
+<p><em>Data collection parameters</em>: You can set analysis ranges (RT and MS1 axis). Here, set 0-20 min and 150-1700 Da for the ranges.  </p>
+<p><em>Isotope recognition</em>: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.</p>
+<p><em>Multithreading</em>: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager-&gt;open resource monitor)  </p>
+<h4 id="section-10-4-2">Section 10-4-2</h4>
+<h4 id="peak-detection-tab-and-ms2dec-tab-1">Peak detection tab and MS2Dec tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_137.png">   </p>
+<p>The details are described in Chapter 2&amp;3. In Waters and Bruker QTOF, the minimum peak height can be set to 300-500 as long as I confirmed. Here, 500 is set for minimum peak height because the demonstration file was obtained by Waters Xevo QTOF.<br>MS2Dec tab is mainly for data independent MS/MS project. Please see Section 2-3-3 for details.  </p>
+<h4 id="section-10-4-3">Section 10-4-3</h4>
+<h4 id="identification-tab-5">Identification tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_138.png">   </p>
+<p><em>MSP file</em>: In the case that you selected ‘lipidomics’ project, select what you want to find in your data sets for lipid profiling. Here, tick all lipids.</p>
+<p><em>Parameters</em>: If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5).
+The two mass tolerances for MS1 and MS2 are required for the compound search and they are dependent on your instrument performance.
+The cutoff of the identification score should be greater than 0.7 or 0.8.<br>If the checkbox of ‘Use retention information for scoring’ is checked, the scoring of retention time is used for the calculation of total score which is used for the identification cut off. If the checkbox of ‘Use retention information for filtering’ is checked, the program do not search beyond the RT tolerance value.</p>
+<p><em>Text file</em>: If you want to perform “post identification” processing, set your text file here.</p>
+<h4 id="section-10-4-4">Section 10-4-4</h4>
+<h4 id="adduct-tab-4">Adduct tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_139.png">   </p>
+<p>Adduct ion setting: You can tick the adduct ions and charge values to be considered.<br>∗ see also the section 3-3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  </p>
+<h4 id="section-10-4-5">Section 10-4-5</h4>
+<h4 id="alignment-tab-5">Alignment tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_140.png">   </p>
+<p><em>Parameters</em>: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file in 'Reference file'. All sample data will be aligned to this QC file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter.</p>
+<h4 id="section-10-4-6">Section 10-4-6</h4>
+<h4 id="mobility-tab">Mobility tab</h4>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_141.png">   </p>
+<p><em>Mobility type</em>: Choose your instrument type. The unit of mobility tolerance is different for each type.</p>
+<p><em>Peak picking</em>: The parameter of "Accumulated RT range" is used to accumulate the mobility axis spectra. After the peak picking is performed in the retention time axis, the program expands the ions to the mobility axis. If the peak top in retention time axis is 5.0 min and 0.2 min is set as "accumulated RT range", the mobility scan data from 4.8 min to 5.2 min is accumulated. Then, the extracted ion mobilogram (EIM) is constructed by the accumulated mobility spectra followed by the peak picking in mobility axis.  </p>
+<p><em>Identification</em>: If the checkbox of ‘Use CCS for scoring’ is checked, the scoring of CCS is used for the calculation of total score which is used for the identification cut off. If the checkbox of ‘Use CCS for filtering metabolites’ is checked, the program do not search beyond the CCS tolerance value.</p>
+<h3 id="section-10-5">Section 10-5</h3>
+<h3 id="result-checking-1">Result checking</h3>
+<p>MS-DIAL can automatically identify metabolite peaks by the similarity calculation of retention time, precursor m/z, isotopic ratios, and MS/MS spectrum with the reference databases. You can easily check the result from alignment ion spot table.   </p>
+<p><img alt="alt" src="D:\msdial_tutorial\mtbinfo.github.io\MS-DIAL\images\image_142.png"></p>
+<p>Center window (<strong>Peak spot viewer</strong>): You can check the metabolite peaks in both retention time- and mobility dimensions. Here, the peak in retention time axis and mobility axis is termed as "RT peak" and "IM peak", respectively. Please make sure that in the ion mobility data, the MS/MS spectrum is always assigned to the IM peak, and therefore the annotation is performed for the IM peak property. Namely, one RT peak has several IM peaks, and the annotation result of RT peak is defined by one representative IM peak result which has the highest score in annotation.   </p>
+<p><strong>Alignment table</strong>: the IM peak rows should have the information of mobility and CCS properties while the properties are described as "-1" for RT peak property.</p></body>
+      </html>

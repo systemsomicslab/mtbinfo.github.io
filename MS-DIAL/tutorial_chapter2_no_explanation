@@ -1,0 +1,27 @@
+説明まだのパラメーター　一覧
+
+2-3-1 Data collection tab
+  Advanced
+    Isotope recognition
+      Consider CI and Br elements [checkbox]
+    Execute retention time corrections [checkbox]
+
+2-3-2
+  Advanced
+    Minimum peak width
+
+2-3-3
+  なし
+
+2-3-4 Identification tab
+  なし
+
+2-3-5 Adduct tab
+  なし
+
+2-3-6 Alignment tab
+  Advanced
+    Retention time factor
+    MS1 factor
+    Sample max/blank average (or sample average/blank average)
+    Gap filling by compulsion [checkbox]
