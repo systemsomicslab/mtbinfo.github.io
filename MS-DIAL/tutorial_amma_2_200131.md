@@ -506,7 +506,7 @@ This section uses total 6 files and the MSP file is contained in the same folder
 ![alt](images/new_images/Picture3.png)
 
 **Experiment summary:**  
-Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 m (50×1.0 mm).  
+Liquid chromatography: total 4 min run per sample with Kinetex C18 2.6 μm (50×1.0 mm).  
 Solvent A: water with 0.1% acetic acid  
 Solvent B: acetonitrile with 0.1% acetic acid  
 Mass spectrometer: data dependent method with positive ion mode.  
@@ -776,13 +776,13 @@ Practically, what you have to do is to curate the identification result of an al
 
 ### Section 5-2
 ### Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
-In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the center window (**Peak spot viewer**), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (**Survey scan spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**Extracted ion chromatogram of focused spot**) displays the extracted ion chromatogram of the focused peak. The right window (**Exp. vs. Ref.**) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘**MS2 chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘MS2 Chrom.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
+In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the bottom-center window (**Peak spot viewer**), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (**Survey scan (MS1) spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**EIC of focused spot**) displays the extracted ion chromatogram of the focused peak. The right window (**Exp. vs. Ref.**) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘**MS2 Chrom.**’ and ‘**Raw vs. Purified**’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘**MS2 Chrom**.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘**Raw vs. Purified**’ tab. Other peak information (metadata) is displayed in the top-right of this window.  
 
-![alt](images/image_49.png)
+![alt](images/image_49.png)<!--メインの画像はlipidmicsデータ以外の解析結果ではないと適切ではない→後でスクショする。-->
 
-On **Alignment spot viewer**, each spot shows an aligned spot including all retention time, accurate mass, intensity, and MS/MS spectrum of all samples. As in the **Peak spot viewer**, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check all retention times and accurate masses of aligned samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.   
-On **Rep. vs. Ref.** tab of right panel, in combination with the **alignment spot viewer**, the window compares a representative MS/MS spectrum and a reference MS/MS spectrum. The representative MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
-On **Bar chart of aligned spots** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property’.  
+On **Alignment spot viewer** of the bottom-center window, each spot shows an aligned spot including all retention time, accurate mass, intensity, and MS/MS spectrum of all samples. As described above, in the **Peak spot viewer**, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check all retention times and accurate masses of aligned samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.   
+On **Rep. vs. Ref.** tab of bottom-right panel, in combination with the **alignment spot viewer**, you can compare a representative MS/MS spectrum and a reference MS/MS spectrum. The representative MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
+On **Bar chart of aligned spot (OH)** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property’.  
 
 ![alt](images/image_50.png)
 
@@ -806,13 +806,14 @@ On **Bar chart of aligned spots** of top panel, you can see the summary of the t
 ### Section 5-4
 ### Compound search for the result curation of peak identification  
 The automatic identification process cannot escape from mis-identification. MS-DIAL provides the user-interface so that users can manually correct the identification result. In this option, you can customize the identification criteria into three levels: “confident”, “unsettled”, and “unknown.” For example, in the phospholipid identification, we often determine only the cumulative composition such as PC 36:1 without positions of acyl chains, e.g. PC(18:0/18:1). You can add “unsettled” tag to such peaks as the signpost to comment that “we only checked the cumulative composition”.   
-Information of identification is available not only in the “peak viewer” but also in the “alignment viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  
+Information of identification is available not only in the “Peak spot viewer” but also in the “Alignment spot viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  
 
 ![alt](images/image_53.png)  
 
-A)	Mouse double click in each row of the library information to show identification details.  
-B)	Add a tolerance value for identification and click the “Search” button.  
-C)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  
+A)  Click the icon "Compound search" (shown by encircling in the picture above).   
+B)	Click each row of the library information to show identification details.  
+C)	Add a tolerance value for identification and click the “Search” button.  
+D)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  
 
    
 ### Section 5-5
@@ -831,7 +832,7 @@ B)	If you want to use the other statistics, please go to PRIMe web site:
 ![alt](images/image_55.png)
 ![alt](images/image_127.png)
 
-*	You can choose the metabolite data set from “Identified”, “Annotated” and “Unknown”.
+*	You can choose the metabolite data set from “Ref. matched”, “Suggested” and “Unknown”.
 *	Finally, click the Done button.
 
 Output of the PCA
@@ -865,33 +866,42 @@ Output of the PLS
 
 
 ### Section 5-6
-### Export  
+### Export
+![alt](images/new_images/無題39.png)
 A)	Peak list export  
-B)	Alignment result export  
-C)	Context menu strip  
+B)	Alignment result export<!--
+C)	Context menu strip 今回は無い。-->  
+C)  Molecular spectrum networking export  
+D)  Copy screenshot to clipboard (emf)  
+E)  Parameter export (Tab-delimited text)
+F)  Export as lipoquality database format  
+G)  Export normalization result   <!--CからEまで説明なし。元の文章でもCに関する詳しい説明は無かった。今回は必要？-->
 
 A)	*Peak list export*: You can get the peak list information of each sample including retention time, *m/z*, MS/MS spectra information, and so on. Available formats are MSP, MGF or Text.  
 
-![alt](images/image_56.png)
+![alt](images/new_images/無題37.png)
 
 Step1.	Choose an export folder path.  
-Step2.	Choose files which you want to export.  
-Step3.	Select export format.  
+Step2.	Choose files which you want to export and click button "Add ->".  
+Step3.	Select export format.<!--
+Spectra typeとIsotope regionに関する説明は要らないの？-->  
 Step4.	Click the export button.  
 
 B)	*Alignment result export*: You can get data matrix or spectral information.  
 
 ![alt](images/image_57.png)
+![alt](images/new_images/無題38.png)
 
 Step1.	Choose an export folder path.  
 Step2.	Choose an alignment file which you want to export.  
-Step3.	Select export format if you want to export the representative spectra.  
+Step3.	Select export format if you want to export the representative spectra.  <!--
+各項目の説明は不要？-->  
 Step4.	Click the export button.    
 
 
 ### Section 5-7
 ### Save  
-![alt](images/image_58.png)
+![alt](images/new_images/無題40.png)
 
 **Your project is managed in MTD file.** Although your project is saved automatically whenever you do the data processing method, this program is not saved after your manual modification such as the curation of identification result, internal standard setting, and file or class information setting. Therefore, you have to save your project from this option after your modification.  
 
