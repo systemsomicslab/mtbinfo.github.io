@@ -1,6 +1,6 @@
 # MS-DIAL tutorial
 <div style="text-align: right;">
-Last edited in Sep. 14, 2018
+Last edited in March. 12, 2020
 </div>
 
 ## ABSTRACT
