@@ -291,11 +291,11 @@ In order to calculate the retention indexes of detected peaks, users have to pre
 ![alt](images/image_11.png)  
 Figure: examples of Alkanes or Fames dictionaries  
 
-   
+<!--2章は津川さんが添削済み 200212-->   
 ## Chapter 2
-## LC/MS/MS (data independent MS/MS) project with MS-DIAL’s LipidBlast database (in silico retention time and MS/MS library for lipids)  
+## LC-MS/MS (data independent MS/MS) project for lipidomics using in silico retention time and theoretical MS/MS library of lipids  
 
-A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids (MS-DIAL’s LipidBlast) is demonstrated. The experimental protocol is described in previous research: <http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html>.   
+A project dealing with data independent MS/MS acquisition in combination with the in silico retention time and MS/MS databases for lipids is demonstrated. The experimental protocol is described in previous research: <http://www.nature.com/nmeth/journal/v12/n6/abs/nmeth.3393.html>.   
 
 This tutorial uses 23 demonstration files which are downloadable from the below link.   
 <http://prime.psc.riken.jp/?action=drop_index>  
@@ -320,12 +320,12 @@ Mass spectrometer: SWATH method with negative ion mode.
 
 1. File -> new project  
 2. Set your project file path to the directory of your ABF files  
-3. Select your method type as ‘Data independent MS/MS’  
+3. Select your MS method type as ‘SWATH-MS or conventional all-ions method’  
 4. Select the experimental file: **ABSciex_Experiment_Information_CSH21Da.txt**.  
 5. Choose data type profile data for both MS1 and MS/MS  
 6. Choose negative ion mode  
-7. Choose target omics as lipidomics  
-If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library since MS-DIAL internally contains an enriched LipidBlast for QTOFMS. Instead, you should select compounds needed by your data sets. On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification.  
+7. Choose target omics as 'Lipidomics'  
+If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library since MS-DIAL internally contains the theoretical MS/MS spectra of lipids (and actually, the fragment ions are future evaluated by the decision tree algorithm to provide the proper lipid structure representation.). Instead, you should select lipid subclasses needed by your data sets. On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification (see Chapter 3).  
 **&#042; see section 4 of chapter 1 as well for more detail**  
 
 
@@ -335,8 +335,8 @@ If you select ‘lipidomics’ project, you do not have to prepare NIST MSP form
 
 
 1.	Select ABF files  
-2.	If the file is a “quality control” sample for peak alignment, then set the type as such.  
-3.  Edit Class ID of the files to divide sample data into each experimental group (Blank, QC, Group A, Group B, etc.). Sample files are allocated to each group and after analysis is finished the bar chart of each group will be appeared in the pane "Bar chart of aligned spot" of the main window (See Section 2-4).
+2.	If the file is a “quality control (QC)” sample, set the type as QC. Also, please set the type as Blank for blank samples used for feature reductions based on the blank's peaks.
+3.  Edit Class ID of the files to divide sample data into each experimental group (Blank, QC, Group A, Group B, etc.). Sample files are allocated to each group and after analysis is finished the bar chart (or box plot) of each group will be appeared in the pane "Bar chart of aligned spot" of the main window (See Section 2-4).
 
 Note:  
 - Please finalize your file name here otherwise you cannot change it anymore (these finalized file names will be appeared in the pane "File navigator" of the main window after finishing this analysis. See Section 2-4 for details).  
@@ -347,18 +347,31 @@ Note:
 #### Section 2-3-1
 #### Data collection tab  
 
-![alt](images/new_images/無題3.png)  
+<!-- ![alt](images/new_images/無題3.png)  <!--バージョンアップ前-->
+![alt](images/new_images/無題46.png)  <!--バージョンアップ後-->
 
 *Mass accuracy*: <br>
 After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively. Importantly, this MS2 tolerance value is also used to build the MS/MS chromatogram for a certain *m/z* trace. The MS/MS chromatograms are dedicated to the MS2Dec deconvolution program.  
 
 *Data collection parameters*: <br>
-You can set analysis ranges (RT and MS1 axis). In this demonstration, your expected data range is 0.5-10 min for 100-1250 Da.  
+You can set analysis ranges (RT, MS1 and MS/MS axis). In this demonstration, your expected data range is 0.5-10 min for 100-1250 Da.  
+<!--バージョンアップのため、上記文に少し書き加えた（3/5）。
+もしかしたら佐藤さんも７章のほうで説明加えている？
+MS1だけだったのが、MS1とMS/MSのマスレンジの開始と終了の場所(?)(Da)がパラメーターとして追加された。
+-->
 
-*Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), **the maximum charged number** can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data. <br>
-Check **Consider Cl and Br elements** if you assume that your samples contain any halogen element as halogens have unique characteristic of isotope.
+*Isotope recognition*: <br>
+As long as you focus on small molecule researches (less than 2000 Da), **the maximum charged number** can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data. <br>
+Check **Consider Cl and Br elements** if you assume that compounds in your samples contain chloride (Cl) or bromide (Br) as the formula element showing the unique isotopic patterns.
 
-*Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)   
+*Multithreading*: <br>
+Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)   
+
+*Execute retention time corrections*: <br>
+For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessing and spectral library construction methodology' in the website of MS-DIAL shown below(URL: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/>).
+
+![alt](images/new_images/Picture10.png)  
+
 
 *Execute retention time corrections*: For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessing and spectral library construction methodology' in the website of MS-DIAL shown below(URL: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/>).
 
@@ -370,8 +383,7 @@ Check **Consider Cl and Br elements** if you assume that your samples contain an
 
 ![alt](images/new_images/無題4.png)  
 
-
-MS-DIAL provides two simple thresholds: **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>).<br><!--
+MS-DIAL provides two simple thresholds; **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>).<br><!--
 なぜ今回のデモデータのMinimum peak heightは500なの？defaultは1000
 （津川さんの回答）理想的にはユーザーの経験則で決めるべき。-->
 It is ideal that users put values here based on your own experience that you got looking at the trend of your data. However FYI (based on our experience) the minimum peak height may be set to 500 as a default value for this demo data of Sciex.    <br><!--
@@ -379,12 +391,12 @@ It is ideal that users put values here based on your own experience that you got
 Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.<br>
 **Minimum peak width** indicates a threshold of peak width for filtering. See detail by reading the second slide (title 'In MS-DIAL program') below.
 
-**The width of mass slice** is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive.
+**The width of mass slice** is set here. From our experience, 0.1 and 0.05 are suitable for Q-TOF and Orbitrap, respectively.
 
 *Smoothing method*:<br>
-**Linear-weighted moving average** is used for the peak detection by default to accurately determine the peak left- and right edges. <br>
+**Linear-weighted moving average** is used for the peak detection as default to accurately determine the peak left- and right edges. <br>
 The recommended **smoothing level** is 1-3. <br>
-If you already know unwanted *m/z* peaks from columns or solvent, you can specify them in the **Exclusion mass list**.  
+If you already know unwanted *m/z* peaks because of columns or solvent contaminants, you can specify them in the **Exclusion mass list**.  
 
    
 A part of <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>  
@@ -401,7 +413,7 @@ A part of <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ
 ![alt](images/new_images/無題5.png)  
 
 **The sigma window value** is highly affected by the resolution of deconvolutions. A higher value (0.7-1.0) will reduce the peak top resolutions, i.e. the number of resolved peaks will be decreased. On the other hand, a lower value (0.1-0.3) may also recognize many noise chromatographic peaks. <br>
-You also may be able to set a **cut off value** to reduce the MS noises (see Section 3-3 of Chapter 3). <br>
+You may be able to set a **cut off value** to reduce the MS noises (see Section 3-3 of Chapter 3). <br>
 
 *Exclude after precursor ion*:<br>
 If you want to remove the product ions after the focused precursor ion (recommended for metabolomics and lipidomics), check this box.  
@@ -418,7 +430,7 @@ The MS2Dec algorithm may sometimes erase the precursor’s isotopic ions due to 
 
 
 *MSP file*: <br>
-In the case that you selected ‘lipidomics’ project, select what you want to find in your data sets for lipid profiling. Here, for algae lipidomics, tick the above figure’s lipids: FA, LPC, LPE, PA, PC, PE, PG, PI, PS, MGDG, DGDG, and SQDG.  <br>
+In the case that you selected ‘lipidomics’ project, select what you want to annotate in your data sets for lipid profiling. Here, for algae lipidomics, tick the above figure’s lipids: FA, LPC, LPE, PA, PC, PE, PG, PI, PS, MGDG, DGDG, and SQDG.  <br>
 <!--追加文-->For this tutorial data, in which ammonium formate was used as modifier, select
 HCOONH4 (ammonium formate) as Solvent type in the window 'Lipid database setting', although nowadays CH3COONH4 (ammonium acetate) is basically used as modifier.
 
@@ -431,7 +443,7 @@ default100の意味。分析屋は自分のメソッドでやりたい。retenti
 **The cutoff of the identification score** should be greater than 70% or 80% to avoid false positives.  
 
 <!--編集中。↑の言いたいことは言えた気がするけど、もっと簡易的表現になる気がする。-->
-Unless you check neither **Use retention time for scoring** nor **Use retention time for filtering**, the value of **RT tolerance** does not mean anything because whether you check these boxes determines if you use retention time tolerance value for scoring or/and filtering in identification.
+Unless you check neither **Use retention time for scoring** nor **Use retention time for filtering**, the value of **RT tolerance** does not mean anything.
 
 *Text file and post identification (retention time and accurate mass based) setting*:<br>
 If you want to perform “post identification” processing, set your text file in **Text file**. (Tutorial data: **Lipid_Nega_IS_PostIdentification_vs1.txt**)  <br>
@@ -449,7 +461,7 @@ Since some chromatogram peaks will be annotated as the same compound from the id
 ![alt](images/new_images/無題8.png)  
 
 Adduct ion setting: You can tick the adduct ions and charge values to be considered.  
-&#042; see also the section 3-5 of Chapter 3 for the explanation of how to determine your own adduct ion.  
+&#042; see also the Section 1-6-2 of Chapter 1 for the explanation of how to determine your own adduct ion.  
 
    
 #### Section 2-3-6
@@ -469,27 +481,27 @@ Moreover, in ‘N% detected in at least one group’, the filtering is done with
 追加文考え中
     これにチェックを入れないと、blankを入れている意味が無い（ので絶対チェック入れるもの）
     （言いたいこと）blankの情報を加味して解析に反映させたいなら、この選択でブランクのピークが評価できる-->
-If you add information of blank samples and then reflect them into the result of the analysis, check this to measure the peak of blank samples. <!--
+If you add information of blank samples and want to reflect the blank features information into the result of the analysis, tick this to evaluate the peaks of blank samples. <!--
 くどいため不要かもしれない文　Removing features based on blank information means to remove features which appeared in any of the blank samples and should be removed. Thus check this to filter the factors which appeared even in blank samples. --><br>
 Checking this box allows you to edit the three checkboxes, **Keep 'Reference matched' metabolite features**, **Keep 'Suggested (without MS2)' metabolite features**, and **Keep removable features and assign the tag**.
 
 After checking **Remove features based on blank information**, you will be able to edit the checkbox 'blank filter' on the pane 'Peak spot navigator' in the main window so that you can check which features were filtered as removable features unless you uncheck **Keep removable features and assign the tag**.
 
 *Keep 'Reference matched' metabolite features*: <!--編集済--><br>
-'Reference matched' metabolite means the metabolites in accord with any reference under the threshold you set.
+'Reference matched' metabolite means the metabolites by reference libraries (MSP or Text library).
 
 *Keep 'Suggested (without MS2)' metabolite features*:<!--編集中--><br>
-'Suggested (without MS2)' means metabolites that have any candidate identified based on MS1 although no candidate was found based on MS2. Checking this box determines to include such kind of data among all processed data.
+'Suggested (without MS2)' means that metabolites are annotated by the MS1 feature.
 <!--
   定量したMS1から候補が出たけど、MS2からは候補が見つからなかったものをSuggestedと呼んでいる。
 -->
 *Keep removable features and assign the tag*: <!--文考え中--> <br>
-If you check this, even the features removed as they did not reached the threshold you set will remain in all result features.
-  <!--くどいので不要かもしれない文 In that case, when you check the box 'Blank filter' in the pane 'Peak spot navigator' in the main window, these removable features describe above will be disappeared in the figure on the pane 'Alignment spot viewer'. -->If you uncheck this, removable features will be deleted and thus that data will not be included anymore in all analyzed data, meaning you cannot see that data in the main window after alignment.
+If you check this, even though the features do not exceed the blank feature threshold, the peaks will remain in all result features. But you can confirm the result by using "Blank filter" checkbox of MS-DIAL main window.
+  <!--くどいので不要かもしれない文 In that case, when you check the box 'Blank filter' in the pane 'Peak spot navigator' in the main window, these removable features describe above will be disappeared in the figure on the pane 'Alignment spot viewer'. -->If you uncheck this, removable features will be deleted and thus that blank features will not be included anymore in all analyzed data, meaning you cannot see the blank-oriented peak features in the main window after alignment.
   <!--閾値以下で除外したものをデータとして残しておいて目印を付けるか否か。これにチェックを入れると、検出・同定・アラインメント後の結果に除外データが（除外したデータとして）残り、見ることができる。-->
   <!--（言いたいこと）blank filterを押すとremovable featureは出なくなる。データとしては残してくれる assign the tagはobjectとproperty(つまりinfomatics)に関連した言葉で分析屋さんが理解できるかどうかは津川さんにも分からない。ので、とりあえず分析屋さんが分かりやすい言葉で文章を書いてみる-->
 
-*Gap filling by compulsion*: If you check this, minor gaps are regarded as significant peaks even if they do not reach the thresholds. This is validated by default.
+*Gap filling by compulsion*: If you check this, the peak recognition is performed by the average peak width of samples having the metabolite feature even though no local maximum is observed in the chromatogram. This is validated by default.
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
@@ -528,21 +540,30 @@ Mass spectrometer: data dependent method with positive ion mode.
 
 1. File -> new project  
 2. Set your project file path to the directory of your ABF files  
-3. Select MS method type as conventional LC/MS or data dependent MS/MS  
+3. Select your MS method type as 'Conventional LC/MS or data dependent MS/MS'  
 4. Choose data type profile data for both MS1 and MS/MS  
 5. Choose positive ion mode  
-6. Choose target omics as metabolomics  
-If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library. Instead, you should select compounds needed by your data sets (see **chapter 2**). On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification.  
-
+6. Choose target omics as 'Metabolomics'   
+<!--If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library. Instead, you should select compounds needed by your data sets (see **Chapter 2**). On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification.  
 &#042; see section 4 of chapter 1 as well  
+二章で↑の文だったところを、津川さんが添削で下の文に変更しているけど、この３章も置き換えるべき？
+でも、最後の方に３章を参照するように書いてあって、そのままの置き換えは良くないんじゃないか？
+というかこの後のセクションで何か説明があるとかなのか？
+下記にある１章セクション４を見てみたけど、確かにこのチュートリアルで取り扱っている３種類のケース（ここではプロジェクトと呼んでいる）の詳細が書いてあった。
+(3/10)二章で添削された文を少し３章用に変更して下の文に置き換えた--><br>  
+If you select ‘lipidomics’ project, you do not have to prepare NIST MSP format library since MS-DIAL internally contains the theoretical MS/MS spectra of lipids (and actually, the fragment ions are future evaluated by the decision tree algorithm to provide the proper lipid structure representation.). Instead, you should select lipid subclasses needed by your data sets (see **Chapter 2**). On the other hand, when you select ‘metabolomics’ project, your own MSP file will be required for compound identification (see this chapter).  
+**&#042; see section 4 of chapter 1 as well for more detail**  
 
    
 ### Section 3-2
 ### Importing ABF files  
 1.	Select ABF files  
-2.	If the file is a “quality control” sample for peak alignment, then set the type as such. (in this example, you do not have to change this setting.)  
+2.	If the file is a “quality control (QC)” sample for peak alignment, then set the type as such. (in this example, you do not have to change this setting.)  
+3.  Edit Class ID of the files to divide sample data into each experimental group (Blank, QC, Group A, Group B, etc.). Sample files are allocated to each group and after analysis is finished the bar chart (or box plot) of each group will be appeared in the pane "Bar chart of aligned spot" of the main window (See Section 2-4).
 
-Note: Please finalize your file name here, because you cannot change it later.  
+Note:  
+- Please finalize your file name here otherwise you cannot change it anymore (these finalized file names will be appeared in the pane "File navigator" of the main window after finishing this analysis. See Section 2-4 for details).  
+- If you want to define the injection volume of each file, you can additionally type each volume in the column "Inject. volume (μL)".
 
 ![alt](images/new_images/無題32.png)
    
@@ -553,30 +574,52 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/new_images/Picture6.png)
 
 &#042; For the quick start and its explanations, load ‘Param.med’ as shown above.  
-<!-- 実際にParam.medをロードするとソフト自体が落ちて最初からやり直しになる-->
-![alt](images/new_images/無題23.png)
+<!-- 実際にParam.medをロードするとソフト自体が落ちて最初からやり直しになる
+津川さんから、新しいパラメーターデータのParam.medを用意しておいてほしいと言われてある。
+最終的にそれをデモデータと一緒にダウンロードできる形にするそうだ。
+(3/10)3章が終わってから作るので一旦保留。
+-->
+![alt](images/new_images/無題48_3-3-1_2.png)
 
-*Mass accuracy*: After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding if your files are profile data. By default, mass spectrum of ±0.01 and ±0.025 Da range from each peak top is integrated in MS1 and MS2, respectively.   
+<!--(3/10)以下２章のコピペして、数値を３章のデモデータに合わせて変更した-->
+*Mass accuracy*: <br>
+After the peak detection algorithm is applied along the MS axis with a very low threshold, MS-DIAL performs spectral centroiding. By default, mass spectrum of ±0.01 and ±0.05 Da range from each peak top is integrated in MS1 and MS2, respectively. Importantly, this MS2 tolerance value is also used to build the MS/MS chromatogram for a certain *m/z* trace. The MS/MS chromatograms are dedicated to the MS2Dec deconvolution program.  
 
-*Data collection parameters*: You can set analysis ranges (RT and MS1 axis). Here, set 0.4-3.5 min and 50-1000 Da for the ranges.  
+*Data collection parameters*: <br>
+You can set analysis ranges (RT, MS1 and MS/MS axis). In this demonstration, your expected data range is 0.4-3.5 min for 50-1000 Da.  
+<!--バージョンアップのため、上記文に少し書き加えた（3/5）。
+もしかしたら佐藤さんも７章のほうで説明加えている？
+MS1だけだったのが、MS1とMS/MSのマスレンジの開始と終了の場所(?)(Da)がパラメーターとして追加された。
+-->
 
-*Isotope recognition*: As long as you focus on small molecule researches (less than 2000 Da), the maximum charged number can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data.  
+*Isotope recognition*: <br>
+As long as you focus on small molecule researches (less than 2000 Da), **the maximum charged number** can be set to 2. On the other hand, the parameter can be changed to 8 or more to process proteome or snRNA research data. <br>
+Check **Consider Cl and Br elements** if you assume that compounds in your samples contain chloride (Cl) or bromide (Br) as the formula element showing the unique isotopic patterns.
 
-*Multithreading*: Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)  
+*Multithreading*: <br>
+Please set the count of threads that you want to use. You can check the maximum thread counts in resource monitor. (open task manager->open resource monitor)   
+
+*Execute retention time corrections*: <br>
+For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessing and spectral library construction methodology' in the website of MS-DIAL shown below(URL: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/>).
    
 #### Section 3-3-2
 #### Peak detection tab  
 ![alt](images/new_images/無題24.png)
+<!--(3/10)以下２章のコピペをした-->
+MS-DIAL provides two simple thresholds: **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>).<br>
+It is ideal that users put values here based on your own experience that you got looking at the trend of your data. However FYI (based on our experience) the minimum peak height may be set to 500 as a default value for this demo data of Sciex.    <br>
+Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.<br>
+**Minimum peak width** indicates a threshold of peak width for filtering. See detail by reading the second slide (title 'In MS-DIAL program') below.
 
-MS-DIAL provides two simple thresholds: **minimum values for peak width and height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). <br>
-For FT-ICR or Orbirap data, the minimum peak height should be more than 20,000.  
+**The width of mass slice** is set here. From our experience, 0.1 and 0.05 are suitable for Q-TOF and Orbitrap, respectively.
 
-*Peak detection parameters*: **The width of mass slice** is set here. From our experience, 0.1 or 0.05 is suitable for Agilent Q-TOF, AB Sciex TripleTOF, and Thermo Q-Exactive.
+*Smoothing method*:<br>
+**Linear-weighted moving average** is used for the peak detection as default to accurately determine the peak left- and right edges. <br>
+The recommended **smoothing level** is 1-3. <br>
+If you already know unwanted *m/z* peaks because of columns or solvent contaminants, you can specify them in the **Exclusion mass list**.  
+<!--以上コピペ終わり-->
+**&#042; see Section 2-3-2 and <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf> for more detail**  
 
-**Linear-weighted moving average** is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended **smoothing level** is 1-3.
-
-*Exclusion mass list*: If you already know unwanted *m/z* peaks from columns or solvent, you can specify them in the “Exclusion mass list.”  
-   
 #### Section 3-3-3
 #### MS2Dec tab  
 Unless you have data independent MS/MS data sets, you can skip this part. However, as shown below, you may set a cutoff value to reduce the MS noises. Note that what is shown below is not the same as data sets described earlier, but we found that this parameter was very important to reduce the computational time and the underestimation of spectral similarities especially in Waters or Agilent instruments.  
@@ -587,36 +630,39 @@ Figure: Explanation about purification parameters
 #### Section 3-3-4
 #### Identification tab  
 
-![alt](images/image_33.png)  
-![alt](images/image_34.png)  
+<!--![alt](images/image_33.png)  <!--前回分1-->
+<!--![alt](images/image_34.png)  <!--前回分2-->
 ![alt](images/new_images/無題27.png)<!--このタブでのデフォルトの数値-->
 
-*MSP file*: Set your MSP file here. (Tutorial data: **MSMS-AllPublic-Curated-Pos.msp**.) In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling.  
+*MSP file*: <br> <!--2章と異なる-->
+Set your MSP file here. (Tutorial data: **MSMS-AllPublic-Curated-Pos.msp**.) In the case that you selected ‘lipidomics’ project, please select what you want to find in your data sets for lipid profiling (see Section 2-3-4).  
 
-*Parameters*: <br><!--元の文章If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). However, since the retention times of this MSP file are not recorded by the method of this demonstration, set the tolerance to 100 or larger in order to ignore the effect of retention time tolerance. <!--ここの文章、デフォルト値は新版では100だが、そこだけ変えても文章の後半が文脈に沿わない感じになる。Section 2-3-4 の Identification tab のところでも同じようにデフォルト値が合わないことに困って津川さんにメール質問しているところなので、回答待ち--><!--次の文章は修正案-->By setting retention time (RT) tolerance, you can put RT information recorded in your MSP file. If the RT of the MSP file were not recorded like the method of this demonstration files, set 100 (default value) min or larger to ignore the effect of RT tolerance.<!--defaultは100で、この値はretention timeが記録されていない時に指定される値。
+<!--要修正-->
+*Parameters*: <br><!--
+↓添削前に悩んでいた文章
+元の文章If you put retention time (RT) information in your MSP file, set the RT tolerance value (default is 0.5). However, since the retention times of this MSP file are not recorded by the method of this demonstration, set the tolerance to 100 or larger in order to ignore the effect of retention time tolerance. <!--ここの文章、デフォルト値は新版では100だが、そこだけ変えても文章の後半が文脈に沿わない感じになる。Section 2-3-4 の Identification tab のところでも同じようにデフォルト値が合わないことに困って津川さんにメール質問しているところなので、回答待ち--><!--次の文章は修正案
+By setting retention time (RT) tolerance, you can put RT information recorded in your MSP file. If the RT of the MSP file were not recorded like the method of this demonstration files, set 100 (default value) min or larger to ignore the effect of RT tolerance.<!--defaultは100で、この値はretention timeが記録されていない時に指定される値。
+以下２章添削済み文。Lipidの話をしているので、３章では文を修正した方がよさそう。特にretention time tolerance の値を今回のデモデータではいくつに設定するか知りたい。あるいはそこまで厳格ではない？--><!--以下3/19追加文-->
+For this demo data, retention time is not used for scoring or filtering so you just do **NOT** tick **Use retention time for scoring** and **Use retention time for filtering**.  
+If you put retention time (RT) information in your MSP file, set the **RT tolerance value**.<br> <!--
+For example, our internal lipid DB includes the predicted RT information optimized for our 15 min LC method. Here RT time tolerance is set to 1.5 min for this demo data.
+If suitable RT information is unavailable, set the tolerance 100 (default) or larger (larger than your LC time).<br>
+**The two mass tolerances for MS1 and MS2** are required for the compound search and are dependent on your instrument performance.<br>
+This demonstration’s MSP file has the theoretical value of precursor *m/z* for all of authentic compounds. Therefore, the MS1 tolerance for time-of-flight MS was set to 0.025 Da here. On the other hand, since this MSP file also includes low resolution (QqQ etc.) MS data, 0.2 or more should be suitable for MS2 <!--MS1とMS2の違い、私分かってない to widely utilize all of the queries. <br>
+**The cutoff of the identification score** should be greater than 70% or 80% to avoid false positives.  <br>
+Unless you check neither **Use retention time for scoring** nor **Use retention time for filtering**, the value of **RT tolerance** does not mean anything.
 -->
 
-**The two mass tolerances for MS1 and MS2** are required for the compound search. This demonstration’s MSP file has the theoretical value of precursor *m/z* for all of authentic compounds. Therefore, the MS1 tolerance for time-of-flight MS was set to 0.025 Da here. On the other hand, since this MSP file also includes low resolution (QqQ etc.) MS data, 0.2 or more should be suitable for MS2 <!--MS1とMS2の違い、私分かってない-->to widely utilize all of the queries. <br>
-**The cutoff of the identification score** should be greater than 70% or 80% to avoid false positives.  
+*Text file and post identification (retention time and accurate mass based) setting*:<br>
+If you want to perform “post identification” processing, set your text file here. (There is no text DB for this demonstration.)<br>
+<!--(3/10)以下２章からコピペだけど不要かも
+The meanings of parameters are the same as MSP based identification explained above.-->  
 
-<!--説明不要パラメーター？　←1/30に津川さんから説明聞いたので２章で説明ちゃんと書く
-*Use retention time for scoring*:
+*Relative abundance cut off*: <br>
+the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  
 
-*Use retention time for filtering*:
--->
-*Text file*: If you want to perform “post identification” processing, set your text file here. (There is no text DB for this demonstration.)  
-
-<!--説明不要パラメーター？←まだ説明聞いてないので説明希望質問項目にリストアップしておく。
-*Retention time tolerance*:
-
-*Accurate mass tolerance*:
-
-*Identification score cut off**
--->
-
-*Relative abundance cut off*: the mass spectrum peak less than the user-defined value will not be used for the MS/MS similarity calculation.  
-
-*Only report the top hit*: Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
+*Only report the top hit*: <br>
+Since some chromatogram peaks will be annotated as the same compound from the identification algorithm, this option allows us to determine only one candidate from such multiple results by means of the identification score.  
 
 
 #### Section 3-3-5
@@ -624,22 +670,61 @@ Figure: Explanation about purification parameters
 ![alt](images/new_images/Picture8.png)
 
 You can tick the adduct ions and charge values to be considered.  
-In addition, own definition for adduct ions can be set. (see the adduct format in Section 6-2 of Chapter 1)  
+In addition, own definition for adduct ions can be set. (see the adduct format in Section 1-6-2 of Chapter 1)  
 
 #### Section 3-3-6
 #### Alignment tab  
 ![alt](images/new_images/無題31.png)
 
-*Parameters*: If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample, which are not monitored in the representative file, can be automatically interpolated by the algorithm of MS-DIAL (gap-filling). In this demonstration, 0717_kinetex_wine_50_4min_pos_IDA_A1 is selected as the representative file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (here set 0.05 min and 0.025 Da.). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.  
-<!--削除
-  If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.  
+<!--前の文章
+*Parameters*:
+If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify the QC file here. All sample data will be aligned to this QC file. When no QC file is available, select one of imported files (blank sample is not suitable). The metabolite peaks of a specific sample, which are not monitored in the representative file, can be automatically interpolated by the algorithm of MS-DIAL (gap-filling). In this demonstration, 0717_kinetex_wine_50_4min_pos_IDA_A1 is selected as the representative file. The RT and MS1 tolerances for peak alignment depend on your chromatographic conditions (here set 0.05 min and 0.025 Da.). If you want to remove specific peaks that are not fully detected in the alignment, specify the peak count filter. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.  
+If you can prepare many QC sample data, tick the “Detected in all QCs” box. Then a peak will be removed if it is missing in any of the QC samples.  
 -->
+<!--以下の２章での文章-->
+**Result name** will be the name of each alignment shown at the pane 'Alignement navigator' in the main window.<!--←この文不要かも--> <br>
+<!--3/19削除If you already have a suitable quality control (QC) data, typically a mixed sample data, then specify **the QC file** in **Reference file**. All sample data will be aligned to this QC file. <br><!--今回QCfile無いけどこのファイル選択でいいの？-->
+**The RT and MS1 tolerances** for peak alignment depend on your chromatographic conditions (see MS-DIAL mathematics for details). <br>
+If you want to remove specific peaks that are not fully detected in the alignment, specify **the peak count filter**. For example, the tutorial data include at least 4 biological replicates with the same peak information and the total number of data is 23. Then, you may set the peak count filter as (4/23)&lowast;100 = 17.4 %. This means peaks will be removed when they include missing values for more than 17.4%. <br>
+Moreover, in ‘N% detected in at least one group’, the filtering is done within each sample group. If it is set to 100%, the peaks should be detected in all of samples of a class.
+
+*Retention time factor and MS1 factor*: These values indicate the importance of either RT or MS1 to compare and evaluate the similarity of the spectra among samples based on RT and MS1 tolerance.
+
+*Remove features based on blank information*: <br><!--
+追加文考え中
+    これにチェックを入れないと、blankを入れている意味が無い（ので絶対チェック入れるもの）
+    （言いたいこと）blankの情報を加味して解析に反映させたいなら、この選択でブランクのピークが評価できる-->
+If you add information of blank samples and want to reflect the blank features information into the result of the analysis, tick this to evaluate the peaks of blank samples. <!--
+くどいため不要かもしれない文　Removing features based on blank information means to remove features which appeared in any of the blank samples and should be removed. Thus check this to filter the factors which appeared even in blank samples. --><br>
+Checking this box allows you to edit the three checkboxes, **Keep 'Reference matched' metabolite features**, **Keep 'Suggested (without MS2)' metabolite features**, and **Keep removable features and assign the tag**.
+
+After checking **Remove features based on blank information**, you will be able to edit the checkbox 'blank filter' on the pane 'Peak spot navigator' in the main window so that you can check which features were filtered as removable features unless you uncheck **Keep removable features and assign the tag**.<br>
+**Note:** Check this only when you have any blank sample, otherwise error will occur.
 
 <!--
   Section 2-3-6 Alignment tab の修正が終わってから、このセクションの文章も編集する。そのため保留。
   このデモデータの場合、Blankサンプルが無いので、Blank filter不要だった
   Blank filterにチェック入れちゃうとエラー出るので注意って書く。
+  (3/10)書いた。
 -->
+
+
+*Keep 'Reference matched' metabolite features*: <!--編集済--><br>
+'Reference matched' metabolite means the metabolites by reference libraries (MSP or Text library).
+
+*Keep 'Suggested (without MS2)' metabolite features*:<!--編集中--><br>
+'Suggested (without MS2)' means that metabolites are annotated by the MS1 feature.
+<!--
+  定量したMS1から候補が出たけど、MS2からは候補が見つからなかったものをSuggestedと呼んでいる。
+-->
+*Keep removable features and assign the tag*: <!--文考え中--> <br>
+If you check this, even though the features do not exceed the blank feature threshold, the peaks will remain in all result features. But you can confirm the result by using "Blank filter" checkbox of MS-DIAL main window.
+  <!--くどいので不要かもしれない文 In that case, when you check the box 'Blank filter' in the pane 'Peak spot navigator' in the main window, these removable features describe above will be disappeared in the figure on the pane 'Alignment spot viewer'. -->If you uncheck this, removable features will be deleted and thus that blank features will not be included anymore in all analyzed data, meaning you cannot see the blank-oriented peak features in the main window after alignment.
+  <!--閾値以下で除外したものをデータとして残しておいて目印を付けるか否か。これにチェックを入れると、検出・同定・アラインメント後の結果に除外データが（除外したデータとして）残り、見ることができる。-->
+  <!--（言いたいこと）blank filterを押すとremovable featureは出なくなる。データとしては残してくれる assign the tagはobjectとproperty(つまりinfomatics)に関連した言葉で分析屋さんが理解できるかどうかは津川さんにも分からない。ので、とりあえず分析屋さんが分かりやすい言葉で文章を書いてみる-->
+
+*Gap filling by compulsion*: If you check this, the peak recognition is performed by the average peak width of samples having the metabolite feature even though no local maximum is observed in the chromatogram. This is validated by default.
+
 
 **Note:** When you execute the compound identification, the representative spectra with identification results are automatically determined from one of imported files which has the highest identification score. In the case that an alignment spot is not identified in any samples, the MS/MS spectrum of one sample which has the highest ion abundance in imported files is assigned as the representative spectrum.  
 
@@ -648,7 +733,9 @@ In addition, own definition for adduct ions can be set. (see the adduct format i
 MS-DIAL can automatically identify the metabolite peaks by the similarity calculation of retention time, precursor *m/z*, isotopic ratios, and MS/MS spectrum with the reference databases. However, unfortunately, there are also false positive identifications in the result of peak identifications. Therefore, as an analytical chemist, the result should be manually checked and sometimes some of identified peaks should be curated and modified.   
 Practically, what you have to do is to curate the identification result of an alignment file since the identification result of its alignment file will be reflected in the final output like ‘peak height’ data matrix. Using the GUI of MS-DIAL, you can check if an aligned spot is false positive/negative identification or not. For further information about GUI of MS-DIAL, see Chapter 5.  
 
-![alt](images/image_37.png)  
+<!--![alt](images/image_37.png)  前回分-->
+![alt](images/new_images/Picture13.png)
+
    
 ## Chapter 4
 ## Nominal and accurate GC/MS based metabolic profiling in MS-DIAL  
@@ -784,21 +871,24 @@ Practically, what you have to do is to curate the identification result of an al
 ## Graphical user interface of MS-DIAL  
 ### Section 5-1
 ### Mouse function  
-*	Mouse right click (or hold) and move: zoom in and out  
-*	Mouse left click (or hold) and move: select and scroll  
 
-*	Mouse left double click: reset range and select files in the file navigator  
-*	Mouse wheel: zoom in and out  
-*	Mouse right click: popup context menu  
+Mouse functions described below are available within the area surrounded by pink and green rectangles.
 
-![alt](images/image_48.png)
-![alt](images/new_images/Picture9.png)
+| Operation | Action |
+|---|---|
+Hold right button and drag| zoom in and out (only vertical zoom-in/-out within the green area)
+Click left button| select  
+Hold left button and drug| scroll
+Double click left button| reset range and select files in the file navigator  
+Wheel| zoom in and out  
+Click right button| popup context menu  
+
+<!-- 旧![alt](images/image_48.png)-->
+![alt](images/new_images/Picture12.png)
 <!--新版でマウス機能が機能しなくなっている箇所（二か所）があるのは、大丈夫？
-こういう仕様なのか、バグなのか-->
+こういう仕様なのか、バグなのか
+(3/5)動かない部分はマウスの右ホールドからの移動でズームインアウト-->
 
-<span style="color:red;">&#042; Red rectangle: acceptable click point</span>
-<br />  
-<br />  
 
 ### Section 5-2
 ### Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
