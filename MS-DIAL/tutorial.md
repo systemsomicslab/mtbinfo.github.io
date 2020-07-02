@@ -894,29 +894,27 @@ Click right button| popup context menu
 ### Overview of the MS-DIAL main window in LC/MS (precursor oriented) project  
 In the main viewer of MS-DIAL, the detected peak information is shown in the central window by double clicking the file name in the File navigator. In the bottom-center window (**Peak spot viewer**), each spot denotes the detected peak (precursor ion) information: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. In a lipidomics project, the spot color will mean a specific lipid class such as PC, PE, and TAG etc. The left window (**Survey scan (MS1) spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**EIC of focused spot**) displays the extracted ion chromatogram of the focused peak. The right window (**Exp. vs. Ref.**) displays the MS/MS spectrum (blue or black) and the reference MS/MS spectrum (red). In data independent MS/MS project, the detail of deconvolution is shown in ‘**MS2 Chrom.**’ and ‘**Raw vs. Purified**’ tabs of the right panel. The MS/MS chromatograms (both raw- and deconvoluted) are depicted in ‘**MS2 Chrom**.’. In addition, the raw- and deconvoluted (purified) MS/MS spectrum were depicted in ‘**Raw vs. Purified**’ tab. Other peak information (metadata) is displayed in the top-right of this window.  
 
-![alt](images/image_49.png)<!--メインの画像はlipidmicsデータ以外の解析結果ではないと適切ではない→後でスクショする。-->
+![alt](images/new_images/Picture14.png) <!--3/19 メイン以外の画像はデータが違うし、不要ということで削除-->
 
 On **Alignment spot viewer** of the bottom-center window, each spot shows an aligned spot including all retention time, accurate mass, intensity, and MS/MS spectrum of all samples. As described above, in the **Peak spot viewer**, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check all retention times and accurate masses of aligned samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.   
-On **Rep. vs. Ref.** tab of bottom-right panel, in combination with the **alignment spot viewer**, you can compare a representative MS/MS spectrum and a reference MS/MS spectrum. The representative MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
-On **Bar chart of aligned spot (OH)** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property’.  
+On **Rep. vs. Ref.** tab of bottom-right panel, in combination with the **Alignment spot viewer**, you can compare a representative MS/MS spectrum and a reference MS/MS spectrum. The representative MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
+On **Bar chart of aligned spot (OH)** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property setting’.  
 
-![alt](images/image_50.png)
-
+![alt](images/new_images/Picture15.png)
 
    
 ### Section 5-3
 ### Overview of the MS-DIAL main window in GC/MS project  
 The main viewer of MS-DIAL GC/MS is mostly the same as the viewer of LC/MS part. The specific difference between GC/MS part and LC/MS part are in ‘**Peak spot viewer**’. The peak picking and deconvolution results of a GC/MS file are shown in the center window by mouse left double click of the file name in the File navigator. In the center window (**Peak spot viewer**), each circle spot denotes the detected peak on each mass (*m/z*) trace: blue spots describe peaks of lower abundance in the sample, red spots describe peaks of higher abundance, and green spots describe peaks of middle abundance. However, in contrast to LC/MS part, these circle spots are not meaningful very much. Instead, the **reverse triangle** is the important description to recognize detected metabolites.   
-Once you click one of the reverse triangles, you can see the detail of detected (deconvoluted) peak. The left window (**Survey scan spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**Extracted ion chromatogram of focused spot**) displays the extracted ion chromatogram of the quant mass of focused peak. The right window (**Exp. vs. Ref.**) displays the EI spectrum (blue or black) and the reference MS/MS spectrum (red). The detail of deconvolution is shown in ‘**EI chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The EI chromatograms (both raw- and deconvoluted) are depicted in ‘EI Chrom.’. In addition, the raw- and deconvoluted (purified) EI spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
+Once you click one of the reverse triangles, you can see the detail of detected (deconvoluted) peak. The left window (**Survey scan (MS1) spectrum**) displays the MS1 spectrum of the focused peak and the upper window (**EIC of focused spot**) displays the extracted ion chromatogram of the quant mass of focused peak. The right window (**Exp. vs. Ref.**) displays the EI spectrum (blue or black) and the reference MS/MS spectrum (red). The detail of deconvolution is shown in ‘**EI Chrom.**’ And ‘**Raw vs. Purified**’ tabs of the right panel. The EI chromatograms (both raw- and deconvoluted) are depicted in ‘EI Chrom.’. In addition, the raw- and deconvoluted (purified) EI spectrum were depicted in ‘Raw vs. Purified tab. Other peak information (metadata) is displayed in the top-right of this window.  
 
-![alt](images/image_51.png)
-
+![alt](images/new_images/Picture16.png)
    
 On **Alignment spot viewer**, the description is also mostly the same as that of LC/MS part. Each spot shows an aligned spot including all retention time, **quant mass**, intensity, and EI spectrum of all samples. As in the **Peak spot viewer**, red, blue, and green “alignment” spot denotes higher, lower, and middle abundance (on average) in the alignment, respectively. By clicking each spot, you can check the difference of retention times of aligned samples. Note that the difference of Y-axis does not have any physical meaning: the drawing of Y-axis is performed randomly to separately draw each samples. The green spot is associated with the “detected” flag, showing whether all samples contain the spot. The red spot is associated with the “interpolated” flag, showing whether the software program augmented originally missing values.   
-On **Rep. vs. Ref.** tab of right panel, in combination with the **alignment spot viewer**, the window compares a representative EI spectrum and a reference EI spectrum. The representative EI is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
-On **Bar chart of aligned spots** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property’.  
+On **Rep. vs. Ref.** tab of right panel, in combination with the **Alignment spot viewer**, the window compares a representative EI spectrum and a reference EI spectrum. The representative EI is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.  
+On **Bar chart of aligned spots (OH)** of top panel, you can see the summary of the target ion abundances by means of its average and standard deviation (SD) of the specific biological class. The biological classes can be defined from ‘Option -> File property setting’.  
 
-![alt](images/image_52.png)
+![alt](images/new_images/Picture17.png)
 
    
 ### Section 5-4
@@ -924,12 +922,12 @@ On **Bar chart of aligned spots** of top panel, you can see the summary of the t
 The automatic identification process cannot escape from mis-identification. MS-DIAL provides the user-interface so that users can manually correct the identification result. In this option, you can customize the identification criteria into three levels: “confident”, “unsettled”, and “unknown.” For example, in the phospholipid identification, we often determine only the cumulative composition such as PC 36:1 without positions of acyl chains, e.g. PC(18:0/18:1). You can add “unsettled” tag to such peaks as the signpost to comment that “we only checked the cumulative composition”.   
 Information of identification is available not only in the “Peak spot viewer” but also in the “Alignment spot viewer”. Although you only see representative spectra from all samples in the alignment viewer, it is very helpful to make a data matrix and to check your peak identification result. Importantly, the curation in the alignment viewer will be reflected in principal component analysis or the output of data matrix.  
 
-![alt](images/image_53.png)  
+![alt](images/new_images/Picture18.png)
 
 A)  Click the icon "Compound search" (shown by encircling in the picture above).   
 B)	Click each row of the library information to show identification details.  
 C)	Add a tolerance value for identification and click the “Search” button.  
-D)	You can select either “A: Confident”, “B: Unsettled” or “C: Unknown.”  
+D)	You can select either “A: Confidence”, “B: Unsettled” or “C: Unknown.”  
 
    
 ### Section 5-5
@@ -942,18 +940,17 @@ A)	If you want to use internal standards to normalize your peak list, you have t
 B)	If you want to use the other statistics, please go to PRIMe web site:  
 <http://prime.psc.riken.jp/Metabolomics_Software/StatisticalAnalysisOnMicrosoftExcel/index.html>  
 
-&#042; Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_&#042;&#042;&#042;’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘176’ which was annotated LysoPC 17:0 from the setting below.  
+&#042; Below is the brief description of how to do LOWESS normalization with an internal standard compound information in MS-DIAL. In the below setting, all ‘QC_&#042;&#042;&#042;’ samples will be recognized as ‘quality control’ and the injection order is recognized as this setting. Then, all metabolite peaks will be divided by the ion abundance of alignment spot ID ‘245’ which was annotated LysoPC 17:0 from the setting below.  
 
-![alt](images/image_54.png)
-![alt](images/image_55.png)
-![alt](images/image_127.png)
+![alt](images/new_images/Picture19.png)
+![alt](images/new_images/Picture20.png)
 
 *	You can choose the metabolite data set from “Ref. matched”, “Suggested” and “Unknown”.
 *	Finally, click the Done button.
 
 Output of the PCA
 
-![alt](images/image_128.png)
+![alt](images/new_images/無題72_5-5_12.png)
 
 *	The left side of the upper row: PCA score plot
 *	The right side of the upper row: PCA loading plot
@@ -967,7 +964,7 @@ Output of the PCA
 *	Finally, click the Done button.
 
 **!** File setting for PLS before analyses
-1. Set Y (response) variables at menu -> option -> file property
+1. Set Y (response) variables at menu -> Option -> File property setting
 2. For (O)PLS-DA, use a binary (0 or 1) value as the response. Non-zero values are recognized as 1 in (O)PLS-DA testing.
 3. For (O)PLS-R, set sequential values.
 
@@ -1005,7 +1002,7 @@ Step4.	Click the export button.
 
 B)	*Alignment result export*: You can get data matrix or spectral information.  
 
-![alt](images/image_57.png)
+<!--![alt](images/image_57.png)-->
 ![alt](images/new_images/無題38.png)
 
 Step1.	Choose an export folder path.  
@@ -1021,38 +1018,39 @@ Step4.	Click the export button.
 
 **Your project is managed in MTD file.** Although your project is saved automatically whenever you do the data processing method, this program is not saved after your manual modification such as the curation of identification result, internal standard setting, and file or class information setting. Therefore, you have to save your project from this option after your modification.  
 
-![alt](images/image_59.png)
+![alt](images/new_images/Picture21.png)
 
 **Your data processing parameter can be saved as MED format file.** When you want to use your method file for your data processing method, select your MED format file in the data processing setting.  
 
-![alt](images/image_60.png)
+![alt](images/new_images/Picture22.png)
 
 <br />
 
 ### Section 5-8
 ### Open  
 
-![alt](images/image_61.png)
+![alt](images/image_61.png)<!--変更なし-->
 
-The project file is saved as MTD file format automatically whenever you perform data processing method. The manual save is described in section 7. **You can re-start your project from the MTB file.** The manual curation of peak identification result is highly recommended. In addition, the manual annotation can be set from *Identification* menu.  
+The project file is saved as MTD file format automatically whenever you perform data processing method. The manual save is described in section 5-7. **You can re-start your project from the MTB file.** The manual curation of peak identification result is highly recommended. In addition, the manual annotation can be set from *Identification* menu.  
 
 
    
 ### Section 5-9
 ### Option  
-![alt](images/image_62.png)
+![alt](images/new_images/無題77_5-9_1.png)
 
 
 You can set properties of aligned peaks and files. In the file properties, you can reset file type, class ID, or analytical order (but not the file name). If you clear the check box of the “Included” column, the corresponding data are no longer used in the statistical analysis. In the alignment properties, you can set internal standard information for each aligned peak. Please make sure to assign “alignment ID” in the “internal standard” column.  
 
-![alt](images/image_63.png)
-![alt](images/image_64.png)
+![alt](images/new_images/無題77_5-9_2.png)
+![alt](images/image_64.png)<!--何に変更すればいいのか分からない-->
 
 <br />
-### Section 5-10
+
+### Section 5-10  
 ### Manual annotation on Identification menu  
 
-![alt](images/image_65.png)
+![alt](images/image_65.png)<!--どこから変更すればいいのか分からない。data procassingのidentification tabから行った所のもの？-->
 
 *Identification setting*: You can manually correct identification result. This option may be useful to check internal standards which are not included in the reference library.  
 
@@ -1061,15 +1059,15 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ### Section 5-11
 ### Chromatogram viewers  
 
-![alt](images/image_67.png)
+![alt](images/new_images/無題77_5-11_1.png)
 
 *Display total ion chromatogram*: You can see the total ion chromatogram of the focused sample.  
 
-![alt](images/image_68.png)
+![alt](images/new_images/無題77_5-11_2.png)
 
 *Display extracted ion chromatogram*: You can see the extracted ion chromatograms which you want to display for the focused sample.  
 
-![alt](images/image_69.png)
+![alt](images/new_images/Picture23.png)
 
 
 ### Section 5-12
@@ -1079,54 +1077,62 @@ You can set properties of aligned peaks and files. In the file properties, you c
 
 *Label*: You can check the peak information such as retention time, accurate mass, metabolite name, adduct ion name and isotope ion in the center window of MS-DIAL. Shown below are examples.  
 
-![alt](images/image_70.png)
-![alt](images/image_71.png)
+![alt](images/new_images/Picture24.png)
+
+![alt](images/new_images/Picture25.png)
+
+![alt](images/new_images/Picture26.png)
    
-*Height filter*: This filter is used to check the peak abundance. Each peak is assigned a rank with respect to its peak abundance in the focused sample.  
+*Peak spots*: This filter is used to check the peak abundance. Each peak is assigned a rank with respect to its peak abundance in the focused sample.  
 
-![alt](images/image_72.png)
+![alt](images/new_images/Picture27.png)
 
-*Display filter*   
-1. “Identified” shows only identified peaks with the MS/MS spectrum.  
-2. “Annotated” shows only identified peaks without the MS/MS spectrum.  
+*Display filter*   <!--新規項目について記述してほしい-->
+1. “Ref. matched” shows only identified peaks with the MS/MS spectrum.  
+2. “Suggested” shows only identified peaks without the MS/MS spectrum.
+3. "CCS matched"  
+5. “Unknown” shows only unknown peaks.
+5. "MS2 acquired"
 3. “Molecular ion” shows de-isotoped molecular ions only.  
-4. “MS/MS” shows only peaks having the MS/MS spectrum.  
-5. “Unknown” shows only unknown peaks.  
+7. "Blank filter"
+8. "Unique ions"
+<!--4. “MS/MS” shows only peaks having the MS/MS spectrum.  -->
 
 #### Section 5-12-2
 #### Tabs of MS-DIAL  
 
 <br />
-![alt](images/image_73.png)
+
+![alt](images/new_images/Picture28.png)
 
 This viewer is prepared especially for data independent MS/MS analysis or GC/MS analysis.   
 *Exp. vs. Ref.*: The upper spectrum (blue or black) displays the centroided information of the MS/MS spectrum. The lower spectrum (red) displays the reference MS/MS spectrum. In case of data independent MS/MS or GC/MS analysis, de-convoluted MS/MS spectrum can be displayed by clicking the de-convolution icon <img src="images/image_74.png" width=3%>.  
 
-![alt](images/image_75.png)
+![alt](images/new_images/Picture29.png)
 
 *MS2 Chrom.*: The MS/MS chromatograms inside the sky-blue rectangle in the center window are displayed. In GC/MS part (named MS1 Chrom.), there is no sky-blue rectangle in the viewer, and the peak width is automatically determined by the algorithm of MS-DIAL instead.   
 
-![alt](images/image_76.png)
+![alt](images/new_images/Picture31.png)
 
 <img src="images/image_77.png" width="3%"> This icon displays the raw EI or DIA-MS/MS chromatograms.  
 <img src="images/image_78.png" width="3%"> This icon displays the de-convoluted EI or DIA-MS/MS chromatograms.  
 <img src="images/image_79.png" width="3%"> This icon displays both the raw and de-convoluted EI or DIA-MS/MS chromatograms.  
 
-![alt](images/image_80.png)
+![alt](images/new_images/Picture30.png)
    
 *Raw vs. Purified.*: The upper and bottom windows display the raw and de-convoluted EI or DIA-MS/MS spectrum, respectively.  
 
-![alt](images/image_81.png)
+![alt](images/new_images/無題77_5-12-2_9.png)
 
 *Rep. vs. Ref.*: In combination with the **alignment viewer**, the window compares a representative EI or MS/MS spectrum and a reference EI or MS/MS spectrum. The representative EI or MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.   
 
-![alt](images/image_82.png)  
+![alt](images/image_82.png)  <!--中央図と右図に何も出てこない-->
 <br />
 
 
 ### Section 5-13
 ### Search  
-#### Section 5-13-1
+#### Section 5-13-1 <!--エラーが出て二枚目の画像の差し替えができない-->
 #### MS/MS fragment searcher  
 In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’96.9597’ Da as product ion search in order to find the precursor ions contacting sulfate (SO<sub>4</sub><sup>-</sup>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  
 
@@ -1134,7 +1140,7 @@ In LC-MS/MS project, there is a ‘search’ function to find precursor ions con
 <br />
 
 
-#### Section 5-13-2
+#### Section 5-13-2 <!--データが見つけられず修正できない-->
 #### Amalgamation of different polarity peak list  
 The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see *m/z* 273.076 in positive and *m/z* 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  
 
@@ -1143,7 +1149,7 @@ The adduct type determination for unknown molecules is the important process for
 Example of mass difference for adduct type determination  
 
 Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   
-1.	In negative ion mode project, select ‘Export’ -> ‘Peak list export’.  
+1.	In negative ion mode project, select ‘Export’ -> ‘Peak list result’.  
 2.	Export a detected peak list (feature list) as tab delimited text format.  
 ![alt](images/image_85.png)
 3.	Then, make the peak list containing *m/z* value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg ion features.txt’.   
@@ -1156,7 +1162,7 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 
 1\. “Data visualization” -> “Pathway”  
 
-![alt](images/image_125.png)
+![alt](images/new_images/Picture32.png)
 
 *	You can select one of 3 type of pathway, i.e. animal pathway, plant pathway and user-defined pathway (two formats, graphml (VANTED) and gpml (Wikipathway) are accepted). In lipidomics project, the label name of nodes is used for mapping aligned data. In metabolomics project, InChIKey is used. Please register the InChIKey to tooltip in Vanted. In Wikipathway, there is the field (see the tutorial). Currently, the first layer is used for matching node and annotated data.
 *	You can also load up to 4 different project aligned data (class setting must be equal, and now, the project must be closed when loaded).
@@ -1165,13 +1171,14 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 
 2\. You can get the pathway map.
 
-![alt](images/image_126.png)
+![alt](images/new_images/無題77_5-14_3.png)
+
 *	Right double click reset the display range.
 *	Right click and drag for zoom in.
 *	Mouse wheel for up-down scroll.
 *	Mouse wheel + Ctrl for zoom in-out.
 *	Mouse wheel + Shift for left-right scroll.
-*	Mouse click + Shift or Ctrl for changing node position.
+*	Mouse click + Shift or Ctrl for changing node position.<!--shiftやctrlがなくても四角形をドラッグすればノードポジションが動かせる-->
 
 
 ## Chapter 6
