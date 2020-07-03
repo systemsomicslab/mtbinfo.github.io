@@ -1043,14 +1043,17 @@ The project file is saved as MTD file format automatically whenever you perform 
 You can set properties of aligned peaks and files. In the file properties, you can reset file type, class ID, or analytical order (but not the file name). If you clear the check box of the “Included” column, the corresponding data are no longer used in the statistical analysis. In the alignment properties, you can set internal standard information for each aligned peak. Please make sure to assign “alignment ID” in the “internal standard” column.  
 
 ![alt](images/new_images/無題77_5-9_2.png)
-![alt](images/image_64.png)<!--何に変更すればいいのか分からない-->
+
+![alt](images/new_images/無題77_5-9_5.png)
+
+![alt](images/new_images/無題77_5-9_3.png)
 
 <br />
 
 ### Section 5-10  
 ### Manual annotation on Identification menu  
 
-![alt](images/image_65.png)<!--どこから変更すればいいのか分からない。data procassingのidentification tabから行った所のもの？-->
+![alt](images/image_65.png)<!--ツールバーにidentificationという項目がないので、どこから変更すればいいのか分からない。data procassingのidentification tabから行った所のもの？-->
 
 *Identification setting*: You can manually correct identification result. This option may be useful to check internal standards which are not included in the reference library.  
 
