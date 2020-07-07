@@ -1050,16 +1050,8 @@ You can set properties of aligned peaks and files. In the file properties, you c
 
 <br />
 
-### Section 5-10  
-### Manual annotation on Identification menu  
-
-![alt](images/image_65.png)<!--ツールバーにidentificationという項目がないので、どこから変更すればいいのか分からない。data procassingのidentification tabから行った所のもの？-->
-
-*Identification setting*: You can manually correct identification result. This option may be useful to check internal standards which are not included in the reference library.  
-
-![alt](images/image_66.png)
    
-### Section 5-11
+### Section 5-10
 ### Chromatogram viewers  
 
 ![alt](images/new_images/無題77_5-11_1.png)
@@ -1073,9 +1065,9 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ![alt](images/new_images/Picture23.png)
 
 
-### Section 5-12
+### Section 5-11
 ### Explanation of buttons and tabs of MS-DIAL  
-#### Section 5-12-1
+#### Section 5-11-1
 #### Display filters  
 
 *Label*: You can check the peak information such as retention time, accurate mass, metabolite name, adduct ion name and isotope ion in the center window of MS-DIAL. Shown below are examples.  
@@ -1091,17 +1083,17 @@ You can set properties of aligned peaks and files. In the file properties, you c
 ![alt](images/new_images/Picture27.png)
 
 *Display filter*   <!--新規項目について記述してほしい-->
-1. “Ref. matched” shows only identified peaks with the MS/MS spectrum.  
-2. “Suggested” shows only identified peaks without the MS/MS spectrum.
-3. "CCS matched"  
-5. “Unknown” shows only unknown peaks.
-5. "MS2 acquired"
-3. “Molecular ion” shows de-isotoped molecular ions only.  
-7. "Blank filter"
-8. "Unique ions"
-<!--4. “MS/MS” shows only peaks having the MS/MS spectrum.  -->
+1. “Ref. matched” shows peaks matched with reference libraries.  
+2. “Suggested” shows annotated peaks without the MS/MS spectrum.
+3. "CCS matched" shows peaks matched with CCS information.
+5. “Unknown” shows unknown peaks.
+5. "MS2 acquired" shows peaks having MS/MS information.
+3. “Molecular ion” shows de-isotoped molecular ions.  
+7. "Blank filter" shows peaks exceeding threshold of blank filtering.
+8. "Unique ions" shows peaks having searched fragment ions.
 
-#### Section 5-12-2
+
+#### Section 5-11-2
 #### Tabs of MS-DIAL  
 
 <br />
@@ -1129,21 +1121,21 @@ This viewer is prepared especially for data independent MS/MS analysis or GC/MS 
 
 *Rep. vs. Ref.*: In combination with the **alignment viewer**, the window compares a representative EI or MS/MS spectrum and a reference EI or MS/MS spectrum. The representative EI or MS/MS is automatically selected as the spectrum of the highest identification score for all samples aligned to the focused alignment spot.   
 
-![alt](images/image_82.png)  <!--中央図と右図に何も出てこない-->
+![alt](images/new_images/無題77_5-12-2_12.png)
 <br />
 
 
-### Section 5-13
+### Section 5-12
 ### Search  
-#### Section 5-13-1 <!--エラーが出て二枚目の画像の差し替えができない-->
+#### Section 5-12-1
 #### MS/MS fragment searcher  
-In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’96.9597’ Da as product ion search in order to find the precursor ions contacting sulfate (SO<sub>4</sub><sup>-</sup>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  
+In LC-MS/MS project, there is a ‘search’ function to find precursor ions containing the user-defined product ions and/or neutral losses. The function can be applied for both peak spot- and alignment spot results. The search type can be set as ‘product ion’ or ‘neutral loss’. Below is the example using ’281.2479’ Da as product ion search in order to find the precursor ions contacting oleic acid (C<sub>18</sub>H<sub>32</sub>O<sub>2</sub>). The result can be found by clicking ‘unique ions’ checkbox in MS-DIAL main window.  
 
-![alt](images/image_83.png)  
+![alt](images/new_images/Picture33.png)
 <br />
 
 
-#### Section 5-13-2 <!--データが見つけられず修正できない-->
+#### Section 5-12-2
 #### Amalgamation of different polarity peak list  
 The adduct type determination for unknown molecules is the important process for compound identification. The integration of positive- and negative ion features is often helpful. For example, if we see *m/z* 273.076 in positive and *m/z* 271.061 in negative ion data at the same retention time region, the adduct type can be determined as [M+H]+ and [M-H]- because of the 2.015Da difference.  
 
@@ -1154,13 +1146,13 @@ Example of mass difference for adduct type determination
 Therefore, MS-DIAL provides the utility integrating the different polarity peak features. Here, this demonstration will use the feature list from negative ion mode data to determine the adduct types of positive ion peak features.   
 1.	In negative ion mode project, select ‘Export’ -> ‘Peak list result’.  
 2.	Export a detected peak list (feature list) as tab delimited text format.  
-![alt](images/image_85.png)
-3.	Then, make the peak list containing *m/z* value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg ion features.txt’.   
-<img src="images/image_86.png" width="40%">
-4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Search” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
-![alt](images/image_87.png)
+![alt](images/new_images/無題77_5-13-2_5.png)
+3.	Then, make the peak list containing *m/z* value (first column) and retention time value as tab delimited text format file. Now, (for example), it is saved as ‘12C-AT-Root-Neg.txt’.   
+![alt](images/new_images/無題77_5-13-2_6.png)
+4.	Open the project using positive ion mode data. Ideally, the sample origins should be the same as handled in negative ion mode. Then, follow as “Post processing” -> “Amalgamation of different polarity peak list”. Then, browse the ion features of negative ion project, i.e. 12C-AT-Root-Neg ion features.txt. Please select the adduct type pairs to be considered for the adduct type determination. After the ion feature amalgamator is executed, you will get the integrated result of different polarity data.
+![alt](images/new_images/Picture34.png)
 
-### Section 5-14
+### Section 5-13
 ### Pathway map  
 
 1\. “Data visualization” -> “Pathway”  
@@ -1181,7 +1173,7 @@ Therefore, MS-DIAL provides the utility integrating the different polarity peak 
 *	Mouse wheel for up-down scroll.
 *	Mouse wheel + Ctrl for zoom in-out.
 *	Mouse wheel + Shift for left-right scroll.
-*	Mouse click + Shift or Ctrl for changing node position.<!--shiftやctrlがなくても四角形をドラッグすればノードポジションが動かせる-->
+*	Mouse click + Shift or Ctrl for changing node position.
 
 
 ## Chapter 6
