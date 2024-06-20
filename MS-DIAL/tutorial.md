@@ -136,7 +136,7 @@ MS-DIAL screenshot
 
 ## Chapter 1
 ## General introduction of MS-DIAL
-The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. **Figure 1** shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>.    
+The current MS-DIAL program provides a stream pipeline for untargeted metabolomics. **Figure 1** shows the overview of the workflow. (1) The first step of MS-DIAL based metabolomics is to convert your vendor’s format into ABF (analysis base file) format or mzML format by means of the Reifycs file converter or ProteoWizard msconvert, respectively; we describe this in the first section of this chapter. (2) The second step is to choose your project: the current MS-DIAL program supports the pipelines for GC/MS, LC/MS, LC/MS/MS (DDA: data dependent acquisition), and LC/MS/MS (DIA: data independent acquisition (SWATH or All ions)) data sets. After data processing which includes peak picking, deconvolution, compound identification, and peak alignment, MS-DIAL provides several normalization methods (including LOWESS) and a multivariate analysis by principal component analysis (PCA). (3) Finally, for further analysis by other programs, this program can export your result as table format (for SIMCA-P, MetaboAnalyst, and MetFamily etc.), and as several spectral formats including NIST, MassBank, and Mascot formats for compound identifications by MS-FINDER, CSI:FingerID, CFM-ID, MetFrag, and MetFamily etc. For the parameter explanations including the description of MS-DIAL algorithms, see also ‘MS-DIAL mathematics’ which can be downloaded at <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>.    
 
 ![alt](images/image_2.png)  
 <br />
@@ -382,7 +382,7 @@ For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessi
 
 ![alt](images/new_images/無題4.png)  
 
-MS-DIAL provides two simple thresholds; **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>).<br><!--
+MS-DIAL provides two simple thresholds; **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>).<br><!--
 なぜ今回のデモデータのMinimum peak heightは500なの？defaultは1000
 （津川さんの回答）理想的にはユーザーの経験則で決めるべき。-->
 It is ideal that users put values here based on your own experience that you got looking at the trend of your data. However FYI (based on our experience) the minimum peak height may be set to 500 as a default value for this demo data of Sciex.    <br><!--
@@ -398,7 +398,7 @@ The recommended **smoothing level** is 1-3. <br>
 If you already know unwanted *m/z* peaks because of columns or solvent contaminants, you can specify them in the **Exclusion mass list**.  
 
    
-A part of <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>  
+A part of <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>  
 
 ![alt](images/image_17.png)  
 ![alt](images/image_18.png)
@@ -605,7 +605,7 @@ For detail, visit 'The tutorial and parameter files for MS-DIAL ALF dataprocessi
 #### Peak detection tab  
 ![alt](images/new_images/無題24.png)
 <!--(3/10)以下２章のコピペをした-->
-MS-DIAL provides two simple thresholds: **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>).<br>
+MS-DIAL provides two simple thresholds: **minimum values for peak width** and **height**. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>).<br>
 It is ideal that users put values here based on your own experience that you got looking at the trend of your data. However FYI (based on our experience) the minimum peak height may be set to 500 as a default value for this demo data of Sciex.    <br>
 Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or more.<br>
 **Minimum peak width** indicates a threshold of peak width for filtering. See detail by reading the second slide (title 'In MS-DIAL program') below.
@@ -617,7 +617,7 @@ Besides, for FT-ICR or Orbirap data, the minimum peak height may be 50,000 or mo
 The recommended **smoothing level** is 1-3. <br>
 If you already know unwanted *m/z* peaks because of columns or solvent contaminants, you can specify them in the **Exclusion mass list**.  
 <!--以上コピペ終わり-->
-**&#042; see Section 2-3-2 and <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf> for more detail**  
+**&#042; see Section 2-3-2 and <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf> for more detail**  
 
 #### Section 3-3-3
 #### MS2Dec tab  
@@ -793,7 +793,7 @@ Note: Please finalize your file name here, because you cannot change it later.
 ![alt](images/new_images/image_4_5.png)  
 
 *Peak detection parameters*: The workflow of GC/MS deconvolution is 1) peak picking in each *m/z* chromatogram, and 2) deconvolution on the basis of detected peak spots. The algorithm of this peak picking is the same as LC/MS parts except for exclusion mass list which was removed from the parameter list in GC/MS processing.   
-Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For GC-Q-Exactive data, the minimum peak height should be 50,000 or more (at a first trial).  
+Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 1-3. MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>). For GC-Q-Exactive data, the minimum peak height should be 50,000 or more (at a first trial).  
 
 *Peak spotting parameters*: If your data is obtained by high resolution GCMS such as Agilent GC-QTOFMS and GC-QExactive, check ‘accurate MS’. Then, set the width of mass slice. From our experience, 0.1 or 0.05 is suitable for accurate GCMS. In addition, put the mass accuracy which is used for the construction of EI-chromatograms followed by the deconvolution (MS1Dec) program.  
 
@@ -1443,7 +1443,7 @@ Check **Consider Cl and Br elements** if you assume that your samples contain an
 #### Peak detection tab  
 ![alt](images/new_images/image_8_5.png)
 
-*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <http://prime.psc.riken.jp/Metabolomics_Software/MS-DIAL/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.  
+*Peak detection parameters*: Linear-weighted moving average is used for the peak detection by default to accurately determine the peak left- and right edges. The recommended smoothing level is 3 (see Note). MS-DIAL provides two simple thresholds: minimum values for peak width and height. Peaks below these thresholds are ignored (see also MS-DIAL mathematics: <https://systemsomicslab.github.io/compms/msdial/download/mathematics/MS-DIAL%20FAQ-vs2.pdf>). For FT-ICR or Orbitrap data, the minimum peak height may be 50,000 or more.  
 **Note:** check the smoothing level at the raw data  
 **Note:** it is recommended to set the minimum peak height at least 2-5 fold higher than the noise level, otherwise the data analysis will take very long time. To check the noise level you can for example check several scans in the non-busy region of the mass spectrum. The small peaks not found consistently across the scans can be regarded as noise.   
 
