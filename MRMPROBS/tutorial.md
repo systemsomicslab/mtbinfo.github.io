@@ -73,10 +73,10 @@ MRMPROBS screenshot
 Download link: <http://www.reifycs.com/AbfConverter/index.html>  
 
 * MRMPROBS  
-Download link: <http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>  
+Download link: <https://systemsomicslab.github.io/compms/mrmprobs/main.html#Software>  
 
 * Demo files and the reference library (tab-delimited text file)  
-Example: <http://prime.psc.riken.jp/Metabolomics_Software/MRMPROBS/index.html>  
+Example: <https://systemsomicslab.github.io/compms/mrmprobs/main.html#Templates>  
 
 MRMPROBS can import Analysis Base Framework (ABF) format data. MRMPROBS extracts chromatogram data together with the reference library including the name of the target metabolite, its retention-time and amplitude information, and precursor *m/z* and product *m/z*. The supported formats for ABF conversion are Shimadzu Inc. (.LCD), Agilent Technologies (.D), AB Sciex (.WIFF), Waters (.RAW), and Thermo Fisher Scientific (.RAW). MRMPROBS is also acceptable to a common data format mzML converted by an open source file translator ProteoWizard. The information is described in **Appendix B**.   
 
